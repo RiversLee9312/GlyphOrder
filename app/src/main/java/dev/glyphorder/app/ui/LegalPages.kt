@@ -14,6 +14,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.LinkAnnotation
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.TextLinkStyles
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.withLink
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import dev.glyphorder.app.BuildConfig
 import dev.glyphorder.app.R
@@ -57,6 +63,7 @@ private fun LegalLink(title: String, summary: String? = null, index: Int = 0, co
 }
 
 private data class LibraryNotice(val coordinate: String, val license: String, val assets: List<String>)
+private data class LegalParagraph(val text: String, val markdown: Boolean)
 
 @Composable
 internal fun LicensesPage(open: (String, List<String>) -> Unit) {
@@ -122,13 +129,41 @@ internal fun LegalTextPage(assets: List<String>) {
     val context = LocalContext.current
     val paragraphs = remember(assets) {
         assets.flatMap { asset ->
-            context.assets.open(asset).bufferedReader().use { it.readText() }.replace("\r\n", "\n").split(Regex("\n[ \\t]*\n"))
+            val text = context.assets.open(asset).bufferedReader().use { it.readText() }.replace("\r\n", "\n")
+            val markdown = asset.endsWith(".md")
+            val sections = if (markdown) text.lines().filterIndexed { index, line -> line.isNotBlank() && !(index == 0 && line.startsWith("# ")) }
+                else text.split(Regex("\n[ \\t]*\n"))
+            sections.map { LegalParagraph(it.trim(), markdown) }
         }
     }
     // Separate paragraphs avoid a huge single text layout for aggregated notices.
     SelectionContainer {
         LazyColumn(contentPadding = PaddingValues(20.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-            items(paragraphs) { Text(it.trim(), style = MaterialTheme.typography.bodyMedium) }
+            items(paragraphs) { paragraph ->
+                if (paragraph.markdown) MarkdownParagraph(paragraph.text)
+                else Text(paragraph.text, style = MaterialTheme.typography.bodyMedium)
+            }
         }
     }
+}
+
+@Composable
+private fun MarkdownParagraph(text: String) {
+    val heading = text.startsWith("#")
+    val body = text.removePrefix("### ").removePrefix("## ").removePrefix("# ")
+        .replace("**", "").replace("`", "").let { if (it.startsWith("- ")) "• ${it.removePrefix("- ")}" else it }
+    val linkStyle = TextLinkStyles(style = SpanStyle(color = MaterialTheme.colorScheme.primary, textDecoration = TextDecoration.Underline))
+    val content = buildAnnotatedString {
+        var cursor = 0
+        Regex("\\[([^]]+)]\\(([^)]+)\\)").findAll(body).forEach { match ->
+            append(body.substring(cursor, match.range.first))
+            val target = match.groupValues[2]
+            val url = if (target.startsWith("https://") || target.startsWith("http://")) target else "$PROJECT_URL/blob/main/$target"
+            withLink(LinkAnnotation.Url(url, styles = linkStyle)) { append(match.groupValues[1]) }
+            cursor = match.range.last + 1
+        }
+        append(body.substring(cursor))
+    }
+    Text(content, style = if (heading) MaterialTheme.typography.titleMedium else MaterialTheme.typography.bodyMedium,
+        modifier = if (heading) Modifier.padding(top = 12.dp) else Modifier)
 }
