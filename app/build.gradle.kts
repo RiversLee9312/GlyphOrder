@@ -15,7 +15,9 @@ val syncProjectNotices by tasks.registering(Sync::class) {
 
 tasks.register("exportRuntimeDependencies") {
     doLast {
-        val artifacts = configurations.getByName("debugRuntimeClasspath").resolvedConfiguration.resolvedArtifacts
+        val artifacts = listOf("debugRuntimeClasspath", "releaseRuntimeClasspath").flatMap {
+            configurations.getByName(it).resolvedConfiguration.resolvedArtifacts
+        }.distinctBy { it.moduleVersion.id.toString() }
         val records = artifacts.map { artifact ->
             val id = artifact.moduleVersion.id
             mapOf("group" to id.group, "name" to id.name, "version" to id.version, "file" to artifact.file.absolutePath)
@@ -33,7 +35,9 @@ val verifyLegalCatalog by tasks.registering {
         @Suppress("UNCHECKED_CAST")
         val entries = JsonSlurper().parse(assets.resolve("legal/libraries.json")) as List<Map<String, Any>>
         val known = entries.map { it.getValue("coordinate").toString() }.toSet()
-        val resolved = configurations.getByName("debugRuntimeClasspath").resolvedConfiguration.resolvedArtifacts.map { it.moduleVersion.id.toString() }.toSet()
+        val resolved = listOf("debugRuntimeClasspath", "releaseRuntimeClasspath").flatMap {
+            configurations.getByName(it).resolvedConfiguration.resolvedArtifacts.map { artifact -> artifact.moduleVersion.id.toString() }
+        }.toSet()
         check(known == resolved) { "Dependency notices are stale. Run :app:exportRuntimeDependencies, then python tools/prepare-legal.py. Missing: ${resolved - known}; stale: ${known - resolved}" }
         entries.forEach { entry ->
             check(assets.resolve(entry.getValue("licenseAsset").toString()).isFile)

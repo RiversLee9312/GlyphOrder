@@ -248,14 +248,6 @@
     "noticeAsset": "legal/dependencies/ad9268d2c76961ac04cb.txt"
   },
   {
-    "name": "Core",
-    "coordinate": "androidx.core:core:1.16.0",
-    "license": "Apache-2.0",
-    "licenseAsset": "legal/Apache-2.0.txt",
-    "source": "https://developer.android.com/jetpack/androidx/releases/core#1.16.0",
-    "noticeAsset": "legal/dependencies/ad9268d2c76961ac04cb.txt"
-  },
-  {
     "name": "Core Kotlin Extensions",
     "coordinate": "androidx.core:core-ktx:1.16.0",
     "license": "Apache-2.0",
@@ -543,7 +535,7 @@
     "coordinate": "com.github.topjohnwu.libsu:core:6.0.0",
     "license": "Apache-2.0",
     "licenseAsset": "legal/Apache-2.0.txt",
-    "source": "https://github.com/topjohnwu/libsu/blob/master/LICENSE"
+    "source": "https://github.com/topjohnwu/libsu/blob/8c3e80ffe466b89ff875471e542d77e6a1b480c5/LICENSE"
   },
   {
     "name": "Guava ListenableFuture only",

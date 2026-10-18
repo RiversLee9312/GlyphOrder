@@ -1,7 +1,7 @@
 # Third-party notices
 
 Project code and documentation are Apache-2.0; third-party components keep their original licenses.
-Generated from resolved debug runtime artifacts (including transitive dependencies). Debug-only tooling may be absent from release builds.
+Generated from resolved debug/release runtime artifacts (including transitive dependencies). Debug-only tooling may be absent from release builds.
 
 ## Runtime libraries
 
@@ -36,7 +36,6 @@ Generated from resolved debug runtime artifacts (including transitive dependenci
 - `androidx.compose.ui:ui-unit-android:1.10.4` — Apache-2.0. [Upstream](https://developer.android.com/jetpack/androidx/releases/compose-ui#1.10.4).
 - `androidx.compose.ui:ui-util-android:1.10.4` — Apache-2.0. [Upstream](https://developer.android.com/jetpack/androidx/releases/compose-ui#1.10.4).
 - `androidx.concurrent:concurrent-futures:1.1.0` — Apache-2.0. [Upstream](https://developer.android.com/topic/libraries/architecture/index.html).
-- `androidx.core:core:1.16.0` — Apache-2.0. [Upstream](https://developer.android.com/jetpack/androidx/releases/core#1.16.0).
 - `androidx.core:core:1.16.0` — Apache-2.0. [Upstream](https://developer.android.com/jetpack/androidx/releases/core#1.16.0).
 - `androidx.core:core-ktx:1.16.0` — Apache-2.0. [Upstream](https://developer.android.com/jetpack/androidx/releases/core#1.16.0).
 - `androidx.core:core-viewtree:1.0.0` — Apache-2.0. [Upstream](https://developer.android.com/jetpack/androidx/releases/core#1.0.0).
@@ -75,7 +74,7 @@ Generated from resolved debug runtime artifacts (including transitive dependenci
 - `androidx.versionedparcelable:versionedparcelable:1.1.1` — Apache-2.0. [Upstream](http://developer.android.com/tools/extras/support-library.html).
 - `androidx.window:window:1.5.0` — Apache-2.0. [Upstream](https://developer.android.com/jetpack/androidx/releases/window#1.5.0).
 - `androidx.window:window-core-android:1.5.0` — Apache-2.0. [Upstream](https://developer.android.com/jetpack/androidx/releases/window#1.5.0).
-- `com.github.topjohnwu.libsu:core:6.0.0` — Apache-2.0. [Upstream](https://github.com/topjohnwu/libsu/blob/master/LICENSE).
+- `com.github.topjohnwu.libsu:core:6.0.0` — Apache-2.0. [Upstream](https://github.com/topjohnwu/libsu/blob/8c3e80ffe466b89ff875471e542d77e6a1b480c5/LICENSE).
 - `com.google.guava:listenablefuture:1.0` — Apache-2.0. [Upstream](https://github.com/google/guava/blob/v26.0/guava/COPYING).
 - `org.jetbrains.kotlin:kotlin-stdlib:2.2.10` — Apache-2.0. [Upstream](https://kotlinlang.org/).
 - `org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0` — Apache-2.0. [Upstream](https://github.com/Kotlin/kotlinx.coroutines).

@@ -18,8 +18,8 @@ CACHE = Path.home() / '.gradle/caches/modules-2/files-2.1'
 NS = {'m': 'http://maven.apache.org/POM/4.0.0'}
 OVERRIDES = {
     # These published POMs omit licenses; verified against upstream LICENSE.
-    'com.github.topjohnwu.libsu:core': 'https://github.com/topjohnwu/libsu/blob/master/LICENSE',
-    'com.google.guava:listenablefuture': 'https://github.com/google/guava/blob/v26.0/guava/COPYING',
+    'com.github.topjohnwu.libsu:core:6.0.0': 'https://github.com/topjohnwu/libsu/blob/8c3e80ffe466b89ff875471e542d77e6a1b480c5/LICENSE',
+    'com.google.guava:listenablefuture:1.0': 'https://github.com/google/guava/blob/v26.0/guava/COPYING',
 }
 
 
@@ -45,7 +45,7 @@ def main():
     third_party = [
         '# Third-party notices', '',
         'Project code and documentation are Apache-2.0; third-party components keep their original licenses.',
-        'Generated from resolved debug runtime artifacts (including transitive dependencies). Debug-only tooling may be absent from release builds.', '',
+        'Generated from resolved debug/release runtime artifacts (including transitive dependencies). Debug-only tooling may be absent from release builds.', '',
         '## Runtime libraries', '',
     ]
     for item in records:
@@ -55,12 +55,12 @@ def main():
         pom = next((CACHE / group / name / version).rglob('*.pom'))
         root = ET.parse(pom).getroot()
         licenses = root.findall('m:licenses/m:license', NS)
-        if module not in OVERRIDES:
+        if coordinate not in OVERRIDES:
             assert licenses and all('apache' in license.findtext('m:name', '', NS).lower()
                                     and '2.0' in license.findtext('m:name', '', NS) for license in licenses), coordinate
         source = root.findtext('m:url', '', NS) or root.findtext('m:scm/m:url', '', NS)
         if not source:
-            source = OVERRIDES.get(module, 'https://developer.android.com/jetpack/androidx')
+            source = OVERRIDES.get(coordinate, 'https://developer.android.com/jetpack/androidx')
         entry = dict(name=root.findtext('m:name', name, NS), coordinate=coordinate,
                      license='Apache-2.0', licenseAsset='legal/Apache-2.0.txt', source=source)
         notices = embedded_notices(Path(item['file']).read_bytes())
