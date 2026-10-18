@@ -1,5 +1,7 @@
 # 字序 / GlyphOrder
 
+[Download APK](https://github.com/RiversLee9312/GlyphOrder/releases/latest) · [中文](README.md)
+
 An Android font switcher built with Kotlin, Jetpack Compose and Material 3 Expressive. Android 14 (API 34) minimum; developed against LineageOS 23.2 / Android 16 on a OnePlus 11.
 
 Includes five offline choices: MiSans with the official Global language packs, Rubik, Noto Sans, Noto Serif with its script-specific Serif/CJK families, and Sarasa Fixed SC Regular/Bold. Every built-in and imported primary also has the shared Noto missing-glyph pool enabled by default. Matching family supplements precede the shared pool, preserving Serif and MiSans designs where available. This does not imply complete Unicode coverage or a matching design for every script. See [sources, coverage and licenses](design/FONTS.md). The interface supports 24 locales and native multilingual preview.
@@ -13,6 +15,10 @@ Use JDK 21 and Android SDK 36. Set `sdk.dir` in your untracked `local.properties
 ```
 
 The APK is generated at `app/build/outputs/apk/debug/app-debug.apk`. The debug APK uses the machine's Android debug key; production distribution should use a privately managed release key.
+
+For signed releases, create an untracked root `keystore.properties` with `storeFile`, `storePassword`, `keyAlias` and `keyPassword`, then run `./gradlew :app:assembleRelease`. Output: `app/build/outputs/apk/release/app-release.apk`. Without that file the release APK is unsigned. Keep a private offline backup of the signing key and configuration for future updates.
+
+The GitHub release uses a dedicated signing key and cannot update a debug installation in place. Before switching, back up application data, disable the font module and reboot, then uninstall the debug build and install the release APK.
 
 ## Use
 

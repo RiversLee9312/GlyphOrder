@@ -2,6 +2,8 @@
 
 [English](README.en.md) · [Apache-2.0](LICENSE) · [第三方声明](THIRD_PARTY_NOTICES.md) · [隐私说明](PRIVACY.md)
 
+[下载 APK](https://github.com/RiversLee9312/GlyphOrder/releases/latest)
+
 通过 Magisk 模块管理 Android 系统字体，使用 Kotlin、Jetpack Compose 与 Material 3 Expressive 构建。支持 Android 14 及以上；目前主要在 OnePlus 11 的 LineageOS 23.2 / Android 16 上验证。
 
 ## 功能
@@ -51,6 +53,19 @@ python3 tools/check-i18n.py
 ```
 
 APK 位于 `app/build/outputs/apk/debug/app-debug.apk`。调试包使用构建机器的 Android 调试签名；正式发布需自行配置私有签名密钥，勿提交密钥或密码。
+
+正式构建读取仓库根目录下、不提交到 Git 的 `keystore.properties`：
+
+```properties
+storeFile=/private/path/to/release.p12
+storePassword=YOUR_STORE_PASSWORD
+keyAlias=YOUR_KEY_ALIAS
+keyPassword=YOUR_KEY_PASSWORD
+```
+
+配置后运行 `./gradlew :app:assembleRelease`（Windows 使用 `gradlew.bat`）。正式 APK 位于 `app/build/outputs/apk/release/app-release.apk`；未提供签名配置时会生成未签名包。保管好密钥与配置的离线备份，后续更新必须使用相同签名。
+
+GitHub Release 的正式包与本地调试包签名不同，不能覆盖安装。调试版用户切换前应先备份数据、禁用字体模块并重启，再卸载调试版安装正式包。
 
 更新依赖后，刷新并检查离线许可清单：
 
