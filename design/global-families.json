@@ -1,0 +1,467 @@
+{
+  "notoCommit": "5c3913063bb189df4edc94b766584dfb4c04a187",
+  "notoCjkCommit": "f8d157532fbfaeda587e826d4cd5b21a49186f7c",
+  "sources": [
+    {
+      "asset": "fonts/sarasa/NotoSerifAhom-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifAhom/full/ttf/NotoSerifAhom-Regular.ttf",
+      "gitBlob": "3e6d2dc8accb212c52a7200cae07e01c8b0aae78",
+      "sha256": "60fb8b9b8323d934a381f5d6a13534aed178c9ec573ecf988b6083211b36bbf3"
+    },
+    {
+      "asset": "fonts/global/NotoSerifArmenian[wdth,wght].ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifArmenian/full/variable/NotoSerifArmenian[wdth,wght].ttf",
+      "gitBlob": "928c9ed056d88dd3f96793940729e8723cfaa672",
+      "sha256": "4ed8c00b7cdd494412d83630ac7e1eccb74421c513f25677d1d2c90db4bfe99d"
+    },
+    {
+      "asset": "fonts/global/NotoSerifBalinese-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifBalinese/full/ttf/NotoSerifBalinese-Regular.ttf",
+      "gitBlob": "6a32ff1ab14c00931f55e75284d281d97b4a5425",
+      "sha256": "cb3eab35b1b9e3070f084b02f555f11faf2ea78e2ac694c25877c0d1486b0f02"
+    },
+    {
+      "asset": "fonts/global/NotoSerifBengali-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifBengali/full/ttf/NotoSerifBengali-Regular.ttf",
+      "gitBlob": "c6b3f524c153679162f85dd9610f04408f878de1",
+      "sha256": "20be09559236073efdc24ec466baf11e23c84c6eabebb8f943c913d7aea56e83"
+    },
+    {
+      "asset": "fonts/global/NotoSerifBengali-Bold.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifBengali/full/ttf/NotoSerifBengali-Bold.ttf",
+      "gitBlob": "ebf32b1c3d2be467833a3f74fba355f6fb8d7537",
+      "sha256": "a382a80546c5fbc1e6fedff4ae54d16c02d1194a2d34cff72144100678a20b68"
+    },
+    {
+      "asset": "fonts/global/NotoSerifDevanagari-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifDevanagari/full/ttf/NotoSerifDevanagari-Regular.ttf",
+      "gitBlob": "8655f9e1f3a45cdc91ba736ea5db98eed0a16588",
+      "sha256": "e3aafe3baf7d8601b2c895fd10ee74ad6b108dad0f7617c3211f6fc7d7d2aada"
+    },
+    {
+      "asset": "fonts/global/NotoSerifDevanagari-Bold.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifDevanagari/full/ttf/NotoSerifDevanagari-Bold.ttf",
+      "gitBlob": "e4fa4a3873f41454f4c702974ccaa3f56d43ef37",
+      "sha256": "4e0bcf1dced06476ca166344e6e6b56288ff47e89b7d03326578d559e7437387"
+    },
+    {
+      "asset": "fonts/sarasa/NotoSerifDivesAkuru-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifDivesAkuru/full/ttf/NotoSerifDivesAkuru-Regular.ttf",
+      "gitBlob": "cd820a2b1980303e516bfac8e9f6a438f16f1253",
+      "sha256": "5f7309a8441f8e22750cd1e6a42114bb08c16ffe8c2f13f13f4eac27b80a7573"
+    },
+    {
+      "asset": "fonts/sarasa/NotoSerifDogra-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifDogra/full/ttf/NotoSerifDogra-Regular.ttf",
+      "gitBlob": "3e9d00d7a2e8fd1b8de1b6f53ba7467e744c5f5d",
+      "sha256": "768d01d50dc527a6e17d120da6fcac77565fc0e3b5bf248c3bf052f711b7c4b3"
+    },
+    {
+      "asset": "fonts/global/NotoSerifEthiopic-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifEthiopic/full/ttf/NotoSerifEthiopic-Regular.ttf",
+      "gitBlob": "6e487a1cb47fca86503e4630bc699b76afda1262",
+      "sha256": "af1790d3df09027c082a44ea851184fe88d30ad2e5f396d8a8b792f16760dd09"
+    },
+    {
+      "asset": "fonts/global/NotoSerifEthiopic-Bold.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifEthiopic/full/ttf/NotoSerifEthiopic-Bold.ttf",
+      "gitBlob": "9fabc9f1410a2af2f379abfec7027cfa00134e1a",
+      "sha256": "4aa33abd93547d2b4cb82a621714dfe4767a6c2829c1b49b3e071a8fa0f55676"
+    },
+    {
+      "asset": "fonts/global/NotoSerifGeorgian[wdth,wght].ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifGeorgian/full/variable/NotoSerifGeorgian[wdth,wght].ttf",
+      "gitBlob": "471aa2930c96a8ade4ab0cc7c7bfa31d6222c4f1",
+      "sha256": "12ee0cf307b89d09c04395947c20f0ea8fe376186b286873ece4ca8c22814dee"
+    },
+    {
+      "asset": "fonts/global/NotoSerifGrantha-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifGrantha/full/ttf/NotoSerifGrantha-Regular.ttf",
+      "gitBlob": "cb6427af1eaaf86554b7f26c0a815552a4293026",
+      "sha256": "0a2c6dd1d312c3cf97ddbbcfa44c83e7f7f02a6af5c95a516e4492ac987cd66f"
+    },
+    {
+      "asset": "fonts/global/NotoSerifGujarati[wght].ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifGujarati/full/variable/NotoSerifGujarati[wght].ttf",
+      "gitBlob": "a5b649c3e606003c004597d29a7b65c49a39d530",
+      "sha256": "f1d144ca51062d48eb7bc88191978e3533a6528dc14f002ba239599a661ae3b2"
+    },
+    {
+      "asset": "fonts/global/NotoSerifGurmukhi-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifGurmukhi/full/ttf/NotoSerifGurmukhi-Regular.ttf",
+      "gitBlob": "1c79f14077e24f8af1e144ddae78eb73419b0e30",
+      "sha256": "255f404f61622ef03385a2851c2423de3a676d978115b2e39ffd5570e0022c32"
+    },
+    {
+      "asset": "fonts/global/NotoSerifGurmukhi-Bold.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifGurmukhi/full/ttf/NotoSerifGurmukhi-Bold.ttf",
+      "gitBlob": "9343ac19b8d103391c9abb61e4c1ce1159137e24",
+      "sha256": "ba33ab5743a56b356bfac4f01b14276f9c8316a88835a23009191f457afd3d4e"
+    },
+    {
+      "asset": "fonts/global/NotoSerifHebrew[wdth,wght].ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifHebrew/full/variable/NotoSerifHebrew[wdth,wght].ttf",
+      "gitBlob": "f655b45de455c64d66ae1f1db98493d2e376a9dd",
+      "sha256": "bbddccbf48250951b6896559d71412836d8cb50026395129ff4d507492186c0b"
+    },
+    {
+      "asset": "fonts/global/NotoSerifHentaigana[wght].ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifHentaigana/full/variable/NotoSerifHentaigana[wght].ttf",
+      "gitBlob": "abc90983009bf3a9f503f49f18d84f9592da0d74",
+      "sha256": "ce6ad0eb36659267cdcae04436ef6413526bee388ce27a500efb7441ec710f48"
+    },
+    {
+      "asset": "fonts/global/NotoSerifKannada[wght].ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifKannada/full/variable/NotoSerifKannada[wght].ttf",
+      "gitBlob": "b9a6724c03aa351f8f0436c1176bd8c4b0846c97",
+      "sha256": "9d15bc697b2147a54f9e40a173e30e3fd95b3f0d775841d5dedc7b900088d9ae"
+    },
+    {
+      "asset": "fonts/sarasa/NotoSerifKhitanSmallScript-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifKhitanSmallScript/full/ttf/NotoSerifKhitanSmallScript-Regular.ttf",
+      "gitBlob": "d784512bcc096bacd76550aa9ec6c00f8ff26d6f",
+      "sha256": "7f0bfd1e09db31f5e1562eb7c5a8dbc7c3a45129d5da3c7b779d3c5b6d08e1ff"
+    },
+    {
+      "asset": "fonts/global/NotoSerifKhmer[wdth,wght].ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifKhmer/full/variable/NotoSerifKhmer[wdth,wght].ttf",
+      "gitBlob": "ebcebc97e3265d5948ce2f8cee4f807a5eea5e50",
+      "sha256": "3fb93df65112aa9ec847521f84fcfcf26535ecb4b111d647c44188dc96af5cfa"
+    },
+    {
+      "asset": "fonts/global/NotoSerifKhojki[wght].ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifKhojki/full/variable/NotoSerifKhojki[wght].ttf",
+      "gitBlob": "a0e0f5749ff841aa307be8cd913cf330f768ce4a",
+      "sha256": "bd9f1bfec55c00cbdc2ab1d9d9f4fb74e3f3df11e7c0fb5bfda553a247b73d34"
+    },
+    {
+      "asset": "fonts/global/NotoSerifLao-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifLao/full/ttf/NotoSerifLao-Regular.ttf",
+      "gitBlob": "40c9c2ccbbef646aff26233401c0ce9014c4cda3",
+      "sha256": "ff5ab4f3270c448b99b113a8ac6275bc6e4a4ca922ed2271df9a95132b5c2db6"
+    },
+    {
+      "asset": "fonts/global/NotoSerifLao-Bold.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifLao/full/ttf/NotoSerifLao-Bold.ttf",
+      "gitBlob": "c451914a6138764a019faca7e42bea7bba437452",
+      "sha256": "bdf8a669685277125be9a0071ede42baf80147180bbd4bbb541301c7266250a4"
+    },
+    {
+      "asset": "fonts/sarasa/NotoSerifMakasar-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifMakasar/full/ttf/NotoSerifMakasar-Regular.ttf",
+      "gitBlob": "c49de78d6457735e45734784cf2c4e25e96a6bb4",
+      "sha256": "c6b37b42cfd20fdb9b74c7648a4dd61f77cede3d66c0979b2d264c414c82d26b"
+    },
+    {
+      "asset": "fonts/global/NotoSerifMalayalam-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifMalayalam/full/ttf/NotoSerifMalayalam-Regular.ttf",
+      "gitBlob": "40c82a11e4e0f915a601ace69a6ea0181563f180",
+      "sha256": "7755029171b99ef7d5e7027c6f9148bcca3f3b95a41fd73cfc79d664a935cf30"
+    },
+    {
+      "asset": "fonts/global/NotoSerifMalayalam-Bold.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifMalayalam/full/ttf/NotoSerifMalayalam-Bold.ttf",
+      "gitBlob": "14bedd78c467d9f0eab63902af8a748a70082a4f",
+      "sha256": "ad883959c77c2365d6784091ac179f451d4cd430c6feadaa1e40b90ca490e57c"
+    },
+    {
+      "asset": "fonts/global/NotoSerifMyanmar-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifMyanmar/full/ttf/NotoSerifMyanmar-Regular.ttf",
+      "gitBlob": "5628363befc79ba8d4b612788b6af01a5f5a0251",
+      "sha256": "a533d9cce799f0367eca714e05dfb3cbef1e0ac0be35d66630192c48a84b455e"
+    },
+    {
+      "asset": "fonts/global/NotoSerifMyanmar-Bold.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifMyanmar/full/ttf/NotoSerifMyanmar-Bold.ttf",
+      "gitBlob": "402fddde41abd38e2d1f21738ae03d2e7b981180",
+      "sha256": "5df34c3a93e3ddadfca0aa672d4544c5a4029fb6dea78807c589633bcb8656a3"
+    },
+    {
+      "asset": "fonts/sarasa/NotoSerifNPHmong-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifNPHmong/full/ttf/NotoSerifNPHmong-Regular.ttf",
+      "gitBlob": "5ed13e3dd4c6bb7a77706d96ecba0e8b18fad03d",
+      "sha256": "5609585a39d703aacf4cd917ec8158fccee7fd791700c3c8bc54c231ad38c3df"
+    },
+    {
+      "asset": "fonts/global/NotoSerifNPHmong-Bold.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifNPHmong/full/ttf/NotoSerifNPHmong-Bold.ttf",
+      "gitBlob": "fa64bc16ef8219bf726c1f68e187175421792d76",
+      "sha256": "be29ea40537e069766196af581c0295f7e00bdcb18c91b236209d69045259521"
+    },
+    {
+      "asset": "fonts/sarasa/NotoSerifOldUyghur-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifOldUyghur/full/ttf/NotoSerifOldUyghur-Regular.ttf",
+      "gitBlob": "e68826459eac1f5651a7d197ed3c9c793290bb8c",
+      "sha256": "258b1344b33c0560a36080a6e0f7cbf8ff2a4896c10ab9b3ac0a66149a54a978"
+    },
+    {
+      "asset": "fonts/global/NotoSerifOriya-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifOriya/full/ttf/NotoSerifOriya-Regular.ttf",
+      "gitBlob": "63a2777b7883f0dc33d764c6dd29bf0dd111a7ed",
+      "sha256": "0abc1b2755c87e2db6e713eb5f0b5fde583bc460a3500c3eafce046a1cae50a9"
+    },
+    {
+      "asset": "fonts/global/NotoSerifOriya-Bold.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifOriya/full/ttf/NotoSerifOriya-Bold.ttf",
+      "gitBlob": "6881dbd4343c409cbc28e9600ed18f761fb415b4",
+      "sha256": "3c8532a5397325eaa3f27eee4d13ff1fbcd2fafa17bb577ad910a3b926e5da96"
+    },
+    {
+      "asset": "fonts/sarasa/NotoSerifOttomanSiyaq-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifOttomanSiyaq/full/ttf/NotoSerifOttomanSiyaq-Regular.ttf",
+      "gitBlob": "8034168f26d95b99458a0df6d1c40b7cc6b47e9d",
+      "sha256": "ed1644735ec931669e329b7bc902abd8264c7557172dde68ee9c37104ce51ea5"
+    },
+    {
+      "asset": "fonts/global/NotoSerifSinhala-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifSinhala/full/ttf/NotoSerifSinhala-Regular.ttf",
+      "gitBlob": "78435e230adfd94b8492663e2f6109039173291a",
+      "sha256": "cafa8544ad87a1116d296193cfbf8be39b7927e67fd4af36b7e73105cf2ac85e"
+    },
+    {
+      "asset": "fonts/global/NotoSerifSinhala-Bold.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifSinhala/full/ttf/NotoSerifSinhala-Bold.ttf",
+      "gitBlob": "52fc9f1a9a96d5e3e43790f7c6d8c7119ef79d8d",
+      "sha256": "09a843eb8e54be645c2d3b8465886216667acc28e83e5c55d93a93d6c725d427"
+    },
+    {
+      "asset": "fonts/global/NotoSerifTamil-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifTamil/full/ttf/NotoSerifTamil-Regular.ttf",
+      "gitBlob": "4e3ba004d3ccb9ff8ec9c6efb346827e7326b54e",
+      "sha256": "00611c2dc5e6a09a5cd85eb87e135ae86aaafa5ac63543adf5eb2050784582a0"
+    },
+    {
+      "asset": "fonts/global/NotoSerifTamil-Bold.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifTamil/full/ttf/NotoSerifTamil-Bold.ttf",
+      "gitBlob": "71a93f0c47dc73eacf7bdacaea8676ec6c27f00c",
+      "sha256": "c566c07b9107acf77a5ff23df28b3b05a75e5dc198a9e11b3217d909588c283b"
+    },
+    {
+      "asset": "fonts/sarasa/NotoSerifTangut-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifTangut/full/ttf/NotoSerifTangut-Regular.ttf",
+      "gitBlob": "bbca6617de1c410c7463ef8ff13eaeaa7ebcf5e4",
+      "sha256": "76bca83da5b7f6bec404aa9357f6d206c0c097bcc32c2d3a38aa6a76d21a0eab"
+    },
+    {
+      "asset": "fonts/global/NotoSerifTelugu[wght].ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifTelugu/full/variable/NotoSerifTelugu[wght].ttf",
+      "gitBlob": "fd60541be47e755d7ef0c7af9c681a2612c1dca2",
+      "sha256": "22bc97f28b7098f7e7dbb46eb4c363148f8472629eae3963ab15e5e11e2ab75b"
+    },
+    {
+      "asset": "fonts/global/NotoSerifTest-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifTest/full/ttf/NotoSerifTest-Regular.ttf",
+      "gitBlob": "4c5998bc28e6904a42db84afa0a5e3ce0743318d",
+      "sha256": "6fb9c7333b60b98b98d413379723bda71c5303b8f1cc2b79578f913db59ba64d"
+    },
+    {
+      "asset": "fonts/global/NotoSerifTest-Bold.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifTest/full/ttf/NotoSerifTest-Bold.ttf",
+      "gitBlob": "93885eade64efc61bfacc9216330536c9f567c5f",
+      "sha256": "d83990eba6c0b37c23c3b9bc5df80bc565290e865bf6b822a909a59afb769315"
+    },
+    {
+      "asset": "fonts/global/NotoSerifThai[wdth,wght].ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifThai/full/variable/NotoSerifThai[wdth,wght].ttf",
+      "gitBlob": "af065d74dd51810bd95344552854a8a28ac5d823",
+      "sha256": "464c78acab44a65effa3e792120f032b192aacfe2b7bd2ffd3d589c694a057e5"
+    },
+    {
+      "asset": "fonts/sarasa/NotoSerifTibetan-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifTibetan/full/ttf/NotoSerifTibetan-Regular.ttf",
+      "gitBlob": "b88eb08046057aaeb44c8a1653367c41f82a1701",
+      "sha256": "2ac2555a88b5bcbbacc490003e96dd4d00d064daeee4a9465d68cf301f9886b3"
+    },
+    {
+      "asset": "fonts/global/NotoSerifTibetan-Bold.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifTibetan/full/ttf/NotoSerifTibetan-Bold.ttf",
+      "gitBlob": "d86291a0071a231907391887034dea84ba9f8b5a",
+      "sha256": "2b25c40f870d0b2261fe9b3f008c05bfba61ae815ba533c1548a5c6e9d74c774"
+    },
+    {
+      "asset": "fonts/sarasa/NotoSerifTodhri-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifTodhri/full/ttf/NotoSerifTodhri-Regular.ttf",
+      "gitBlob": "907f5d91bf3936ab2bb21528de858de24f294663",
+      "sha256": "ea6ade81f1b680496bffd02e2fc4307f76327264ae744cbfa2283ffe2188149d"
+    },
+    {
+      "asset": "fonts/sarasa/NotoSerifToto-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifToto/full/ttf/NotoSerifToto-Regular.ttf",
+      "gitBlob": "18561852c515e7082e3e93ebaa2efa8baffd6dee",
+      "sha256": "9e07667bc2139967182dad33f630b281fde2852e9e6218b1ef7ce84838769d5a"
+    },
+    {
+      "asset": "fonts/global/NotoSerifToto-Bold.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifToto/full/ttf/NotoSerifToto-Bold.ttf",
+      "gitBlob": "390fc28918d757edb89ad7f6121b182ea8475453",
+      "sha256": "35531a084601e27954a2a76e70b93864c1979819109098573fe459c6dd0acd10"
+    },
+    {
+      "asset": "fonts/global/NotoSerifVithkuqi-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifVithkuqi/full/ttf/NotoSerifVithkuqi-Regular.ttf",
+      "gitBlob": "15d308d95a674bb26c94ca687dfd3160d117c59b",
+      "sha256": "768ed79c1006dda772275d3e9a78fa7b1a1c7ec37b791999046bc26299f44dce"
+    },
+    {
+      "asset": "fonts/global/NotoSerifVithkuqi-Bold.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifVithkuqi/full/ttf/NotoSerifVithkuqi-Bold.ttf",
+      "gitBlob": "b18be8bc1b490feaf095a6b308a54e3d73509eb2",
+      "sha256": "db2bee04950d397a5e02e4f33efa7b52b5631a64f9d0dd33b963b818dc1b8da4"
+    },
+    {
+      "asset": "fonts/sarasa/NotoSerifYezidi-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifYezidi/full/ttf/NotoSerifYezidi-Regular.ttf",
+      "gitBlob": "dd28e0eb19bfcb1bc977f0d0bc3b558fe9ee36c8",
+      "sha256": "089da7329a9754e07ea3c85ba40301d1ef49eb9661ce251bf8d8e0f9b7132ab6"
+    },
+    {
+      "asset": "fonts/global/NotoSerifYezidi-Bold.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSerifYezidi/full/ttf/NotoSerifYezidi-Bold.ttf",
+      "gitBlob": "c87d1fdf2f7ee246820ef799f9c9e9f2a5175d4b",
+      "sha256": "82ebc5c0b11f27530e5f4b853cd2892895eca34586a910260ad197c9932f536a"
+    },
+    {
+      "asset": "fonts/global/NotoSans[wdth,wght].ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c3913063bb189df4edc94b766584dfb4c04a187/fonts/NotoSans/full/variable/NotoSans[wdth,wght].ttf",
+      "gitBlob": "a5853d7ec1a54adf67d92aa147bce5b760ba26fe",
+      "sha256": "ef704f00c2e81931b29daaa4bf6278e67832c595372681b3517a7a0617a2d796"
+    },
+    {
+      "asset": "fonts/global/NotoSerifCJKsc-Regular.otf",
+      "url": "https://raw.githubusercontent.com/notofonts/noto-cjk/f8d157532fbfaeda587e826d4cd5b21a49186f7c/Serif/OTF/SimplifiedChinese/NotoSerifCJKsc-Regular.otf",
+      "gitBlob": "cba8a4783cc38574ac7cda52cae7d9b4241c07a5",
+      "sha256": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+    },
+    {
+      "asset": "fonts/global/NotoSerifCJKsc-Bold.otf",
+      "url": "https://raw.githubusercontent.com/notofonts/noto-cjk/f8d157532fbfaeda587e826d4cd5b21a49186f7c/Serif/OTF/SimplifiedChinese/NotoSerifCJKsc-Bold.otf",
+      "gitBlob": "f1bd9c86c5765f3358815fb84b19003fd5711747",
+      "sha256": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73"
+    },
+    {
+      "asset": "fonts/global/MiSansLatinVF.ttf",
+      "url": "https://hyperos.mi.com/font-download/MiSans_Latin.zip",
+      "member": "MiSans Latin/σÅ»σÅÿσ¡ùΣ╜ô/MiSansLatinVF.ttf",
+      "crc32": "44731ff8",
+      "sha256": "0e9cd4d867fa61cecd7b6a315bc67a54bee91bd1c693d865cbbcc9e030b051db"
+    },
+    {
+      "asset": "fonts/global/MiSansArabicUIVF.ttf",
+      "url": "https://hyperos.mi.com/font-download/MiSans_Arabic.zip",
+      "member": "MiSans Arabic/MiSans Arabic UI/σÅ»σÅÿσ¡ùΣ╜ô/MiSansArabicUIVF.ttf",
+      "crc32": "9969f250",
+      "sha256": "94b56b78dd82fd6cb170e209aca15e3ad4f9e204024ee06d6d59affd5abc4c7e"
+    },
+    {
+      "asset": "fonts/global/MiSansArabicVF.ttf",
+      "url": "https://hyperos.mi.com/font-download/MiSans_Arabic.zip",
+      "member": "MiSans Arabic/MiSans Arabic/σÅ»σÅÿσ¡ùΣ╜ô/MiSansArabicVF.ttf",
+      "crc32": "ffd8fd4a",
+      "sha256": "d62077ee66ed9914293300df8e3e3bd4d5fa74c89018b663510f613e88ab2e8d"
+    },
+    {
+      "asset": "fonts/global/MiSans Devanagari VF.ttf",
+      "url": "https://hyperos.mi.com/font-download/MiSans_Devanagari.zip",
+      "member": "MiSans Devanagari/MiSans Devanagari VF.ttf",
+      "crc32": "4614a548",
+      "sha256": "1b71ccf7bcf9640654d2d52a43a337467cd4571aeb02f1cbadd47a583ccde9d6"
+    },
+    {
+      "asset": "fonts/global/MiSans Gujarati VF.ttf",
+      "url": "https://hyperos.mi.com/font-download/MiSans_Gujarati.zip",
+      "member": "MiSans Gujarati/MiSans Gujarati VF.ttf",
+      "crc32": "862608af",
+      "sha256": "d4d405c69ad32b2414da5df8f9b5b308bc41f61ef6301e8f388455bc4d2ffd74"
+    },
+    {
+      "asset": "fonts/global/MiSans Gujarati VF.ttf",
+      "url": "https://hyperos.mi.com/font-download/MiSans_Gujarati.zip",
+      "member": "MiSans Gujarati/Font_Files/MiSans Gujarati VF.ttf",
+      "crc32": "862608af",
+      "sha256": "d4d405c69ad32b2414da5df8f9b5b308bc41f61ef6301e8f388455bc4d2ffd74"
+    },
+    {
+      "asset": "fonts/global/MiSans Gurmukhi VF.ttf",
+      "url": "https://hyperos.mi.com/font-download/MiSans_Gurmukhi.zip",
+      "member": "MiSans Gurmukhi/MiSans Gurmukhi VF.ttf",
+      "crc32": "ad2eac62",
+      "sha256": "0801460043a5a0e1cb83daec9eb6b41be59ab3b71ac9e1e1d4f725ee871bb733"
+    },
+    {
+      "asset": "fonts/global/MiSansKhmerVF.ttf",
+      "url": "https://hyperos.mi.com/font-download/MiSans_Khmer.zip",
+      "member": "MiSans Khmer/σÅ»σÅÿσ¡ùΣ╜ô/MiSansKhmerVF.ttf",
+      "crc32": "dfff892b",
+      "sha256": "d0e816006ea7ceae1bb7cbb0fb583e7d9aefee88e399199c1ee8b4de97a9fa52"
+    },
+    {
+      "asset": "fonts/global/MiSansLaoVF.ttf",
+      "url": "https://hyperos.mi.com/font-download/MiSans_Lao.zip",
+      "member": " MiSans Lao/MiSansLaoVF.ttf",
+      "crc32": "806292f4",
+      "sha256": "6f35c6d75b1be25cd3602c1ca0d26adf3e824b59e5ee728f0c94676cea56e5ab"
+    },
+    {
+      "asset": "fonts/global/MiSans Myanmar VF.ttf",
+      "url": "https://hyperos.mi.com/font-download/MiSans_Myanmar.zip",
+      "member": "MiSans Myanmar/σÅ»σÅÿσ¡ùΣ╜ô/MiSans Myanmar VF.ttf",
+      "crc32": "7046facd",
+      "sha256": "7a37fd1587d5e6d265f390f4aaaffc0ce0d42a8237d5fc62bb084b49e65b0f58"
+    },
+    {
+      "asset": "fonts/global/MiSans Thai VF.ttf",
+      "url": "https://hyperos.mi.com/font-download/MiSans_Thai.zip",
+      "member": "MiSans Thai/σÅ»σÅÿσ¡ùΣ╜ô/MiSans Thai VF.ttf",
+      "crc32": "7db44bea",
+      "sha256": "b103a1a4fb44194189576ad2180ce950dedccfafaeb148800edf8658c2f4865a"
+    },
+    {
+      "asset": "fonts/global/MiSansTibetanVF.ttf",
+      "url": "https://hyperos.mi.com/font-download/MiSans_Tibetan.zip",
+      "member": "MiSans Tibetan/σÅ»σÅÿσ¡ùΣ╜ô/MiSansTibetanVF.ttf",
+      "crc32": "c4ad2fd0",
+      "sha256": "3a2bf2fe1cdb17d2d44cd895fca0c34d0980125b95652a09a45c571b72146e15"
+    },
+    {
+      "asset": "fonts/global/MisansTC VF.ttf",
+      "url": "https://hyperos.mi.com/font-download/MiSans_TC.zip",
+      "member": "MiSans TC/σÅ»σÅÿσ¡ùΣ╜ô/MisansTC VF.ttf",
+      "crc32": "baa3e26b",
+      "sha256": "4236ee573cdc4fd7ef631e9b884fc112c8c2125824e3a4f3b47dc6c496e7467f"
+    },
+    {
+      "asset": "fonts/global/MiSans L3.ttf",
+      "url": "https://hyperos.mi.com/font-download/MiSans_L3.zip",
+      "member": "MiSans L3/MiSans L3.ttf",
+      "crc32": "763aa938",
+      "sha256": "710bc52d40d01d8846254a095780bec95e2f39382500939e4536e4a999bdd844"
+    }
+  ],
+  "coverage": {
+    "MiSans": {
+      "codepoints": 137902,
+      "scripts": 162,
+      "faces": 181
+    },
+    "Rubik": {
+      "codepoints": 79889,
+      "scripts": 162,
+      "faces": 168
+    },
+    "Noto Serif": {
+      "codepoints": 79916,
+      "scripts": 162,
+      "faces": 210
+    },
+    "Sarasa Fixed": {
+      "codepoints": 80921,
+      "scripts": 162,
+      "faces": 169
+    },
+    "Noto Sans": {
+      "codepoints": 79889,
+      "scripts": 162,
+      "faces": 168
+    }
+  }
+}

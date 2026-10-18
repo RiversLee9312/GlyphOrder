@@ -1,0 +1,18 @@
+GlyphOrder / 字序
+Copyright 2026 RiversLee9312 and GlyphOrder contributors
+
+Original project code and documentation are licensed under the Apache License,
+Version 2.0. Third-party libraries, fonts and artwork retain their own licenses;
+the project license does not supersede those terms.
+
+This application uses MiSans and MiSans Global, Copyright Xiaomi Inc. MiSans is
+distributed unchanged as application assets under the Xiaomi MiSans Font
+Intellectual Property License Agreement. It is not licensed under Apache-2.0
+or the SIL Open Font License.
+
+Noto, Rubik and Sarasa Fixed fonts retain their upstream copyright notices and
+the SIL Open Font License 1.1. Google Material Symbols Rounded are licensed
+under Apache-2.0; their path geometry was converted to Android vectors.
+
+See THIRD_PARTY_NOTICES.md, app/src/main/assets/licenses/ and
+app/src/main/assets/legal/ for the complete notices and license texts.

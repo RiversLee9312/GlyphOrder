@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">字序</string>
+    <string name="tab_fonts">Fonts</string>
+    <string name="tab_preview">Preview</string>
+    <string name="tab_apply">Apply</string>
+    <string name="title_fallback">Fallback fonts</string>
+    <string name="title_targets">Replacement scope</string>
+    <string name="accessibility_back">Back</string>
+    <string name="accessibility_import_font">Import fonts</string>
+    <string name="accessibility_inspect_device">Check device again</string>
+    <string name="accessibility_change_language">Change app language</string>
+    <string name="busy_processing">Working…</string>
+
+    <string name="dialog_install_title">Install font module?</string>
+    <string name="dialog_install_body">The changes take effect after a reboot. Disable the module in this app or Magisk, then reboot again to restore the system fonts.</string>
+    <string name="dialog_restore_title">Restore system fonts?</string>
+    <string name="dialog_restore_body">Disable the GlyphOrder font module. The system fonts will be restored after a reboot.</string>
+    <string name="dialog_reboot_title">Reboot now?</string>
+    <string name="dialog_reboot_body">The device will restart now.</string>
+    <string name="dialog_remove_title">Remove font?</string>
+    <string name="dialog_remove_body">This font and its related settings will be removed.</string>
+    <string name="action_install">Install</string>
+    <string name="action_reboot">Reboot</string>
+    <string name="action_disable">Disable</string>
+    <string name="action_remove">Remove</string>
+    <string name="action_cancel">Cancel</string>
+
+    <string name="primary_font">Primary font</string>
+    <string name="system_default">System default</string>
+    <string name="font_variable">Variable font</string>
+    <string name="font_static_weight">Static font · weight %1$s</string>
+    <string name="fallback_fonts">Fallback fonts</string>
+    <string name="fallback_summary">%1$s · %2$s</string>
+    <plurals name="script_count">
+        <item quantity="one">%1$d script</item>
+        <item quantity="other">%1$d scripts</item>
+    </plurals>
+    <plurals name="universal_fallback_count">
+        <item quantity="one">%1$d universal fallback</item>
+        <item quantity="other">%1$d universal fallbacks</item>
+    </plurals>
+    <string name="font_library">Font library</string>
+    <string name="action_import">Import</string>
+    <string name="font_library_empty">No fonts yet</string>
+    <string name="font_files_supported">Import .ttf or .otf font files</string>
+    <string name="action_choose_file">Choose files</string>
+    <string name="font_selected_primary">Selected as the primary font</string>
+    <string name="font_removed">Font removed</string>
+    <string name="preview_glyph_sample" translatable="false">Aa 字</string>
+    <string name="preview_glyphs_sample" translatable="false">Aa 文字 0123</string>
+    <string name="preview_cjk_sample" translatable="false">清风徐来，水波不兴。</string>
+    <string name="preview_latin_sample" translatable="false">The quick brown fox</string>
+
+    <string name="universal_fallback_title">Universal fallbacks</string>
+    <string name="universal_fallback_description">Tried in order when the system font is missing a glyph. Applies to all Unicode characters, including symbols and private-use characters.</string>
+    <string name="action_move_up">Move up</string>
+    <string name="action_move_down">Move down</string>
+    <string name="action_remove_fallback">Remove fallback</string>
+    <string name="action_add_font">Add font</string>
+    <string name="script_fallback_title">Fallback by script</string>
+    <string name="script_fallback_description">These choices take priority over the system fallback for the same script. Characters present in the primary font continue to use it.</string>
+    <string name="search_language_or_script">Search languages or scripts</string>
+    <string name="chip_all_scripts">All (%1$d)</string>
+    <string name="chip_configured_scripts">Configured (%1$d)</string>
+    <string name="no_matching_scripts">No matching scripts</string>
+    <string name="unspecified_script_note">Scripts without a manual selection use automatic fallback when enabled, then system fonts. Actual coverage depends on the font files.</string>
+    <string name="title_primary_font_picker">Primary font</string>
+    <string name="title_add_fallback_font">Add fallback font</string>
+    <string name="font_picker_empty">Import a font in the library first.</string>
+    <string name="font_variable_short">Variable</string>
+    <string name="font_static_short">Static</string>
+
+    <string name="font_axes_title">Variable axes</string>
+    <string name="font_axes_description">The system selects weight and italic style as needed. Other axes are saved with the module.</string>
+    <string name="font_axis_accessibility">Font axis %1$s</string>
+    <string name="action_reset_axes">Reset axis values</string>
+    <string name="font_static_weight_detail">Static font · weight %1$s</string>
+    <string name="action_set_primary_font">Set as primary font</string>
+    <string name="action_remove_font">Remove font</string>
+
+    <string name="preview_default_text">The quick brown fox jumps over the lazy dog.\nAa Bb Cc · The quick brown fox\n清风徐来，水波不兴。かな カナ 한글\n0123456789 · &amp; @ #\n🙂 🌏</string>
+    <string name="preview_language_zh_hans">简体中文</string>
+    <string name="preview_language_zh_hant">繁體中文</string>
+    <string name="preview_language_ja">日本語</string>
+    <string name="preview_language_ko">한국어</string>
+    <string name="preview_size">Text size</string>
+    <string name="preview_size_value">%1$s sp</string>
+    <string name="preview_weight">Font weight</string>
+    <string name="preview_text_label">Preview text</string>
+    <string name="preview_sample_mixed">Mixed</string>
+    <string name="preview_note">The preview uses your current fonts and fallback settings. Text layout can differ in other apps.</string>
+    <string name="targets_description">Choose the system font families to replace. Fallback settings apply to the system fallback chain.</string>
+
+    <string name="device_ready">Device ready</string>
+    <string name="device_check">Check device</string>
+    <string name="device_version">Android %1$s · Magisk %2$s</string>
+    <string name="device_current_family">%1$s · %2$s</string>
+    <string name="device_root_required">Reading the active font configuration requires root access.</string>
+    <string name="action_check">Check</string>
+    <string name="device_conflicts">Disable these conflicting modules and reboot: %1$s</string>
+    <string name="summary_primary_font">Primary font</string>
+    <string name="summary_fallback_fonts">Fallbacks</string>
+    <string name="action_replacement_scope">Replacement scope</string>
+    <string name="targets_not_selected">None selected</string>
+    <string name="apply_reboot_note">Reboot after installation. Disable the module and reboot again to restore the system fonts.</string>
+    <string name="action_regenerate_module">Regenerate module</string>
+    <string name="action_generate_module">Generate module</string>
+    <string name="module_generated">Module generated</string>
+    <string name="size_megabytes">%1$s MB</string>
+    <string name="size_kilobytes">%1$s KB</string>
+    <string name="action_save_zip">Save ZIP</string>
+    <string name="device_waiting_reboot">Waiting for reboot</string>
+    <string name="action_reboot_device">Reboot device</string>
+    <string name="action_restore_system_fonts">Restore system fonts</string>
+    <string name="module_disabled">Module disabled</string>
+    <string name="action_collapse_log">Hide log</string>
+    <string name="action_view_log">View log</string>
+    <string name="recovery_instructions">Recovery command:
+%1$s
+Then reboot the device.</string>
+    <string name="recovery_shell_command" translatable="false">su -c \'touch /data/adb/modules/glyphorder_fonts/disable\'</string>
+    <string name="module_build_log">Validated font files, XML, and the original configuration.
+%1$s</string>
+
+    <plurals name="notice_imported_fonts"><item quantity="one">Imported %1$d font</item><item quantity="other">Imported %1$d fonts</item></plurals>
+    <string name="notice_device_checked">Device check complete</string>
+    <string name="notice_install_complete">Installation complete. Reboot to apply the changes.</string>
+    <string name="notice_module_disabled">Module disabled. Reboot to restore the system fonts.</string>
+    <string name="notice_module_saved">Module saved</string>
+    <string name="error_operation_failed">The operation could not be completed.</string>
+
+    <string name="error_font_extension">Choose a .ttf or .otf font file.</string>
+    <string name="error_font_too_large">The font file exceeds 128 MB.</string>
+    <string name="error_file_read">The file could not be read.</string>
+    <string name="error_font_save">The font could not be saved.</string>
+    <string name="error_font_remove">The font could not be removed.</string>
+    <string name="error_font_size_invalid">The font file size is invalid. The maximum size is 128 MB.</string>
+    <string name="error_font_single_face">Choose one .ttf or .otf font file. Font collections are not supported.</string>
+    <string name="error_font_data_invalid">The font file is damaged or unsupported.</string>
+    <string name="error_root_permission">Root access was not granted. Try again. If you denied the request, allow GlyphOrder in Magisk\'s superuser settings.</string>
+    <string name="error_system_updated">The system has been updated. Disable the module, reboot, and check again.</string>
+    <string name="error_selinux_label_missing">The SELinux label for the font configuration could not be read.</string>
+    <string name="error_selinux_label_unsupported">This SELinux label is not supported.</string>
+    <string name="error_font_config_conflict">Another module changed the font configuration. Disable the conflicting module and reboot.</string>
+    <string name="error_system_font_config_missing">The system font configuration was not found.</string>
+    <string name="error_android15_config_missing">The Android 15 or later font configuration was not found. This system version is not supported.</string>
+    <string name="error_module_not_installed">No installed module was found.</string>
+    <string name="error_xml_declaration">The configuration contains an unsupported XML declaration.</string>
+    <string name="error_font_config_format">The font configuration format is not recognized.</string>
+    <string name="error_language_script_unsupported">This language or script is not supported.</string>
+    <string name="error_fallback_font_removed">A selected fallback font was removed.</string>
+    <string name="error_universal_font_removed">A selected universal fallback font was removed.</string>
+    <string name="error_emoji_config_validation">Emoji configuration validation failed.</string>
+    <string name="error_select_font">Choose at least one font first.</string>
+    <string name="error_conflicting_modules">Disable conflicting font modules and reboot: %1$s</string>
+    <string name="error_select_existing_family">Choose a font family available on this device.</string>
+    <string name="error_selected_font_removed">A selected font was removed.</string>
+    <string name="error_total_fonts_large">The selected fonts exceed 384 MB in total.</string>
+    <string name="error_font_integrity">Font file verification failed.</string>
+    <string name="error_device_changed">The system version changed. Generate the module again.</string>
+    <string name="error_conflict_detected">A conflicting font module was detected.</string>
+    <string name="error_config_changed">The font configuration changed. Generate the module again.</string>
+    <string name="error_module_integrity">Module file verification failed.</string>
+    <string name="error_magisk_module_missing">Magisk did not create the module directory.</string>
+    <string name="error_installed_module_integrity">Installed module verification failed.</string>
+    <string name="error_root_command">Root command failed (code %1$s): %2$s</string>
+    <string name="error_module_not_generated">Generate a module first.</string>
+    <string name="error_module_save">The module could not be saved.</string>
+
+    <string name="module_display_name">GlyphOrder · Fonts</string>
+    <string name="module_description">Custom fonts and Unicode fallbacks. Disable the module and reboot to restore the system fonts.</string>
+    <string name="module_install_print">Font module installed. Reboot to apply the changes.</string>
+    <string name="module_error_android_version">Requires Android 14 or newer</string>
+    <string name="module_error_device_changed">Device build changed. Regenerate the module.</string>
+    <string name="recovery_file_title">Disable the GlyphOrder font module and reboot to restore the system fonts.</string>
+    <string name="recovery_file_adb">ADB root shell command: touch /data/adb/modules/%1$s/disable</string>
+    <string name="recovery_file_update">If an update is staged, also create /data/adb/modules_update/%1$s/disable.</string>
+    <string name="recovery_file_do_not_edit">Do not delete or modify system font files.</string>
+    <string name="font_builtin">Built-in</string>
+    <string name="action_view_license">View license</string>
+    <string name="automatic_fallback_summary">Primary → Family supplements → System</string>
+    <string name="automatic_fallback_description">Enabled by default. Uses the primary, your script choices, matching family supplements, shared Noto fonts and system fallbacks. Keeps system emoji and checks the family limit.</string>
+    <string name="error_font_family_limit">Font fallback chain %2$s in %1$s needs %3$s families; the system limit is %4$s. Reduce fallback fonts or choose a smaller preset. Generation and installation are blocked to prevent a boot loop.</string>
+    <string name="action_apply_global">Apply globally</string>
+    <string name="scope_global">All system font families</string>
+    <string name="global_scope_description">Generate and install for all system font families, with automatic fallback optimization and system emoji preserved. Reboot to apply. Apps with their own fonts may differ.</string>
+    <string name="automatic_fallback_title">Automatic missing-glyph fallback</string>
+    <string name="action_reset_fallbacks">Restore default fallbacks</string>
+    <string name="application_mode">Application mode</string>
+    <string name="mode_single">Single font</string>
+    <string name="mode_styles">Mix by style</string>
+    <string name="style_sans">Sans serif</string>
+    <string name="style_serif">Serif</string>
+    <string name="style_mono">Monospace</string>
+    <string name="style_google">Google Sans / clocks</string>
+    <string name="style_other">Other families</string>
+    <string name="style_mix_description">Choose a font for each style. System default preserves that style.</string>
+    <string name="style_unavailable">No matching family on this device</string>
+    <string name="action_apply_configured">Apply configuration</string>
+    <string name="apply_configured_description">Detect, generate and install the selected fonts and scope. Reboot to activate.</string>
+    <string name="style_casual">Casual</string>
+    <string name="style_cursive">Cursive</string>
+    <string name="title_about">About</string>
+    <string name="about_description">System fonts with Magisk. Choose and mix fonts by style.</string>
+    <string name="title_open_source">Open-source licenses</string>
+    <string name="title_privacy">Privacy</string>
+    <string name="privacy_summary">Fonts and settings stay on your device.</string>
+    <string name="action_source_code">Source code</string>
+    <string name="license_scope">Project code uses Apache-2.0. Fonts and libraries retain their own licenses.</string>
+    <string name="title_notices">Third-party notices</string>
+    <string name="title_font_licenses">Font licenses</string>
+    <string name="misans_notice">This app uses MiSans / MiSans Global under Xiaomi’s license. The fonts are unmodified and are not licensed under Apache-2.0 or SIL OFL.</string>
+    <string name="title_software_licenses">Software libraries</string>
+</resources>

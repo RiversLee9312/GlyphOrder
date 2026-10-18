@@ -1,0 +1,12 @@
+<resources>
+    <style name="Theme.GlyphOrder" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowBackground">#F7FAF5</item>
+    </style>
+    <color name="icon_background">#E4EFDD</color>
+</resources>

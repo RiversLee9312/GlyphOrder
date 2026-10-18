@@ -1,0 +1,10 @@
+.gradle/
+.kotlin/
+__pycache__/
+*.py[cod]
+**/build/
+local.properties
+*.iml
+.idea/
+device-baseline/
+artifacts/
