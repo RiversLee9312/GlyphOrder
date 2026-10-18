@@ -102,7 +102,7 @@ fun GlyphApp(vm: AppViewModel) {
         // Request su only once the activity is visibly resumed and library loading has finished.
         lifecycle.currentStateFlow.first { it == Lifecycle.State.RESUMED }
         vm.state.first { !it.busy }
-        if (vm.state.value.device == null) vm.inspect()
+        if (vm.state.value.device == null) vm.inspect(announce = false)
     }
     val import = rememberLauncherForActivityResult(ActivityResultContracts.OpenMultipleDocuments()) { if (it.isNotEmpty()) vm.import(it) }
     val export = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("application/zip")) { if (it != null) vm.export(it) }

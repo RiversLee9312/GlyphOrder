@@ -115,9 +115,10 @@ class AppViewModel(application: Application) : AndroidViewModel(application) {
             styleFonts = plan.styleFonts.filterValues { it != font.id })
         store.save(next); copy(fonts = store.all(), plan = next, module = null, message = getApplication<Application>().getString(R.string.font_removed))
     }
-    fun inspect() = operation {
+    fun inspect() = inspect(announce = true)
+    fun inspect(announce: Boolean) = operation {
         val snapshot = devices.inspect()
-        copy(device = snapshot, message = getApplication<Application>().getString(R.string.notice_device_checked), installedNow = status.getString("pendingBoot", null) == snapshot.bootId,
+        copy(device = snapshot, message = if (announce) getApplication<Application>().getString(R.string.notice_device_checked) else null, installedNow = status.getString("pendingBoot", null) == snapshot.bootId,
             recoveryAvailable = (snapshot.installed || snapshot.pending) && !snapshot.disabled)
     }
     fun build() = operation {
