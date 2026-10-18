@@ -184,14 +184,12 @@
     <string name="style_casual">Ledig · Casual</string>
     <string name="style_cursive">Handskrift · Cursive</string>
     <string name="title_about">Om</string>
-    <string name="about_description">Hantera systemtypsnitt med Magisk och kombinera dem efter stil.</string>
-    <string name="title_open_source">Licenser för öppen källkod</string>
+    <string name="title_open_source">Licenser och meddelanden</string>
     <string name="title_privacy">Integritet</string>
-    <string name="privacy_summary">Typsnitt och inställningar finns kvar på din enhet.</string>
     <string name="action_source_code">Källkod</string>
-    <string name="license_scope">Projektkoden använder Apache-2.0. Typsnitt och bibliotek behåller sina egna licenser.</string>
     <string name="title_notices">Tredjepartsmeddelanden</string>
     <string name="title_font_licenses">Typsnittslicenser</string>
-    <string name="misans_notice">Appen använder MiSans / MiSans Global under Xiaomis licens. Typsnitten är oförändrade och omfattas inte av Apache-2.0 eller SIL OFL.</string>
+    <string name="misans_notice">Xiaomis typsnittslicens</string>
     <string name="title_software_licenses">Programbibliotek</string>
+    <string name="title_artwork_licenses">Ikoner</string>
 </resources>

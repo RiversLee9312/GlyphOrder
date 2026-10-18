@@ -184,14 +184,12 @@
     <string name="style_casual">Santai · Casual</string>
     <string name="style_cursive">Tulisan tangan · Cursive</string>
     <string name="title_about">Tentang</string>
-    <string name="about_description">Kelola font sistem dengan Magisk dan padukan menurut gaya.</string>
-    <string name="title_open_source">Lisensi sumber terbuka</string>
+    <string name="title_open_source">Lisensi dan pemberitahuan</string>
     <string name="title_privacy">Privasi</string>
-    <string name="privacy_summary">Font dan setelan tetap di perangkat Anda.</string>
     <string name="action_source_code">Kode sumber</string>
-    <string name="license_scope">Kode proyek menggunakan Apache-2.0. Font dan pustaka mempertahankan lisensinya masing-masing.</string>
     <string name="title_notices">Pemberitahuan pihak ketiga</string>
     <string name="title_font_licenses">Lisensi font</string>
-    <string name="misans_notice">Aplikasi ini menggunakan MiSans / MiSans Global dengan lisensi Xiaomi. Font tidak dimodifikasi dan tidak menggunakan Apache-2.0 atau SIL OFL.</string>
+    <string name="misans_notice">Lisensi font Xiaomi</string>
     <string name="title_software_licenses">Pustaka perangkat lunak</string>
+    <string name="title_artwork_licenses">Ikon</string>
 </resources>

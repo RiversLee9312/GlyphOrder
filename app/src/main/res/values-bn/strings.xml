@@ -184,14 +184,12 @@
     <string name="style_casual">অনানুষ্ঠানিক · Casual</string>
     <string name="style_cursive">হাতের লেখা · Cursive</string>
     <string name="title_about">পরিচিতি</string>
-    <string name="about_description">Magisk দিয়ে সিস্টেম ফন্ট পরিচালনা করুন এবং শৈলী অনুযায়ী মেশান।</string>
-    <string name="title_open_source">ওপেন সোর্স লাইসেন্স</string>
+    <string name="title_open_source">লাইসেন্স ও বিজ্ঞপ্তি</string>
     <string name="title_privacy">গোপনীয়তা</string>
-    <string name="privacy_summary">ফন্ট ও সেটিংস আপনার ডিভাইসেই থাকে।</string>
     <string name="action_source_code">সোর্স কোড</string>
-    <string name="license_scope">প্রকল্পের কোড Apache-2.0-এর অধীনে। ফন্ট ও লাইব্রেরি নিজস্ব লাইসেন্স বজায় রাখে।</string>
     <string name="title_notices">তৃতীয় পক্ষের বিজ্ঞপ্তি</string>
     <string name="title_font_licenses">ফন্ট লাইসেন্স</string>
-    <string name="misans_notice">এই অ্যাপ Xiaomi-এর লাইসেন্সে MiSans / MiSans Global ব্যবহার করে। ফন্ট অপরিবর্তিত এবং Apache-2.0 বা SIL OFL-এর অধীনে নয়।</string>
+    <string name="misans_notice">Xiaomi ফন্ট লাইসেন্স</string>
     <string name="title_software_licenses">সফটওয়্যার লাইব্রেরি</string>
+    <string name="title_artwork_licenses">আইকন</string>
 </resources>

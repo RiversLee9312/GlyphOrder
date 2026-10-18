@@ -178,14 +178,12 @@
     <string name="style_casual">अनौपचारिक · Casual</string>
     <string name="style_cursive">हस्तलिखित · Cursive</string>
     <string name="title_about">परिचय</string>
-    <string name="about_description">Magisk से सिस्टम फ़ॉन्ट प्रबंधित करें और शैली के अनुसार मिलाएँ।</string>
-    <string name="title_open_source">ओपन सोर्स लाइसेंस</string>
+    <string name="title_open_source">लाइसेंस और सूचनाएँ</string>
     <string name="title_privacy">गोपनीयता</string>
-    <string name="privacy_summary">फ़ॉन्ट और सेटिंग आपके डिवाइस पर रहते हैं।</string>
     <string name="action_source_code">स्रोत कोड</string>
-    <string name="license_scope">प्रोजेक्ट का कोड Apache-2.0 के तहत है। फ़ॉन्ट और लाइब्रेरी अपने लाइसेंस बनाए रखते हैं।</string>
     <string name="title_notices">तृतीय-पक्ष सूचनाएँ</string>
     <string name="title_font_licenses">फ़ॉन्ट लाइसेंस</string>
-    <string name="misans_notice">यह ऐप Xiaomi के लाइसेंस के तहत MiSans / MiSans Global का उपयोग करता है। फ़ॉन्ट अपरिवर्तित हैं और Apache-2.0 या SIL OFL के तहत नहीं हैं।</string>
+    <string name="misans_notice">Xiaomi फ़ॉन्ट लाइसेंस</string>
     <string name="title_software_licenses">सॉफ़्टवेयर लाइब्रेरी</string>
+    <string name="title_artwork_licenses">आइकन</string>
 </resources>

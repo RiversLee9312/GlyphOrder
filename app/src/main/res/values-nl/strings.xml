@@ -184,14 +184,12 @@
     <string name="style_casual">Informeel · Casual</string>
     <string name="style_cursive">Schrijfletter · Cursive</string>
     <string name="title_about">Over</string>
-    <string name="about_description">Beheer systeemlettertypen met Magisk en combineer ze per stijl.</string>
-    <string name="title_open_source">Opensourcelicenties</string>
+    <string name="title_open_source">Licenties en vermeldingen</string>
     <string name="title_privacy">Privacy</string>
-    <string name="privacy_summary">Lettertypen en instellingen blijven op uw apparaat.</string>
     <string name="action_source_code">Broncode</string>
-    <string name="license_scope">De projectcode gebruikt Apache-2.0. Lettertypen en bibliotheken behouden hun eigen licenties.</string>
     <string name="title_notices">Vermeldingen van derden</string>
     <string name="title_font_licenses">Lettertypelicenties</string>
-    <string name="misans_notice">Deze app gebruikt MiSans / MiSans Global onder de Xiaomi-licentie. De lettertypen zijn ongewijzigd en vallen niet onder Apache-2.0 of SIL OFL.</string>
+    <string name="misans_notice">Xiaomi-lettertypelicentie</string>
     <string name="title_software_licenses">Softwarebibliotheken</string>
+    <string name="title_artwork_licenses">Pictogrammen</string>
 </resources>

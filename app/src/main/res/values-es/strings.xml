@@ -181,14 +181,12 @@ Después, reinicia el dispositivo.</string>
     <string name="style_casual">Informal · Casual</string>
     <string name="style_cursive">Cursiva · Cursive</string>
     <string name="title_about">Acerca de</string>
-    <string name="about_description">Gestiona las fuentes del sistema con Magisk y combínalas por estilo.</string>
-    <string name="title_open_source">Licencias de código abierto</string>
+    <string name="title_open_source">Licencias y avisos</string>
     <string name="title_privacy">Privacidad</string>
-    <string name="privacy_summary">Las fuentes y los ajustes permanecen en tu dispositivo.</string>
     <string name="action_source_code">Código fuente</string>
-    <string name="license_scope">El código del proyecto usa Apache-2.0. Las fuentes y bibliotecas conservan sus propias licencias.</string>
     <string name="title_notices">Avisos de terceros</string>
     <string name="title_font_licenses">Licencias de fuentes</string>
-    <string name="misans_notice">Esta aplicación usa MiSans / MiSans Global bajo licencia de Xiaomi. Las fuentes no se han modificado y no usan Apache-2.0 ni SIL OFL.</string>
+    <string name="misans_notice">Licencia de fuentes Xiaomi</string>
     <string name="title_software_licenses">Bibliotecas de software</string>
+    <string name="title_artwork_licenses">Iconos</string>
 </resources>

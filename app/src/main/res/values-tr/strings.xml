@@ -184,14 +184,12 @@
     <string name="style_casual">Gündelik · Casual</string>
     <string name="style_cursive">El yazısı · Cursive</string>
     <string name="title_about">Hakkında</string>
-    <string name="about_description">Magisk ile sistem yazı tiplerini yönetin ve stile göre birleştirin.</string>
-    <string name="title_open_source">Açık kaynak lisansları</string>
+    <string name="title_open_source">Lisanslar ve bildirimler</string>
     <string name="title_privacy">Gizlilik</string>
-    <string name="privacy_summary">Yazı tipleri ve ayarlar cihazınızda kalır.</string>
     <string name="action_source_code">Kaynak kodu</string>
-    <string name="license_scope">Proje kodu Apache-2.0 lisanslıdır. Yazı tipleri ve kitaplıklar kendi lisanslarını korur.</string>
     <string name="title_notices">Üçüncü taraf bildirimleri</string>
     <string name="title_font_licenses">Yazı tipi lisansları</string>
-    <string name="misans_notice">Bu uygulama Xiaomi lisansı altında MiSans / MiSans Global kullanır. Yazı tipleri değiştirilmemiştir ve Apache-2.0 veya SIL OFL kapsamında değildir.</string>
+    <string name="misans_notice">Xiaomi yazı tipi lisansı</string>
     <string name="title_software_licenses">Yazılım kitaplıkları</string>
+    <string name="title_artwork_licenses">Simgeler</string>
 </resources>

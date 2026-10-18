@@ -178,14 +178,12 @@
     <string name="style_casual">عفوي · Casual</string>
     <string name="style_cursive">يدوي · Cursive</string>
     <string name="title_about">حول</string>
-    <string name="about_description">إدارة خطوط النظام باستخدام Magisk ومزجها حسب النمط.</string>
-    <string name="title_open_source">تراخيص المصادر المفتوحة</string>
+    <string name="title_open_source">التراخيص والإشعارات</string>
     <string name="title_privacy">الخصوصية</string>
-    <string name="privacy_summary">تبقى الخطوط والإعدادات على جهازك.</string>
     <string name="action_source_code">الشيفرة المصدرية</string>
-    <string name="license_scope">شيفرة المشروع مرخصة بموجب Apache-2.0. تحتفظ الخطوط والمكتبات بتراخيصها الخاصة.</string>
     <string name="title_notices">إشعارات الجهات الخارجية</string>
     <string name="title_font_licenses">تراخيص الخطوط</string>
-    <string name="misans_notice">يستخدم هذا التطبيق MiSans / MiSans Global بموجب ترخيص Xiaomi. الخطوط غير معدلة ولا تخضع لترخيص Apache-2.0 أو SIL OFL.</string>
+    <string name="misans_notice">ترخيص خطوط Xiaomi</string>
     <string name="title_software_licenses">مكتبات البرامج</string>
+    <string name="title_artwork_licenses">الأيقونات</string>
 </resources>

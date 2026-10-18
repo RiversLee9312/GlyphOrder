@@ -184,14 +184,12 @@
     <string name="style_casual">Thân mật · Casual</string>
     <string name="style_cursive">Viết tay · Cursive</string>
     <string name="title_about">Giới thiệu</string>
-    <string name="about_description">Quản lý phông hệ thống bằng Magisk và kết hợp theo kiểu.</string>
-    <string name="title_open_source">Giấy phép nguồn mở</string>
+    <string name="title_open_source">Giấy phép và thông báo</string>
     <string name="title_privacy">Quyền riêng tư</string>
-    <string name="privacy_summary">Phông chữ và cài đặt được lưu trên thiết bị.</string>
     <string name="action_source_code">Mã nguồn</string>
-    <string name="license_scope">Mã dự án dùng Apache-2.0. Phông chữ và thư viện giữ giấy phép riêng.</string>
     <string name="title_notices">Thông báo bên thứ ba</string>
     <string name="title_font_licenses">Giấy phép phông chữ</string>
-    <string name="misans_notice">Ứng dụng dùng MiSans / MiSans Global theo giấy phép Xiaomi. Phông không bị sửa đổi và không dùng Apache-2.0 hay SIL OFL.</string>
+    <string name="misans_notice">Giấy phép phông Xiaomi</string>
     <string name="title_software_licenses">Thư viện phần mềm</string>
+    <string name="title_artwork_licenses">Biểu tượng</string>
 </resources>

@@ -86,7 +86,7 @@ su -c '[ ! -d /data/adb/modules_update/glyphorder_fonts ] || touch /data/adb/mod
 - **MiSans / MiSans Global：小米专有字体许可协议，属于免费商用字体，不是开源字体。** 作为本应用的原样字体资源提供；不得因本项目开源而将其改为 Apache-2.0 或 OFL，不得修改字体或作为独立字体包再分发。原始协议 PDF 和可读文本随应用保留。
 - AndroidX、Kotlin、libsu、Material Symbols 等：保留上游 Apache-2.0 条款与声明。
 
-完整组件、版本、原始声明和字体协议见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)，也可在应用顶部“关于”→“开源许可”离线查看。项目许可证不授予第三方字体、商标或其他作品的额外权利。
+完整组件、版本、原始声明和字体协议见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)，也可在应用顶部“关于”→“许可与声明”离线查看。项目许可证不授予第三方字体、商标或其他作品的额外权利。
 
 ## 贡献
 

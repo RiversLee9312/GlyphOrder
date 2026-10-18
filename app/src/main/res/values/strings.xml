@@ -202,14 +202,12 @@ Then reboot the device.</string>
     <string name="style_casual">Casual</string>
     <string name="style_cursive">Cursive</string>
     <string name="title_about">About</string>
-    <string name="about_description">System fonts with Magisk. Choose and mix fonts by style.</string>
-    <string name="title_open_source">Open-source licenses</string>
+    <string name="title_open_source">Licenses and notices</string>
     <string name="title_privacy">Privacy</string>
-    <string name="privacy_summary">Fonts and settings stay on your device.</string>
     <string name="action_source_code">Source code</string>
-    <string name="license_scope">Project code uses Apache-2.0. Fonts and libraries retain their own licenses.</string>
     <string name="title_notices">Third-party notices</string>
     <string name="title_font_licenses">Font licenses</string>
-    <string name="misans_notice">This app uses MiSans / MiSans Global under Xiaomi’s license. The fonts are unmodified and are not licensed under Apache-2.0 or SIL OFL.</string>
+    <string name="misans_notice">Xiaomi font license</string>
     <string name="title_software_licenses">Software libraries</string>
+    <string name="title_artwork_licenses">Artwork</string>
 </resources>

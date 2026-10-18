@@ -184,14 +184,12 @@
     <string name="style_casual">غیررسمی · Casual</string>
     <string name="style_cursive">دست‌نویس · Cursive</string>
     <string name="title_about">درباره</string>
-    <string name="about_description">مدیریت قلم‌های سیستم با Magisk و ترکیب آن‌ها بر اساس سبک.</string>
-    <string name="title_open_source">مجوزهای متن‌باز</string>
+    <string name="title_open_source">مجوزها و اعلان‌ها</string>
     <string name="title_privacy">حریم خصوصی</string>
-    <string name="privacy_summary">قلم‌ها و تنظیمات در دستگاه شما می‌مانند.</string>
     <string name="action_source_code">کد منبع</string>
-    <string name="license_scope">کد پروژه تحت Apache-2.0 است. قلم‌ها و کتابخانه‌ها مجوزهای خود را حفظ می‌کنند.</string>
     <string name="title_notices">اعلان‌های شخص ثالث</string>
     <string name="title_font_licenses">مجوزهای قلم</string>
-    <string name="misans_notice">این برنامه از MiSans / MiSans Global با مجوز Xiaomi استفاده می‌کند. قلم‌ها بدون تغییر هستند و تحت Apache-2.0 یا SIL OFL نیستند.</string>
+    <string name="misans_notice">مجوز قلم Xiaomi</string>
     <string name="title_software_licenses">کتابخانه‌های نرم‌افزار</string>
+    <string name="title_artwork_licenses">نمادها</string>
 </resources>

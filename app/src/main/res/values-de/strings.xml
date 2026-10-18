@@ -181,14 +181,12 @@ Starte anschließend das Gerät neu.</string>
     <string name="style_casual">Locker · Casual</string>
     <string name="style_cursive">Schreibschrift · Cursive</string>
     <string name="title_about">Über</string>
-    <string name="about_description">Systemschriften mit Magisk verwalten und nach Stil kombinieren.</string>
-    <string name="title_open_source">Open-Source-Lizenzen</string>
+    <string name="title_open_source">Lizenzen und Hinweise</string>
     <string name="title_privacy">Datenschutz</string>
-    <string name="privacy_summary">Schriften und Einstellungen bleiben auf Ihrem Gerät.</string>
     <string name="action_source_code">Quellcode</string>
-    <string name="license_scope">Der Projektcode steht unter Apache-2.0. Schriften und Bibliotheken behalten ihre eigenen Lizenzen.</string>
     <string name="title_notices">Drittanbieterhinweise</string>
     <string name="title_font_licenses">Schriftlizenzen</string>
-    <string name="misans_notice">Diese App verwendet MiSans / MiSans Global unter Xiaomis Lizenz. Die Schriften sind unverändert und stehen nicht unter Apache-2.0 oder SIL OFL.</string>
+    <string name="misans_notice">Xiaomi-Schriftlizenz</string>
     <string name="title_software_licenses">Softwarebibliotheken</string>
+    <string name="title_artwork_licenses">Symbole</string>
 </resources>

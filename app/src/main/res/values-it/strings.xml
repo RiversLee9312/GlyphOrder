@@ -184,14 +184,12 @@
     <string name="style_casual">Informale · Casual</string>
     <string name="style_cursive">Corsivo · Cursive</string>
     <string name="title_about">Informazioni</string>
-    <string name="about_description">Gestisci i caratteri di sistema con Magisk e combinali per stile.</string>
-    <string name="title_open_source">Licenze open source</string>
+    <string name="title_open_source">Licenze e avvisi</string>
     <string name="title_privacy">Privacy</string>
-    <string name="privacy_summary">I caratteri e le impostazioni restano sul dispositivo.</string>
     <string name="action_source_code">Codice sorgente</string>
-    <string name="license_scope">Il codice del progetto usa Apache-2.0. Caratteri e librerie conservano le proprie licenze.</string>
     <string name="title_notices">Avvisi di terze parti</string>
     <string name="title_font_licenses">Licenze dei caratteri</string>
-    <string name="misans_notice">Questa app usa MiSans / MiSans Global con licenza Xiaomi. I caratteri non sono modificati e non sono sotto Apache-2.0 o SIL OFL.</string>
+    <string name="misans_notice">Licenza dei caratteri Xiaomi</string>
     <string name="title_software_licenses">Librerie software</string>
+    <string name="title_artwork_licenses">Icone</string>
 </resources>

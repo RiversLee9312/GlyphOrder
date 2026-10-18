@@ -184,14 +184,12 @@
     <string name="style_casual">แบบสบาย · Casual</string>
     <string name="style_cursive">ลายมือ · Cursive</string>
     <string name="title_about">เกี่ยวกับ</string>
-    <string name="about_description">จัดการแบบอักษรระบบด้วย Magisk และผสมตามสไตล์</string>
-    <string name="title_open_source">สัญญาอนุญาตโอเพนซอร์ส</string>
+    <string name="title_open_source">สัญญาอนุญาตและประกาศ</string>
     <string name="title_privacy">ความเป็นส่วนตัว</string>
-    <string name="privacy_summary">แบบอักษรและการตั้งค่าอยู่ในอุปกรณ์ของคุณ</string>
     <string name="action_source_code">ซอร์สโค้ด</string>
-    <string name="license_scope">โค้ดโครงการใช้ Apache-2.0 แบบอักษรและไลบรารีคงสัญญาอนุญาตของตนเอง</string>
     <string name="title_notices">ประกาศของบุคคลที่สาม</string>
     <string name="title_font_licenses">สัญญาอนุญาตแบบอักษร</string>
-    <string name="misans_notice">แอปนี้ใช้ MiSans / MiSans Global ภายใต้สัญญาอนุญาต Xiaomi แบบอักษรไม่มีการแก้ไขและไม่ได้ใช้ Apache-2.0 หรือ SIL OFL</string>
+    <string name="misans_notice">สัญญาอนุญาตแบบอักษร Xiaomi</string>
     <string name="title_software_licenses">ไลบรารีซอฟต์แวร์</string>
+    <string name="title_artwork_licenses">ไอคอน</string>
 </resources>

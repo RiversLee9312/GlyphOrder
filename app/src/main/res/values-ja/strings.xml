@@ -181,14 +181,12 @@
     <string name="style_casual">カジュアル · Casual</string>
     <string name="style_cursive">筆記体 · Cursive</string>
     <string name="title_about">このアプリについて</string>
-    <string name="about_description">Magisk でシステムフォントを管理し、スタイル別に組み合わせます。</string>
-    <string name="title_open_source">オープンソースライセンス</string>
+    <string name="title_open_source">ライセンスと通知</string>
     <string name="title_privacy">プライバシー</string>
-    <string name="privacy_summary">フォントと設定は端末内に保存されます。</string>
     <string name="action_source_code">ソースコード</string>
-    <string name="license_scope">プロジェクトのコードは Apache-2.0 です。フォントとライブラリには個別のライセンスが適用されます。</string>
     <string name="title_notices">第三者の通知</string>
     <string name="title_font_licenses">フォントのライセンス</string>
-    <string name="misans_notice">本アプリは Xiaomi のライセンスで MiSans / MiSans Global を使用します。フォントは未変更で、Apache-2.0 や SIL OFL の対象ではありません。</string>
+    <string name="misans_notice">Xiaomi フォントライセンス</string>
     <string name="title_software_licenses">ソフトウェアライブラリ</string>
+    <string name="title_artwork_licenses">アイコン</string>
 </resources>

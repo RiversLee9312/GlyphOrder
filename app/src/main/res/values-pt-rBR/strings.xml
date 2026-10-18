@@ -178,14 +178,12 @@
     <string name="style_casual">Informal · Casual</string>
     <string name="style_cursive">Manuscrita · Cursive</string>
     <string name="title_about">Sobre</string>
-    <string name="about_description">Gerencie fontes do sistema com Magisk e combine-as por estilo.</string>
-    <string name="title_open_source">Licenças de código aberto</string>
+    <string name="title_open_source">Licenças e avisos</string>
     <string name="title_privacy">Privacidade</string>
-    <string name="privacy_summary">As fontes e configurações ficam no seu dispositivo.</string>
     <string name="action_source_code">Código-fonte</string>
-    <string name="license_scope">O código do projeto usa Apache-2.0. Fontes e bibliotecas mantêm suas próprias licenças.</string>
     <string name="title_notices">Avisos de terceiros</string>
     <string name="title_font_licenses">Licenças das fontes</string>
-    <string name="misans_notice">Este aplicativo usa MiSans / MiSans Global sob licença da Xiaomi. As fontes não foram modificadas e não usam Apache-2.0 ou SIL OFL.</string>
+    <string name="misans_notice">Licença de fontes Xiaomi</string>
     <string name="title_software_licenses">Bibliotecas de software</string>
+    <string name="title_artwork_licenses">Ícones</string>
 </resources>

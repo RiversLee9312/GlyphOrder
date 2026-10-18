@@ -178,14 +178,12 @@
     <string name="style_casual">Swobodna · Casual</string>
     <string name="style_cursive">Odręczna · Cursive</string>
     <string name="title_about">Informacje</string>
-    <string name="about_description">Zarządzaj czcionkami systemowymi przez Magisk i łącz je według stylu.</string>
-    <string name="title_open_source">Licencje open source</string>
+    <string name="title_open_source">Licencje i informacje</string>
     <string name="title_privacy">Prywatność</string>
-    <string name="privacy_summary">Czcionki i ustawienia pozostają na urządzeniu.</string>
     <string name="action_source_code">Kod źródłowy</string>
-    <string name="license_scope">Kod projektu korzysta z Apache-2.0. Czcionki i biblioteki zachowują własne licencje.</string>
     <string name="title_notices">Informacje o podmiotach trzecich</string>
     <string name="title_font_licenses">Licencje czcionek</string>
-    <string name="misans_notice">Aplikacja używa MiSans / MiSans Global na licencji Xiaomi. Czcionki są niezmienione i nie podlegają Apache-2.0 ani SIL OFL.</string>
+    <string name="misans_notice">Licencja czcionek Xiaomi</string>
     <string name="title_software_licenses">Biblioteki oprogramowania</string>
+    <string name="title_artwork_licenses">Ikony</string>
 </resources>

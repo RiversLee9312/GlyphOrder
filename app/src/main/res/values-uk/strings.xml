@@ -178,14 +178,12 @@
     <string name="style_casual">Неформальний · Casual</string>
     <string name="style_cursive">Рукописний · Cursive</string>
     <string name="title_about">Про застосунок</string>
-    <string name="about_description">Керуйте системними шрифтами через Magisk і поєднуйте їх за стилями.</string>
-    <string name="title_open_source">Ліцензії відкритого ПЗ</string>
+    <string name="title_open_source">Ліцензії та повідомлення</string>
     <string name="title_privacy">Конфіденційність</string>
-    <string name="privacy_summary">Шрифти й налаштування зберігаються на вашому пристрої.</string>
     <string name="action_source_code">Вихідний код</string>
-    <string name="license_scope">Код проєкту поширюється за Apache-2.0. Шрифти й бібліотеки зберігають власні ліцензії.</string>
     <string name="title_notices">Повідомлення третіх сторін</string>
     <string name="title_font_licenses">Ліцензії шрифтів</string>
-    <string name="misans_notice">Застосунок використовує MiSans / MiSans Global за ліцензією Xiaomi. Шрифти не змінено, на них не поширюються Apache-2.0 або SIL OFL.</string>
+    <string name="misans_notice">Ліцензія шрифтів Xiaomi</string>
     <string name="title_software_licenses">Програмні бібліотеки</string>
+    <string name="title_artwork_licenses">Піктограми</string>
 </resources>

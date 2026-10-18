@@ -181,14 +181,12 @@
     <string name="style_casual">休閒 · Casual</string>
     <string name="style_cursive">手寫 · Cursive</string>
     <string name="title_about">關於</string>
-    <string name="about_description">透過 Magisk 管理系統字型，依風格選擇與混搭。</string>
-    <string name="title_open_source">開放原始碼授權</string>
+    <string name="title_open_source">授權與聲明</string>
     <string name="title_privacy">隱私說明</string>
-    <string name="privacy_summary">字型與設定儲存在你的裝置上。</string>
     <string name="action_source_code">原始碼</string>
-    <string name="license_scope">專案程式碼採用 Apache-2.0；字型與相依函式庫保留各自的授權。</string>
     <string name="title_notices">第三方聲明</string>
     <string name="title_font_licenses">字型授權</string>
-    <string name="misans_notice">本應用程式使用小米授權的 MiSans / MiSans Global，字型保持原樣，不屬於 Apache-2.0 或 SIL OFL 授權。</string>
+    <string name="misans_notice">小米字型授權協議</string>
     <string name="title_software_licenses">相依函式庫</string>
+    <string name="title_artwork_licenses">圖示</string>
 </resources>

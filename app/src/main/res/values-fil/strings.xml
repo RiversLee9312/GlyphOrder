@@ -184,14 +184,12 @@
     <string name="style_casual">Kaswal · Casual</string>
     <string name="style_cursive">Sulat-kamay · Cursive</string>
     <string name="title_about">Tungkol</string>
-    <string name="about_description">Pamahalaan ang mga font ng system gamit ang Magisk at paghaluin ayon sa istilo.</string>
-    <string name="title_open_source">Mga lisensya ng open source</string>
+    <string name="title_open_source">Mga lisensya at abiso</string>
     <string name="title_privacy">Privacy</string>
-    <string name="privacy_summary">Nananatili sa device mo ang mga font at setting.</string>
     <string name="action_source_code">Source code</string>
-    <string name="license_scope">Apache-2.0 ang lisensya ng code ng proyekto. May sariling lisensya ang mga font at library.</string>
     <string name="title_notices">Mga abiso ng third party</string>
     <string name="title_font_licenses">Mga lisensya ng font</string>
-    <string name="misans_notice">Gumagamit ang app ng MiSans / MiSans Global sa ilalim ng lisensya ng Xiaomi. Hindi binago ang mga font at hindi saklaw ng Apache-2.0 o SIL OFL.</string>
+    <string name="misans_notice">Lisensya ng font ng Xiaomi</string>
     <string name="title_software_licenses">Mga software library</string>
+    <string name="title_artwork_licenses">Mga icon</string>
 </resources>

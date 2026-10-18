@@ -181,14 +181,12 @@ Redémarrez ensuite l’appareil.</string>
     <string name="style_casual">Décontractée · Casual</string>
     <string name="style_cursive">Manuscrite · Cursive</string>
     <string name="title_about">À propos</string>
-    <string name="about_description">Gérez les polices système avec Magisk et combinez-les par style.</string>
-    <string name="title_open_source">Licences open source</string>
+    <string name="title_open_source">Licences et mentions</string>
     <string name="title_privacy">Confidentialité</string>
-    <string name="privacy_summary">Les polices et réglages restent sur votre appareil.</string>
     <string name="action_source_code">Code source</string>
-    <string name="license_scope">Le code du projet est sous Apache-2.0. Les polices et bibliothèques conservent leurs propres licences.</string>
     <string name="title_notices">Mentions de tiers</string>
     <string name="title_font_licenses">Licences des polices</string>
-    <string name="misans_notice">Cette application utilise MiSans / MiSans Global sous licence Xiaomi. Les polices sont inchangées et ne sont pas sous Apache-2.0 ni SIL OFL.</string>
+    <string name="misans_notice">Licence de police Xiaomi</string>
     <string name="title_software_licenses">Bibliothèques logicielles</string>
+    <string name="title_artwork_licenses">Icônes</string>
 </resources>

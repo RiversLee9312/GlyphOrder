@@ -181,14 +181,12 @@
     <string name="style_casual">캐주얼 · Casual</string>
     <string name="style_cursive">필기체 · Cursive</string>
     <string name="title_about">정보</string>
-    <string name="about_description">Magisk로 시스템 글꼴을 관리하고 스타일별로 조합합니다.</string>
-    <string name="title_open_source">오픈 소스 라이선스</string>
+    <string name="title_open_source">라이선스 및 고지</string>
     <string name="title_privacy">개인정보 안내</string>
-    <string name="privacy_summary">글꼴과 설정은 기기에 저장됩니다.</string>
     <string name="action_source_code">소스 코드</string>
-    <string name="license_scope">프로젝트 코드는 Apache-2.0을 따릅니다. 글꼴과 라이브러리는 각각의 라이선스를 유지합니다.</string>
     <string name="title_notices">타사 고지</string>
     <string name="title_font_licenses">글꼴 라이선스</string>
-    <string name="misans_notice">이 앱은 Xiaomi 라이선스로 MiSans / MiSans Global을 사용합니다. 글꼴은 수정되지 않았으며 Apache-2.0 또는 SIL OFL이 적용되지 않습니다.</string>
+    <string name="misans_notice">Xiaomi 글꼴 라이선스</string>
     <string name="title_software_licenses">소프트웨어 라이브러리</string>
+    <string name="title_artwork_licenses">아이콘</string>
 </resources>
