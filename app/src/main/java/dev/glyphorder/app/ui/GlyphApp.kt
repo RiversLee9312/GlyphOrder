@@ -123,7 +123,6 @@ fun GlyphApp(vm: AppViewModel) {
                             data = Uri.fromParts("package", context.packageName, null)
                         })
                     }) { Symbol(R.drawable.ic_language, stringResource(R.string.accessibility_change_language)) }
-                    if (tab == 0 && route.isEmpty()) IconButton(enabled = !state.busy, onClick = { import.launch(arrayOf("*/*")) }) { Symbol(R.drawable.ic_add, stringResource(R.string.accessibility_import_font)) }
                     if (tab == 2 && route.isEmpty()) IconButton(enabled = !state.busy, onClick = vm::inspect) { Symbol(R.drawable.ic_refresh, stringResource(R.string.accessibility_inspect_device)) }
                 })
         },
