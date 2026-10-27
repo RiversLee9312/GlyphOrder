@@ -5,6 +5,8 @@ Generated from resolved debug/release runtime artifacts (including transitive de
 
 ## Runtime libraries
 
+The native font preloader includes the [Zygisk public API header](https://github.com/topjohnwu/zygisk-module-sample/blob/master/module/jni/zygisk.hpp), copyright 2022–2023 John "topjohnwu" Wu, under the ISC license. The full notice is in `app/src/main/assets/legal/Zygisk-API.txt`, available in the app and included in generated font modules. The preloader uses Android's existing font cache; its design was informed by [FontLoader](https://github.com/RikkaW/FontLoader). No FontLoader implementation code is bundled.
+
 - `androidx.activity:activity:1.8.2` — Apache-2.0. [Upstream](https://developer.android.com/jetpack/androidx/releases/activity#1.8.2).
 - `androidx.activity:activity-compose:1.8.2` — Apache-2.0. [Upstream](https://developer.android.com/jetpack/androidx/releases/activity#1.8.2).
 - `androidx.activity:activity-ktx:1.8.2` — Apache-2.0. [Upstream](https://developer.android.com/jetpack/androidx/releases/activity#1.8.2).

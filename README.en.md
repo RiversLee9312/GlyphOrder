@@ -8,7 +8,7 @@ Includes five offline choices: MiSans with the official Global language packs, R
 
 ## Build
 
-Use JDK 21 and Android SDK 36. Set `sdk.dir` in your untracked `local.properties`, then run:
+Use JDK 21, Android SDK 36, NDK 28.2.13676358 and CMake 3.22.1. Set `sdk.dir` in your untracked `local.properties`, then run:
 
 ```powershell
 .\gradlew.bat :app:assembleDebug :app:testDebugUnitTest
@@ -47,6 +47,8 @@ Android's per-app language setting is available through system App info → Lang
 
 ## Systemless implementation
 
+Since 0.1.1, generated modules include a Zygisk preloader that populates Android's process-wide font-data cache before app specialization removes module mounts. It covers all GlyphOrder files in both `/system/fonts` and `/product/fonts`, including fallback faces, without changing the font plan or XML. The framework retains the cache after the preloader library unloads. Tested with Magisk 30.7 and Zygisk Next 1.5.2 in unmount-only mode. A policy that prevents Zygisk modules from running also prevents preloading. After upgrading the APK, reapply the font configuration and reboot to update an existing module.
+
 All changes are staged in the `glyphorder_fonts` Magisk module. The app uses `magisk --install-module`; it never writes to the real `/system/fonts`, requests SELinux permissive mode, or replaces/deletes `NotoColorEmoji.ttf`. The original emoji families are checked for preservation.
 
 Original XML and a ROM fingerprint are included under `baseline/` in the module. Named families, aliases and other fallback families are preserved. Android 15+ `font_fallback.xml` and legacy `fonts.xml` are updated together. Product customization fonts are placed under `system/product/fonts` because the product parser resolves relative font names against `/product/fonts`.
@@ -67,6 +69,10 @@ su -c '[ ! -d /data/adb/modules_update/glyphorder_fonts ] || touch /data/adb/mod
 Then reboot. If Android cannot start, use Magisk's documented safe mode or an already configured recovery/ADB method. A font module can affect boot before the app is available, so app-level recovery is not a guarantee against every font-parser failure. No automatic reboot is performed.
 
 ## Verification
+
+Build the independent, dependency-free rendering probe with `:font-probe:assembleDebug`. Apply the target app's mount-isolation and package-hiding rules to `dev.glyphorder.fontprobe`, then launch it. It exercises the device's named font families and aliases at weights 100/400/700/900, upright and italic, using Latin, CJK, RTL, Indic and supplementary-plane text. Native shaping and Canvas/StaticLayout rendering must finish before `files/result.json` reports success. The report records the custom fonts actually used and whether their paths remain visible after isolation. It requests no root access and does not modify configuration. Repeat cold starts and inspect crash logs alongside the report.
+
+For instrumentation against a signed release installation, build `:app:assembleReleaseAndroidTest -Pglyphorder.testBuildType=release` and install its test APK without uninstalling the application.
 
 `FontConfigTest` checks modern and legacy syntax, supported/clamped axes, script ordering, product family metadata, emoji preservation, safe slot reuse and XML entity rejection. `FontSelectionTest` covers default expansion for every built-in and arbitrary imports, disabling/resetting and legacy catalog tags. `DeviceIntegrationTest` generates global modules for all five built-ins and three real variable/static/OpenType imports, verifies that native shaping actually uses the bundled fallback for an imported font, and checks preference migration/persistence without changing the user's saved settings.
 

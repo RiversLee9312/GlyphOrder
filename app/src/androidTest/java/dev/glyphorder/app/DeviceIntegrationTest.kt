@@ -71,10 +71,19 @@ class DeviceIntegrationTest {
         ZipFile(module.file).use { zip ->
             val paths = zip.entries().asSequence().map { it.name }.toSet()
             assertTrue(paths.containsAll(listOf("module.prop", "customize.sh", "service.sh", "system/etc/fonts.xml", "system/etc/font_fallback.xml", "baseline/system/etc/font_fallback.xml")))
+            assertNotNull(zip.getEntry("zygisk/${android.os.Build.SUPPORTED_ABIS.first()}.so"))
+            assertNotNull(zip.getEntry("licenses/Zygisk-API.txt"))
+            val preloader = zip.getInputStream(zip.getEntry("zygisk/${android.os.Build.SUPPORTED_ABIS.first()}.so")).use { it.readBytes() }
+            assertArrayEquals(byteArrayOf(0x7f, 0x45, 0x4c, 0x46), preloader.take(4).toByteArray())
+            ZipFile(context.applicationInfo.sourceDir).use { apk ->
+                val expected = apk.getInputStream(apk.getEntry("lib/${android.os.Build.SUPPORTED_ABIS.first()}/libglyphorder_preload.so")).use { it.readBytes() }
+                assertArrayEquals(expected, preloader)
+            }
             assertFalse(paths.any { it.startsWith("/") || ".." in it.split('/') || it.endsWith("NotoColorEmoji.ttf") })
             assertNotNull(zip.getEntry("system/fonts/GlyphOrder-${variable.fileName}"))
             if ("google-sans" in targets) assertNotNull(zip.getEntry("system/product/fonts/GlyphOrder-${variable.fileName}"))
             fun text(path: String) = zip.getInputStream(zip.getEntry(path)).bufferedReader().use { it.readText() }
+            assertTrue(text("module.prop").contains("version=${BuildConfig.VERSION_NAME}\n"))
             assertTrue(text("system/etc/font_fallback.xml").contains("supportedAxes"))
             assertFalse(text("system/etc/fonts.xml").contains("supportedAxes"))
             assertTrue(text("customize.sh").contains("system_font_fallback_file"))

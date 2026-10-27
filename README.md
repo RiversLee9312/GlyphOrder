@@ -30,7 +30,7 @@
 
 ## 构建
 
-需要 JDK 21、Android SDK Platform 36 和网络可访问的 Gradle/Maven 仓库。原始字体与资源已经作为应用资源保留，普通构建无需运行字体准备脚本。
+需要 JDK 21、Android SDK Platform 36、NDK 28.2.13676358、CMake 3.22.1 和网络可访问的 Gradle/Maven 仓库。原始字体与资源已经作为应用资源保留，普通构建无需运行字体准备脚本。
 
 在不提交到仓库的 `local.properties` 中设置本机 SDK 路径，例如：
 
@@ -77,6 +77,10 @@ python tools/prepare-legal.py
 构建会检查运行时依赖与许可清单的一致性。字体准备脚本需要 Python 与 fontTools，图标打包另需 Pillow；具体顺序见 [字体来源](design/FONTS.md) 与 [资源说明](design/ASSETS.md)。
 
 ## 验证与恢复
+
+从 0.1.1 起，生成的字体模块内置 Zygisk 字体预加载库，在应用挂载隔离前缓存所有 GlyphOrder 字体，包括 `/product/fonts` 中的字体。当前已验证 Magisk 30.7 与 Zygisk Next 1.5.2 的“仅还原挂载”模式。若隐藏策略完全阻止 Zygisk 模块加载，预加载也无法执行。升级 APK 后，需要重新应用字体配置并重启，才能更新已安装的模块。
+
+`tools/font-probe` 是独立的极简 Android 测试应用，可用 `:font-probe:assembleDebug` 构建。将其包名 `dev.glyphorder.fontprobe` 加入待测应用使用的挂载隔离及应用列表隐藏规则后，启动测试即可覆盖系统字体家族、中英文及多个回退文字、100/400/700/900 字重和正斜体。结果保存在测试应用的 `files/result.json`，同时记录实际使用的字体路径是否仍然可见；应用不会请求 Root 或修改字体配置。
 
 单元测试覆盖字体解析、字形覆盖、可变轴、按风格替换、XML 配置、系统家族上限与启动循环回归。冻结的 ROM XML 与覆盖率夹具位于 `app/src/test/resources/bootloop/`，不会安装模块或重启设备。
 

@@ -5,3 +5,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "GlyphOrder"
 include(":app")
+include(":font-probe")
+project(":font-probe").projectDir = file("tools/font-probe")

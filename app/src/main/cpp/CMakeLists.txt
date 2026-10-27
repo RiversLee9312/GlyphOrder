@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.22.1)
+project(glyphorder_preload LANGUAGES CXX)
+add_library(glyphorder_preload SHARED preload.cpp)
+target_compile_features(glyphorder_preload PRIVATE cxx_std_17)
+target_compile_options(glyphorder_preload PRIVATE -Wall -Wextra -Werror -fvisibility=hidden)
+target_link_libraries(glyphorder_preload PRIVATE log)

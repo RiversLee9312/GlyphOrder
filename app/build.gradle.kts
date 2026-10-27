@@ -54,15 +54,24 @@ val releaseProperties = Properties().apply {
 android {
     namespace = "dev.glyphorder.app"
     compileSdk = 36
+    ndkVersion = "28.2.13676358"
+    testBuildType = providers.gradleProperty("glyphorder.testBuildType").orElse("debug").get()
     defaultConfig {
         applicationId = "dev.glyphorder.app"
         minSdk = 34
         targetSdk = 36
-        versionCode = 1
-        versionName = "0.1.0"
+        versionCode = 2
+        versionName = "0.1.1"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        externalNativeBuild.cmake.arguments += "-DANDROID_STL=c++_static"
     }
     buildFeatures { compose = true; buildConfig = true }
+    externalNativeBuild {
+        cmake {
+            path = file("src/main/cpp/CMakeLists.txt")
+            version = "3.22.1"
+        }
+    }
     if (releasePropertiesFile.isFile) {
         signingConfigs.create("release") {
             storeFile = rootProject.file(releaseProperties.getProperty("storeFile"))

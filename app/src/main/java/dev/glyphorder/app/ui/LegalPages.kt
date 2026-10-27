@@ -110,6 +110,11 @@ internal fun LicensesPage(open: (String, List<String>) -> Unit) {
             open("Material Symbols Rounded", listOf("legal/Material-Symbols.txt"))
         } }
         item { LegalSection(stringResource(R.string.title_software_licenses)) }
+        item {
+            LegalLink("Zygisk public API", "ISC") {
+                open("Zygisk public API · ISC", listOf("legal/Zygisk-API.txt"))
+            }
+        }
         itemsIndexed(libraries, key = { _, library -> library.coordinate }) { index, library ->
             LegalLink(library.coordinate, library.license, index = index, count = libraries.size) {
                 open(library.coordinate, library.assets)

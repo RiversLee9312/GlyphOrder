@@ -10,6 +10,8 @@ import org.json.JSONObject
 import java.io.File
 import java.util.zip.ZipEntry
 import java.util.zip.ZipOutputStream
+import java.util.zip.ZipFile
+import dev.glyphorder.app.BuildConfig
 
 data class BuiltModule(val file: File, val hash: String, val fingerprint: String, val configHashes: Map<String, String>, val maxFamilies: Int = 0)
 
@@ -35,7 +37,21 @@ class ModuleBuilder(private val context: Context) {
                 fun text(path: String, content: String) {
                     stream.putNextEntry(ZipEntry(path)); stream.write(content.toByteArray()); stream.closeEntry()
                 }
-                text("module.prop", "id=$MODULE_ID\nname=${context.getString(R.string.module_display_name)}\nversion=0.1.0\nversionCode=1\nauthor=GlyphOrder\ndescription=${context.getString(R.string.module_description)}\n")
+                text("module.prop", "id=$MODULE_ID\nname=${context.getString(R.string.module_display_name)}\nversion=${BuildConfig.VERSION_NAME}\nversionCode=${BuildConfig.VERSION_CODE}\nauthor=GlyphOrder\ndescription=${context.getString(R.string.module_description)}\n")
+                // Keep the preloader in the generated module. A separate FontLoader
+                // installation must not be required after each font configuration.
+                ZipFile(context.applicationInfo.sourceDir).use { apk ->
+                    val abis = listOf("arm64-v8a", "armeabi-v7a", "x86_64", "x86")
+                    val libraries = abis.mapNotNull { abi ->
+                        apk.getEntry("lib/$abi/libglyphorder_preload.so")?.let { abi to it }
+                    }
+                    check(libraries.any { it.first == Build.SUPPORTED_ABIS.first() }) { UiError.key("error_module_integrity") }
+                    libraries.forEach { (abi, entry) ->
+                        stream.putNextEntry(ZipEntry("zygisk/$abi.so"))
+                        apk.getInputStream(entry).use { it.copyTo(stream) }; stream.closeEntry()
+                    }
+                    text("licenses/Zygisk-API.txt", context.assets.open("legal/Zygisk-API.txt").bufferedReader().use { it.readText() })
+                }
                 text("baseline.json", JSONObject().put("fingerprint", snapshot.fingerprint).toString())
                 snapshot.configs.forEach { (path, xml) -> text("baseline/${path.removePrefix("/")}", xml) }
                 updated.forEach { (path, xml) -> text(DeviceRepository.overlayPath(path), xml) }
