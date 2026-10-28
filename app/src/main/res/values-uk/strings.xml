@@ -11,7 +11,7 @@
     <string name="accessibility_change_language">Змінити мову додатка</string>
     <string name="busy_processing">Обробка…</string>
     <string name="dialog_install_title">Установити модуль шрифтів?</string>
-    <string name="dialog_install_body">Зміни набудуть чинності після перезавантаження. Вимкніть модуль у цьому додатку або Magisk, а потім перезавантажте пристрій ще раз, щоб відновити системні шрифти.</string>
+    <string name="dialog_install_body">Зміни набудуть чинності після перезавантаження. Вимкніть модуль у цьому додатку або Magisk / KernelSU, а потім перезавантажте пристрій ще раз, щоб відновити системні шрифти.</string>
     <string name="dialog_restore_title">Відновити системні шрифти?</string>
     <string name="dialog_restore_body">Вимкніть модуль шрифтів GlyphOrder. Системні шрифти буде відновлено після перезавантаження.</string>
     <string name="dialog_reboot_title">Перезавантажити зараз?</string>
@@ -77,7 +77,7 @@
     <string name="targets_description">Виберіть системні сімейства шрифтів для заміни. Резервні налаштування діють для системного ланцюжка резервів.</string>
     <string name="device_ready">Пристрій готовий</string>
     <string name="device_check">Перевірити пристрій</string>
-    <string name="device_version">Android %1$s · Magisk %2$s</string>
+    <string name="device_version">Android %1$s · %2$s</string>
     <string name="device_current_family">%1$s · %2$s</string>
     <string name="device_root_required">Для читання активної конфігурації шрифтів потрібен доступ root.</string>
     <string name="action_check">Перевірити</string>
@@ -115,8 +115,8 @@
     <string name="error_font_size_invalid">Неприпустимий розмір файлу шрифту. Максимум — 128 МБ.</string>
     <string name="error_font_single_face">Виберіть один файл .ttf або .otf. Колекції шрифтів не підтримуються.</string>
     <string name="error_font_data_invalid">Файл шрифту пошкоджений або не підтримується.</string>
-    <string name="error_root_permission">Доступ root не надано. Спробуйте ще раз. Якщо ви відхилили запит, дозвольте GlyphOrder у налаштуваннях суперкористувача Magisk.</string>
-    <string name="error_system_updated">Систему оновлено. Вимкніть модуль, перезавантажте пристрій і перевірте ще раз.</string>
+    <string name="error_root_permission">Доступ root не надано. Спробуйте ще раз. Якщо ви відхилили запит, дозвольте GlyphOrder у налаштуваннях суперкористувача Magisk / KernelSU.</string>
+    <string name="error_system_updated">Не вдалося перевірити початкову конфігурацію шрифтів для цієї системи. Вимкніть модуль, перезавантажте пристрій і перевірте знову.</string>
     <string name="error_selinux_label_missing">Не вдалося прочитати мітку SELinux для конфігурації шрифтів.</string>
     <string name="error_selinux_label_unsupported">Ця мітка SELinux не підтримується.</string>
     <string name="error_font_config_conflict">Інший модуль змінив конфігурацію шрифтів. Вимкніть конфліктний модуль і перезавантажте пристрій.</string>
@@ -139,7 +139,7 @@
     <string name="error_conflict_detected">Виявлено конфліктний модуль шрифтів.</string>
     <string name="error_config_changed">Конфігурація шрифтів змінилася. Створіть модуль повторно.</string>
     <string name="error_module_integrity">Не вдалося перевірити файл модуля.</string>
-    <string name="error_magisk_module_missing">Magisk не створив каталог модуля.</string>
+    <string name="error_magisk_module_missing">Magisk / KernelSU не створив каталог модуля.</string>
     <string name="error_installed_module_integrity">Не вдалося перевірити встановлений модуль.</string>
     <string name="error_root_command">Помилка команди root (код %1$s): %2$s</string>
     <string name="error_module_not_generated">Спочатку створіть модуль.</string>

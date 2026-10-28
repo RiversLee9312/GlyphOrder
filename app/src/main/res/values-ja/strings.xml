@@ -11,7 +11,7 @@
     <string name="accessibility_change_language">アプリの言語を変更</string>
     <string name="busy_processing">処理中…</string>
     <string name="dialog_install_title">フォントモジュールをインストールしますか？</string>
-    <string name="dialog_install_body">再起動後に変更が反映されます。このアプリまたは Magisk でモジュールを無効にし、もう一度再起動するとシステムフォントに戻ります。</string>
+    <string name="dialog_install_body">再起動後に変更が反映されます。このアプリまたは Magisk / KernelSU でモジュールを無効にし、もう一度再起動するとシステムフォントに戻ります。</string>
     <string name="dialog_restore_title">システムフォントに戻しますか？</string>
     <string name="dialog_restore_body">字序フォントモジュールを無効にします。再起動後にシステムフォントへ戻ります。</string>
     <string name="dialog_reboot_title">今すぐ再起動しますか？</string>
@@ -77,7 +77,7 @@
     <string name="targets_description">置き換えるシステムフォント family を選択します。フォールバック設定はシステムのフォールバックチェーンに適用されます。</string>
     <string name="device_ready">デバイスの準備完了</string>
     <string name="device_check">デバイスを確認</string>
-    <string name="device_version">Android %1$s · Magisk %2$s</string>
+    <string name="device_version">Android %1$s · %2$s</string>
     <string name="device_current_family">%1$s · %2$s</string>
     <string name="device_root_required">有効なフォント設定を読み取るには root 権限が必要です。</string>
     <string name="action_check">確認</string>
@@ -118,8 +118,8 @@
     <string name="error_font_size_invalid">フォントファイルのサイズが無効です。上限は 128 MB です。</string>
     <string name="error_font_single_face">単一の .ttf または .otf ファイルを選択してください。フォントコレクションには対応していません。</string>
     <string name="error_font_data_invalid">フォントファイルが破損しているか、対応していません。</string>
-    <string name="error_root_permission">root 権限が許可されませんでした。再試行してください。拒否した場合は Magisk のスーパー ユーザー設定で字序を許可してください。</string>
-    <string name="error_system_updated">システムが更新されています。モジュールを無効にして再起動してから、もう一度確認してください。</string>
+    <string name="error_root_permission">root 権限が許可されませんでした。再試行してください。拒否した場合は Magisk / KernelSU のスーパー ユーザー設定で字序を許可してください。</string>
+    <string name="error_system_updated">このシステムで元のフォント設定を使用できるか確認できません。モジュールを無効にして再起動してから、もう一度確認してください。</string>
     <string name="error_selinux_label_missing">フォント設定の SELinux ラベルを読み取れませんでした。</string>
     <string name="error_selinux_label_unsupported">この SELinux ラベルには対応していません。</string>
     <string name="error_font_config_conflict">別のモジュールがフォント設定を変更しました。競合するモジュールを無効にして再起動してください。</string>
@@ -142,7 +142,7 @@
     <string name="error_conflict_detected">競合するフォントモジュールが見つかりました。</string>
     <string name="error_config_changed">フォント設定が変わりました。モジュールを再生成してください。</string>
     <string name="error_module_integrity">モジュールファイルの検証に失敗しました。</string>
-    <string name="error_magisk_module_missing">Magisk がモジュールディレクトリを作成しませんでした。</string>
+    <string name="error_magisk_module_missing">Magisk / KernelSU がモジュールディレクトリを作成しませんでした。</string>
     <string name="error_installed_module_integrity">インストール済みモジュールの検証に失敗しました。</string>
     <string name="error_root_command">root コマンドに失敗しました（コード %1$s）：%2$s</string>
     <string name="error_module_not_generated">先にモジュールを生成してください。</string>

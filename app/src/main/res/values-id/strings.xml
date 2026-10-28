@@ -11,7 +11,7 @@
     <string name="accessibility_change_language">Ubah bahasa aplikasi</string>
     <string name="busy_processing">Memproses…</string>
     <string name="dialog_install_title">Pasang modul font?</string>
-    <string name="dialog_install_body">Perubahan berlaku setelah perangkat dimulai ulang. Nonaktifkan modul di aplikasi ini atau Magisk, lalu mulai ulang lagi untuk memulihkan font sistem.</string>
+    <string name="dialog_install_body">Perubahan berlaku setelah perangkat dimulai ulang. Nonaktifkan modul di aplikasi ini atau Magisk / KernelSU, lalu mulai ulang lagi untuk memulihkan font sistem.</string>
     <string name="dialog_restore_title">Pulihkan font sistem?</string>
     <string name="dialog_restore_body">Nonaktifkan modul font GlyphOrder. Font sistem akan dipulihkan setelah perangkat dimulai ulang.</string>
     <string name="dialog_reboot_title">Mulai ulang sekarang?</string>
@@ -83,7 +83,7 @@
     <string name="targets_description">Pilih keluarga font sistem yang akan diganti. Setelan fallback berlaku untuk rantai fallback sistem.</string>
     <string name="device_ready">Perangkat siap</string>
     <string name="device_check">Periksa perangkat</string>
-    <string name="device_version">Android %1$s · Magisk %2$s</string>
+    <string name="device_version">Android %1$s · %2$s</string>
     <string name="device_current_family">%1$s · %2$s</string>
     <string name="device_root_required">Akses root diperlukan untuk membaca konfigurasi font aktif.</string>
     <string name="action_check">Periksa</string>
@@ -121,8 +121,8 @@
     <string name="error_font_size_invalid">Ukuran file font tidak valid. Ukuran maksimum 128 MB.</string>
     <string name="error_font_single_face">Pilih satu file .ttf atau .otf. Koleksi font tidak didukung.</string>
     <string name="error_font_data_invalid">File font rusak atau tidak didukung.</string>
-    <string name="error_root_permission">Akses root tidak diberikan. Coba lagi. Jika permintaan ditolak, izinkan GlyphOrder di setelan superuser Magisk.</string>
-    <string name="error_system_updated">Sistem telah diperbarui. Nonaktifkan modul, mulai ulang, lalu periksa lagi.</string>
+    <string name="error_root_permission">Akses root tidak diberikan. Coba lagi. Jika permintaan ditolak, izinkan GlyphOrder di setelan superuser Magisk / KernelSU.</string>
+    <string name="error_system_updated">Konfigurasi font asli tidak dapat diverifikasi untuk sistem ini. Nonaktifkan modul, mulai ulang, lalu periksa lagi.</string>
     <string name="error_selinux_label_missing">Label SELinux untuk konfigurasi font tidak dapat dibaca.</string>
     <string name="error_selinux_label_unsupported">Label SELinux ini tidak didukung.</string>
     <string name="error_font_config_conflict">Modul lain mengubah konfigurasi font. Nonaktifkan modul yang bertentangan dan mulai ulang.</string>
@@ -145,7 +145,7 @@
     <string name="error_conflict_detected">Modul font yang bertentangan terdeteksi.</string>
     <string name="error_config_changed">Konfigurasi font berubah. Buat ulang modul.</string>
     <string name="error_module_integrity">Verifikasi file modul gagal.</string>
-    <string name="error_magisk_module_missing">Magisk tidak membuat direktori modul.</string>
+    <string name="error_magisk_module_missing">Magisk / KernelSU tidak membuat direktori modul.</string>
     <string name="error_installed_module_integrity">Verifikasi modul terpasang gagal.</string>
     <string name="error_root_command">Perintah root gagal (kode %1$s): %2$s</string>
     <string name="error_module_not_generated">Buat modul terlebih dahulu.</string>

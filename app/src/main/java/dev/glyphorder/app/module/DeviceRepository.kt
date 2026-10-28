@@ -9,13 +9,16 @@ import java.security.MessageDigest
 const val MODULE_ID = "glyphorder_fonts"
 val CONFIG_PATHS = listOf("/system/etc/font_fallback.xml", "/system/etc/fonts.xml", "/product/etc/fonts_customization.xml")
 data class DeviceSnapshot(
-    val fingerprint: String, val sdk: Int, val magisk: String,
+    val fingerprint: String, val sdk: Int, val rootManager: String,
     val configs: Map<String, String>, val contexts: Map<String, String>,
     val targets: List<String>, val currentFamily: String,
     val installed: Boolean, val disabled: Boolean, val pending: Boolean,
     val conflicts: List<String>, val bootId: String,
-    val fontCoverage: Map<String, List<IntRange>> = emptyMap()
-)
+    val fontCoverage: Map<String, List<IntRange>> = emptyMap(),
+    val incremental: String = ""
+) {
+    val build get() = SystemBuild(fingerprint, sdk, incremental)
+}
 
 object Root {
     // Modern Magisk may expose its binaries only in /debug_ramdisk after boot.
@@ -46,25 +49,21 @@ class DeviceRepository {
         // libsu caches an unprivileged shell after denial or timeout. A user-initiated retry
         // must discard it, otherwise Magisk never receives another authorization request.
         check(Root.shell().isRoot) { UiError.key("error_root_permission") }
-        val magisk = Root.run("magisk -v").trim()
+        val manager = RootManager.detect()
         val active = "/data/adb/modules/$MODULE_ID"
         val staged = "/data/adb/modules_update/$MODULE_ID"
         val installed = Root.exists("$active/module.prop")
-        // Before the first reboot, Magisk's active directory is a metadata-only placeholder.
-        var module = if (Root.exists("$active/baseline.json")) active
-            else if (Root.exists("$staged/baseline.json")) staged else null
         val disabled = installed && Root.exists("$active/disable")
         val bootId = Root.read("/proc/sys/kernel/random/boot_id")
+        fun baseline(path: String): FontBaseline? {
+            if (!Root.exists("$path/baseline.json")) return null
+            return FontBaseline(path, SystemBuild.fromManifest(JSONObject(Root.read("$path/baseline.json"))),
+                Root.exists("$path/disable"),
+                Root.exists("$path/mounted-boot-id") && Root.read("$path/mounted-boot-id") == bootId)
+        }
+        val module = FontBaseline.select(SystemBuild.current(), baseline(active), baseline(staged))
         val configs = linkedMapOf<String, String>(); val contexts = linkedMapOf<String, String>()
         val runtimeConfigs = linkedMapOf<String, String>()
-        if (module != null) {
-            val manifest = JSONObject(Root.read("$module/baseline.json"))
-            if (manifest.getString("fingerprint") != Build.FINGERPRINT) {
-                val mountedThisBoot = Root.exists("$module/mounted-boot-id") && Root.read("$module/mounted-boot-id") == bootId
-                check(disabled && !mountedThisBoot) { UiError.key("error_system_updated") }
-                module = null // A disabled module after reboot must not reintroduce the previous ROM's XML.
-            }
-        }
         CONFIG_PATHS.forEach { path ->
             if (!Root.exists(path)) return@forEach
             val current = Root.read(path)
@@ -120,9 +119,9 @@ class DeviceRepository {
                 }.onSuccess { coverage[key] = it }
             }
         }
-        return DeviceSnapshot(Build.FINGERPRINT, Build.VERSION.SDK_INT, magisk, configs, contexts,
+        return DeviceSnapshot(Build.FINGERPRINT, Build.VERSION.SDK_INT, manager.displayName, configs, contexts,
             families, first, installed, disabled, Root.exists("$staged/module.prop") || Root.exists("$active/update"), conflicts,
-            bootId, coverage)
+            bootId, coverage, Build.VERSION.INCREMENTAL)
     }
     fun disable() {
         val active = Root.exists("/data/adb/modules/$MODULE_ID/module.prop")

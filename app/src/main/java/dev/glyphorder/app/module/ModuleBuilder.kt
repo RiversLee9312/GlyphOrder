@@ -13,7 +13,7 @@ import java.util.zip.ZipOutputStream
 import java.util.zip.ZipFile
 import dev.glyphorder.app.BuildConfig
 
-data class BuiltModule(val file: File, val hash: String, val fingerprint: String, val configHashes: Map<String, String>, val maxFamilies: Int = 0)
+data class BuiltModule(val file: File, val hash: String, val build: SystemBuild, val configHashes: Map<String, String>, val maxFamilies: Int = 0)
 
 class ModuleBuilder(private val context: Context) {
     fun build(snapshot: DeviceSnapshot, requested: FontPlan, fonts: List<FontInfo>, directory: File): BuiltModule {
@@ -52,7 +52,7 @@ class ModuleBuilder(private val context: Context) {
                     }
                     text("licenses/Zygisk-API.txt", context.assets.open("legal/Zygisk-API.txt").bufferedReader().use { it.readText() })
                 }
-                text("baseline.json", JSONObject().put("fingerprint", snapshot.fingerprint).toString())
+                text("baseline.json", snapshot.build.manifest().toString())
                 snapshot.configs.forEach { (path, xml) -> text("baseline/${path.removePrefix("/")}", xml) }
                 updated.forEach { (path, xml) -> text(DeviceRepository.overlayPath(path), xml) }
                 val licenses = linkedMapOf<String, ByteArray>()
@@ -76,6 +76,8 @@ class ModuleBuilder(private val context: Context) {
                     append("#!/system/bin/sh\n")
                     append("[ \"\$API\" -ge 34 ] || abort ${Root.quote(context.getString(R.string.module_error_android_version))}\n")
                     append("[ \"\$(getprop ro.build.fingerprint)\" = ${Root.quote(snapshot.fingerprint)} ] || abort ${Root.quote(context.getString(R.string.module_error_device_changed))}\n")
+                    append("[ \"\$(getprop ro.build.version.sdk)\" = ${Root.quote(snapshot.sdk.toString())} ] || abort ${Root.quote(context.getString(R.string.module_error_device_changed))}\n")
+                    append("[ \"\$(getprop ro.build.version.incremental)\" = ${Root.quote(snapshot.incremental)} ] || abort ${Root.quote(context.getString(R.string.module_error_device_changed))}\n")
                     append("set_perm_recursive \"\$MODPATH\" 0 0 0755 0644\n")
                     updated.forEach { (path, _) ->
                         append("set_perm \"\$MODPATH/${DeviceRepository.overlayPath(path)}\" 0 0 0644 ${Root.quote(snapshot.contexts.getValue(path))}\n")
@@ -101,10 +103,10 @@ class ModuleBuilder(private val context: Context) {
         }
         // Bound cache growth while retaining the current generated ZIP.
         output.listFiles().orEmpty().filter { it.extension == "zip" }.sortedByDescending { it.lastModified() }.drop(3).forEach(File::delete)
-        return BuiltModule(zip, hash, Build.FINGERPRINT, snapshot.configs.mapValues { Root.hash(it.value) }, maxFamilies)
+        return BuiltModule(zip, hash, snapshot.build, snapshot.configs.mapValues { Root.hash(it.value) }, maxFamilies)
     }
     fun install(module: BuiltModule) : String {
-        check(module.fingerprint == Build.FINGERPRINT) { UiError.key("error_device_changed") }
+        check(module.build.matches(SystemBuild.current())) { UiError.key("error_device_changed") }
         val actual = module.file.inputStream().use { input ->
             val md = java.security.MessageDigest.getInstance("SHA-256"); val b = ByteArray(65536)
             while (true) { val n = input.read(b); if (n < 0) break; md.update(b, 0, n) }
@@ -115,10 +117,17 @@ class ModuleBuilder(private val context: Context) {
         val fresh = DeviceRepository().inspect()
         check(fresh.conflicts.isEmpty()) { UiError.key("error_conflict_detected") }
         check(fresh.configs.mapValues { Root.hash(it.value) } == module.configHashes) { UiError.key("error_config_changed") }
-        val output = Root.run("magisk --install-module ${Root.quote(module.file.absolutePath)}")
+        val manager = RootManager.detect()
+        if (manager.backend == RootBackend.KERNEL_SU) {
+            check(Root.exists("/data/adb/metamodule/metamount.sh") &&
+                !Root.exists("/data/adb/metamodule/disable") && !Root.exists("/data/adb/metamodule/remove")) {
+                UiError.key("error_root_command", "mount", "KernelSU: meta-overlayfs")
+            }
+        }
+        val output = Root.run(manager.installCommand(module.file.absolutePath))
         val installedPath = if (Root.exists("/data/adb/modules_update/$MODULE_ID/module.prop")) "/data/adb/modules_update/$MODULE_ID" else "/data/adb/modules/$MODULE_ID"
         check(Root.exists("$installedPath/module.prop")) { UiError.key("error_magisk_module_missing") }
-        check(JSONObject(Root.read("$installedPath/baseline.json")).getString("fingerprint") == module.fingerprint) { UiError.key("error_installed_module_integrity") }
+        check(SystemBuild.fromManifest(JSONObject(Root.read("$installedPath/baseline.json"))).matches(module.build)) { UiError.key("error_installed_module_integrity") }
         // Installing is an explicit request to use this module at the next boot, including after recovery.
         Root.run("rm -f /data/adb/modules/$MODULE_ID/disable /data/adb/modules_update/$MODULE_ID/disable")
         val backup = File(context.filesDir, "backup").apply { mkdirs() }

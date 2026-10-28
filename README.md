@@ -4,7 +4,7 @@
 
 [下载 APK](https://github.com/RiversLee9312/GlyphOrder/releases/latest)
 
-通过 Magisk 模块管理 Android 系统字体，使用 Kotlin、Jetpack Compose 与 Material 3 Expressive 构建。支持 Android 14 及以上；目前主要在 OnePlus 11 的 LineageOS 23.2 / Android 16 上验证。
+通过 Magisk / KernelSU 模块管理 Android 系统字体，使用 Kotlin、Jetpack Compose 与 Material 3 Expressive 构建。支持 Android 14 及以上；已在 OnePlus 11 的 LineageOS 23.2 / Android 16 和 LOS 24.0-20261023 / Android 17 上验证。KernelSU 需要先安装并启用挂载元模块，本轮验证使用 meta-overlayfs 1.3.1。
 
 ## 功能
 
@@ -20,13 +20,13 @@
 
 ## 使用
 
-1. 安装 APK，允许 Magisk Root 请求，再检查设备配置。
+1. 安装 APK，在当前 Magisk / KernelSU 管理器中授权 Root，再检查设备配置。
 2. 选择或导入字体，按需调整补字与预览。
 3. 进入“应用”，选择单字体的替换范围，或按风格混搭各类字体。
-4. 点击“应用配置”生成并安装 Magisk 模块，然后自行确认重启。
+4. 点击“应用配置”生成模块，通过当前 Root 管理器的官方接口安装，然后自行确认重启。
 5. 恢复时禁用本应用的模块并重启。应用不会自动重启。
 
-使用了自带字体的应用可能保持原有排版。模块影响系统字体，请先准备可用的 Magisk / ADB 恢复方式。更新 ROM 后，应先禁用旧模块并重启，再为新系统生成配置。
+使用了自带字体的应用可能保持原有排版。模块影响系统字体，请先准备可用的 Root 管理器 / ADB 恢复方式。更新 ROM 后，应先禁用旧模块并重启，再为新系统生成配置。旧系统基线不能仅凭厂商指纹相同而复用：模块同时校验 Android API 和系统增量版本。
 
 ## 构建
 
@@ -77,6 +77,8 @@ python tools/prepare-legal.py
 构建会检查运行时依赖与许可清单的一致性。字体准备脚本需要 Python 与 fontTools，图标打包另需 Pillow；具体顺序见 [字体来源](design/FONTS.md) 与 [资源说明](design/ASSETS.md)。
 
 ## 验证与恢复
+
+2026-10-28：在官方 LOS 24.0-20261023（API 37、增量版本 `c4db0ea4ab`）与 KernelSU 3.3.1 上通过真实配置读取/生成、官方安装与停用、原有 MiSans/Noto Serif/Sarasa 配置恢复及重启后的字体服务检查。66 项单元测试通过。独立无 Root 探针在 Zygisk Next 1.5.2 的仅还原挂载模式下完成 79 个家族、4,424 次排版，实际使用的 34 个自定义字体文件路径均不可见；启用 HMA 3.8.3 与 SuSFS LKM 后结果相同。该结果不等于对所有隐藏策略或检测程序的保证。
 
 从 0.1.1 起，生成的字体模块内置 Zygisk 字体预加载库，在应用挂载隔离前缓存所有 GlyphOrder 字体，包括 `/product/fonts` 中的字体。当前已验证 Magisk 30.7 与 Zygisk Next 1.5.2 的“仅还原挂载”模式。若隐藏策略完全阻止 Zygisk 模块加载，预加载也无法执行。升级 APK 后，需要重新应用字体配置并重启，才能更新已安装的模块。
 

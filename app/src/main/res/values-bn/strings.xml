@@ -11,7 +11,7 @@
     <string name="accessibility_change_language">অ্যাপের ভাষা পরিবর্তন করুন</string>
     <string name="busy_processing">কাজ চলছে…</string>
     <string name="dialog_install_title">ফন্ট মডিউল ইনস্টল করবেন?</string>
-    <string name="dialog_install_body">রিস্টার্টের পরে পরিবর্তন কার্যকর হবে। সিস্টেম ফন্ট ফেরাতে এই অ্যাপ বা Magisk-এ মডিউল নিষ্ক্রিয় করুন, তারপর আবার রিস্টার্ট করুন।</string>
+    <string name="dialog_install_body">রিস্টার্টের পরে পরিবর্তন কার্যকর হবে। সিস্টেম ফন্ট ফেরাতে এই অ্যাপ বা Magisk / KernelSU-এ মডিউল নিষ্ক্রিয় করুন, তারপর আবার রিস্টার্ট করুন।</string>
     <string name="dialog_restore_title">সিস্টেম ফন্ট ফেরাবেন?</string>
     <string name="dialog_restore_body">GlyphOrder ফন্ট মডিউল নিষ্ক্রিয় করুন। রিস্টার্টের পরে সিস্টেম ফন্ট ফিরে আসবে।</string>
     <string name="dialog_reboot_title">এখন রিস্টার্ট করবেন?</string>
@@ -83,7 +83,7 @@
     <string name="targets_description">যে সিস্টেম ফন্ট পরিবারগুলি বদলাতে চান তা বেছে নিন। বিকল্প সেটিং সিস্টেমের বিকল্প ফন্ট শৃঙ্খলে প্রযোজ্য।</string>
     <string name="device_ready">ডিভাইস প্রস্তুত</string>
     <string name="device_check">ডিভাইস পরীক্ষা করুন</string>
-    <string name="device_version">Android %1$s · Magisk %2$s</string>
+    <string name="device_version">Android %1$s · %2$s</string>
     <string name="device_current_family">%1$s · %2$s</string>
     <string name="device_root_required">সক্রিয় ফন্ট কনফিগারেশন পড়তে root access প্রয়োজন।</string>
     <string name="action_check">পরীক্ষা করুন</string>
@@ -121,8 +121,8 @@
     <string name="error_font_size_invalid">ফন্ট ফাইলের আকার সঠিক নয়। সর্বোচ্চ 128 MB।</string>
     <string name="error_font_single_face">একটি .ttf বা .otf ফাইল বেছে নিন। ফন্ট সংগ্রহ সমর্থিত নয়।</string>
     <string name="error_font_data_invalid">ফন্ট ফাইল নষ্ট বা অসমর্থিত।</string>
-    <string name="error_root_permission">Root access দেওয়া হয়নি। আবার চেষ্টা করুন। অনুরোধ প্রত্যাখ্যান করলে Magisk-এর superuser সেটিংসে GlyphOrder-কে অনুমতি দিন।</string>
-    <string name="error_system_updated">সিস্টেম আপডেট হয়েছে। মডিউল নিষ্ক্রিয় করে রিস্টার্ট করুন, তারপর আবার পরীক্ষা করুন।</string>
+    <string name="error_root_permission">Root access দেওয়া হয়নি। আবার চেষ্টা করুন। অনুরোধ প্রত্যাখ্যান করলে Magisk / KernelSU-এর superuser সেটিংসে GlyphOrder-কে অনুমতি দিন।</string>
+    <string name="error_system_updated">এই সিস্টেমের জন্য মূল ফন্ট কনফিগারেশন যাচাই করা যায়নি। মডিউল নিষ্ক্রিয় করে রিস্টার্ট করুন, তারপর আবার পরীক্ষা করুন।</string>
     <string name="error_selinux_label_missing">ফন্ট কনফিগারেশনের SELinux লেবেল পড়া যায়নি।</string>
     <string name="error_selinux_label_unsupported">এই SELinux লেবেল সমর্থিত নয়।</string>
     <string name="error_font_config_conflict">অন্য মডিউল ফন্ট কনফিগারেশন বদলেছে। সংঘাতপূর্ণ মডিউল নিষ্ক্রিয় করে রিস্টার্ট করুন।</string>
@@ -145,7 +145,7 @@
     <string name="error_conflict_detected">সংঘাতপূর্ণ ফন্ট মডিউল শনাক্ত হয়েছে।</string>
     <string name="error_config_changed">ফন্ট কনফিগারেশন বদলেছে। মডিউলটি আবার তৈরি করুন।</string>
     <string name="error_module_integrity">মডিউল ফাইল যাচাই ব্যর্থ হয়েছে।</string>
-    <string name="error_magisk_module_missing">Magisk মডিউল ডিরেক্টরি তৈরি করেনি।</string>
+    <string name="error_magisk_module_missing">Magisk / KernelSU মডিউল ডিরেক্টরি তৈরি করেনি।</string>
     <string name="error_installed_module_integrity">ইনস্টল করা মডিউল যাচাই ব্যর্থ হয়েছে।</string>
     <string name="error_root_command">Root কমান্ড ব্যর্থ হয়েছে (কোড %1$s): %2$s</string>
     <string name="error_module_not_generated">আগে একটি মডিউল তৈরি করুন।</string>

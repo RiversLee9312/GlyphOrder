@@ -11,7 +11,7 @@
     <string name="accessibility_change_language">Palitan ang wika ng app</string>
     <string name="busy_processing">Pinoproseso…</string>
     <string name="dialog_install_title">I-install ang font module?</string>
-    <string name="dialog_install_body">Magkakabisa ang mga pagbabago pagkatapos mag-reboot. I-disable ang module sa app na ito o sa Magisk, pagkatapos ay mag-reboot muli para maibalik ang mga system font.</string>
+    <string name="dialog_install_body">Magkakabisa ang mga pagbabago pagkatapos mag-reboot. I-disable ang module sa app na ito o sa Magisk / KernelSU, pagkatapos ay mag-reboot muli para maibalik ang mga system font.</string>
     <string name="dialog_restore_title">Ibalik ang mga system font?</string>
     <string name="dialog_restore_body">I-disable ang GlyphOrder font module. Maibabalik ang mga system font pagkatapos mag-reboot.</string>
     <string name="dialog_reboot_title">Mag-reboot ngayon?</string>
@@ -83,7 +83,7 @@
     <string name="targets_description">Piliin ang mga pamilya ng system font na papalitan. Nalalapat ang fallback setting sa system fallback chain.</string>
     <string name="device_ready">Handa ang device</string>
     <string name="device_check">Suriin ang device</string>
-    <string name="device_version">Android %1$s · Magisk %2$s</string>
+    <string name="device_version">Android %1$s · %2$s</string>
     <string name="device_current_family">%1$s · %2$s</string>
     <string name="device_root_required">Kailangan ng root access para mabasa ang aktibong configuration ng font.</string>
     <string name="action_check">Suriin</string>
@@ -121,8 +121,8 @@
     <string name="error_font_size_invalid">Di-wasto ang laki ng file ng font. 128 MB ang maximum.</string>
     <string name="error_font_single_face">Pumili ng iisang .ttf o .otf na file. Hindi suportado ang mga koleksyon ng font.</string>
     <string name="error_font_data_invalid">Sira o hindi suportado ang file ng font.</string>
-    <string name="error_root_permission">Hindi naibigay ang root access. Subukan muli. Kung tinanggihan mo ang kahilingan, payagan ang GlyphOrder sa mga setting ng superuser ng Magisk.</string>
-    <string name="error_system_updated">Na-update ang system. I-disable ang module, mag-reboot, at suriin muli.</string>
+    <string name="error_root_permission">Hindi naibigay ang root access. Subukan muli. Kung tinanggihan mo ang kahilingan, payagan ang GlyphOrder sa mga setting ng superuser ng Magisk / KernelSU.</string>
+    <string name="error_system_updated">Hindi ma-verify ang orihinal na configuration ng font para sa system na ito. I-disable ang module, mag-reboot, at suriin muli.</string>
     <string name="error_selinux_label_missing">Hindi mabasa ang SELinux label para sa configuration ng font.</string>
     <string name="error_selinux_label_unsupported">Hindi suportado ang SELinux label na ito.</string>
     <string name="error_font_config_conflict">Binago ng ibang module ang configuration ng font. I-disable ang sumasalungat na module at mag-reboot.</string>
@@ -145,7 +145,7 @@
     <string name="error_conflict_detected">May nakitang sumasalungat na font module.</string>
     <string name="error_config_changed">Nagbago ang configuration ng font. Gawin muli ang module.</string>
     <string name="error_module_integrity">Nabigo ang pag-verify ng module file.</string>
-    <string name="error_magisk_module_missing">Hindi ginawa ng Magisk ang direktoryo ng module.</string>
+    <string name="error_magisk_module_missing">Hindi ginawa ng Magisk / KernelSU ang direktoryo ng module.</string>
     <string name="error_installed_module_integrity">Nabigo ang pag-verify ng naka-install na module.</string>
     <string name="error_root_command">Nabigo ang root command (code %1$s): %2$s</string>
     <string name="error_module_not_generated">Gumawa muna ng module.</string>

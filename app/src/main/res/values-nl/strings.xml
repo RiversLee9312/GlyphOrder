@@ -11,7 +11,7 @@
     <string name="accessibility_change_language">Apptaal wijzigen</string>
     <string name="busy_processing">Bezig…</string>
     <string name="dialog_install_title">Lettertypemodule installeren?</string>
-    <string name="dialog_install_body">De wijzigingen worden actief na een herstart. Schakel de module in deze app of Magisk uit en herstart opnieuw om de systeemlettertypen te herstellen.</string>
+    <string name="dialog_install_body">De wijzigingen worden actief na een herstart. Schakel de module in deze app of Magisk / KernelSU uit en herstart opnieuw om de systeemlettertypen te herstellen.</string>
     <string name="dialog_restore_title">Systeemlettertypen herstellen?</string>
     <string name="dialog_restore_body">Schakel de GlyphOrder-lettertypemodule uit. De systeemlettertypen worden na een herstart hersteld.</string>
     <string name="dialog_reboot_title">Nu herstarten?</string>
@@ -83,7 +83,7 @@
     <string name="targets_description">Kies de systeemlettertypefamilies die je wilt vervangen. Teruginstellingen gelden voor de systeemterugvalketen.</string>
     <string name="device_ready">Apparaat gereed</string>
     <string name="device_check">Apparaat controleren</string>
-    <string name="device_version">Android %1$s · Magisk %2$s</string>
+    <string name="device_version">Android %1$s · %2$s</string>
     <string name="device_current_family">%1$s · %2$s</string>
     <string name="device_root_required">Roottoegang is nodig om de actieve lettertypeconfiguratie te lezen.</string>
     <string name="action_check">Controleren</string>
@@ -121,8 +121,8 @@
     <string name="error_font_size_invalid">De bestandsgrootte van het lettertype is ongeldig. Het maximum is 128 MB.</string>
     <string name="error_font_single_face">Kies één .ttf- of .otf-lettertypebestand. Lettertypecollecties worden niet ondersteund.</string>
     <string name="error_font_data_invalid">Het lettertypebestand is beschadigd of wordt niet ondersteund.</string>
-    <string name="error_root_permission">Roottoegang is niet verleend. Probeer het opnieuw. Als je het verzoek hebt geweigerd, geef GlyphOrder toestemming bij de superuserinstellingen van Magisk.</string>
-    <string name="error_system_updated">Het systeem is bijgewerkt. Schakel de module uit, herstart en controleer opnieuw.</string>
+    <string name="error_root_permission">Roottoegang is niet verleend. Probeer het opnieuw. Als je het verzoek hebt geweigerd, geef GlyphOrder toestemming bij de superuserinstellingen van Magisk / KernelSU.</string>
+    <string name="error_system_updated">De oorspronkelijke lettertypeconfiguratie kan niet worden geverifieerd voor dit systeem. Schakel de module uit, herstart en controleer opnieuw.</string>
     <string name="error_selinux_label_missing">Het SELinux-label van de lettertypeconfiguratie kan niet worden gelezen.</string>
     <string name="error_selinux_label_unsupported">Dit SELinux-label wordt niet ondersteund.</string>
     <string name="error_font_config_conflict">Een andere module heeft de lettertypeconfiguratie gewijzigd. Schakel de conflicterende module uit en herstart.</string>
@@ -145,7 +145,7 @@
     <string name="error_conflict_detected">Er is een conflicterende lettertypemodule gevonden.</string>
     <string name="error_config_changed">De lettertypeconfiguratie is gewijzigd. Genereer de module opnieuw.</string>
     <string name="error_module_integrity">Controle van het modulebestand is mislukt.</string>
-    <string name="error_magisk_module_missing">Magisk heeft de modulemap niet gemaakt.</string>
+    <string name="error_magisk_module_missing">Magisk / KernelSU heeft de modulemap niet gemaakt.</string>
     <string name="error_installed_module_integrity">Controle van de geïnstalleerde module is mislukt.</string>
     <string name="error_root_command">Rootopdracht mislukt (code %1$s): %2$s</string>
     <string name="error_module_not_generated">Genereer eerst een module.</string>

@@ -2,7 +2,7 @@
 
 [Download APK](https://github.com/RiversLee9312/GlyphOrder/releases/latest) · [中文](README.md)
 
-An Android font switcher built with Kotlin, Jetpack Compose and Material 3 Expressive. Android 14 (API 34) minimum; developed against LineageOS 23.2 / Android 16 on a OnePlus 11.
+An Android font switcher built with Kotlin, Jetpack Compose and Material 3 Expressive. Android 14 (API 34) minimum; validated on specific OnePlus 11 LineageOS 23.2 / Android 16 and LOS 24.0-20261023 / Android 17 builds. Root installation supports Magisk and KernelSU; KernelSU requires an active mounting metamodule (meta-overlayfs 1.3.1 was tested).
 
 Includes five offline choices: MiSans with the official Global language packs, Rubik, Noto Sans, Noto Serif with its script-specific Serif/CJK families, and Sarasa Fixed SC Regular/Bold. Every built-in and imported primary also has the shared Noto missing-glyph pool enabled by default. Matching family supplements precede the shared pool, preserving Serif and MiSans designs where available. This does not imply complete Unicode coverage or a matching design for every script. See [sources, coverage and licenses](design/FONTS.md). The interface supports 24 locales and native multilingual preview.
 
@@ -24,7 +24,7 @@ The GitHub release uses a dedicated signing key and cannot update a debug instal
 
 1. Import one or more single-face `.ttf` or `.otf` files through the Android file picker. Files stay on the device; the app has no Internet or broad storage permission.
 2. Choose a primary font. Automatic fallback is enabled by default for both built-in and imported fonts. The fallback page lets you turn it off, add script-specific or universal choices, or restore the default fallback configuration. Restoring clears manual/universal choices and enables automatic fallback while preserving the primary, axes and application scope. Preview custom text, sizes, weights and variable axes.
-3. Allow the app's Root request in Magisk. The app reads the device's actual XML, named families and SELinux labels.
+3. Allow the app's Root request in the active Magisk/KernelSU manager. The app reads the device's actual XML, named families and SELinux labels, and uses that manager's official module installer. Firmware baselines include Android API and OS incremental as well as fingerprint; a vendor fingerprint retained across an OTA cannot authorize an old baseline.
 4. On **Apply**, choose **Single font** with a scope (all families, style categories, or individual detected names), or **Mix by style** with independent Sans, Serif, Mono, Google Sans/LOS clock, Casual, Cursive and other-family choices. A category set to System default remains unchanged. **Apply configuration** detects, generates and installs the current selection in one operation; it never forces the scope to global. Reboot explicitly to activate. Preview has a category selector in mixed mode. Separate generation/export remain available. Apps with bundled fonts may keep their own typography.
 5. To restore the system fonts, disable the app's module and reboot.
 
@@ -86,7 +86,7 @@ Run the read-only generation/device tests with:
 .\gradlew.bat :app:connectedDebugAndroidTest
 ```
 
-The installation test is explicitly opt-in. It stages a same-font test module through Magisk, validates its SELinux label and leaves it disabled; it does not reboot:
+The installation test is explicitly opt-in. It stages a same-font test module through the active root manager, validates its SELinux label and leaves it disabled; it does not reboot:
 
 ```powershell
 .\gradlew.bat :app:connectedDebugAndroidTest '-Pandroid.testInstrumentationRunnerArguments.installModule=true'

@@ -11,7 +11,7 @@
     <string name="accessibility_change_language">Cambia lingua dell’app</string>
     <string name="busy_processing">Elaborazione…</string>
     <string name="dialog_install_title">Installare il modulo dei caratteri?</string>
-    <string name="dialog_install_body">Le modifiche avranno effetto dopo il riavvio. Disattiva il modulo in questa app o in Magisk, quindi riavvia di nuovo per ripristinare i caratteri di sistema.</string>
+    <string name="dialog_install_body">Le modifiche avranno effetto dopo il riavvio. Disattiva il modulo in questa app o in Magisk / KernelSU, quindi riavvia di nuovo per ripristinare i caratteri di sistema.</string>
     <string name="dialog_restore_title">Ripristinare i caratteri di sistema?</string>
     <string name="dialog_restore_body">Disattiva il modulo dei caratteri GlyphOrder. I caratteri di sistema verranno ripristinati dopo il riavvio.</string>
     <string name="dialog_reboot_title">Riavviare ora?</string>
@@ -83,7 +83,7 @@
     <string name="targets_description">Scegli le famiglie di caratteri di sistema da sostituire. Le impostazioni di fallback si applicano alla catena di fallback del sistema.</string>
     <string name="device_ready">Dispositivo pronto</string>
     <string name="device_check">Controlla dispositivo</string>
-    <string name="device_version">Android %1$s · Magisk %2$s</string>
+    <string name="device_version">Android %1$s · %2$s</string>
     <string name="device_current_family">%1$s · %2$s</string>
     <string name="device_root_required">Per leggere la configurazione attiva dei caratteri è necessario l’accesso root.</string>
     <string name="action_check">Controlla</string>
@@ -121,8 +121,8 @@
     <string name="error_font_size_invalid">La dimensione del file non è valida. Il limite massimo è 128 MB.</string>
     <string name="error_font_single_face">Scegli un singolo file .ttf o .otf. Le raccolte di caratteri non sono supportate.</string>
     <string name="error_font_data_invalid">Il file del carattere è danneggiato o non supportato.</string>
-    <string name="error_root_permission">Accesso root non concesso. Riprova. Se hai negato la richiesta, autorizza GlyphOrder nelle impostazioni superutente di Magisk.</string>
-    <string name="error_system_updated">Il sistema è stato aggiornato. Disattiva il modulo, riavvia e controlla di nuovo.</string>
+    <string name="error_root_permission">Accesso root non concesso. Riprova. Se hai negato la richiesta, autorizza GlyphOrder nelle impostazioni superutente di Magisk / KernelSU.</string>
+    <string name="error_system_updated">Impossibile verificare la configurazione originale dei caratteri per questo sistema. Disattiva il modulo, riavvia e controlla di nuovo.</string>
     <string name="error_selinux_label_missing">Impossibile leggere l’etichetta SELinux della configurazione dei caratteri.</string>
     <string name="error_selinux_label_unsupported">Questa etichetta SELinux non è supportata.</string>
     <string name="error_font_config_conflict">Un altro modulo ha modificato la configurazione dei caratteri. Disattiva il modulo in conflitto e riavvia.</string>
@@ -145,7 +145,7 @@
     <string name="error_conflict_detected">Rilevato un modulo dei caratteri in conflitto.</string>
     <string name="error_config_changed">La configurazione dei caratteri è cambiata. Rigenera il modulo.</string>
     <string name="error_module_integrity">Verifica del file del modulo non riuscita.</string>
-    <string name="error_magisk_module_missing">Magisk non ha creato la directory del modulo.</string>
+    <string name="error_magisk_module_missing">Magisk / KernelSU non ha creato la directory del modulo.</string>
     <string name="error_installed_module_integrity">Verifica del modulo installato non riuscita.</string>
     <string name="error_root_command">Comando root non riuscito (codice %1$s): %2$s</string>
     <string name="error_module_not_generated">Genera prima un modulo.</string>

@@ -11,7 +11,7 @@
     <string name="accessibility_change_language">Changer la langue de l\'application</string>
     <string name="busy_processing">Traitement…</string>
     <string name="dialog_install_title">Installer le module de polices ?</string>
-    <string name="dialog_install_body">Les changements prendront effet après le redémarrage. Désactivez le module dans cette application ou dans Magisk, puis redémarrez à nouveau pour restaurer les polices système.</string>
+    <string name="dialog_install_body">Les changements prendront effet après le redémarrage. Désactivez le module dans cette application ou dans Magisk / KernelSU, puis redémarrez à nouveau pour restaurer les polices système.</string>
     <string name="dialog_restore_title">Restaurer les polices système ?</string>
     <string name="dialog_restore_body">Désactive le module de polices 字序. Les polices système seront restaurées après un redémarrage.</string>
     <string name="dialog_reboot_title">Redémarrer maintenant ?</string>
@@ -77,7 +77,7 @@
     <string name="targets_description">Choisissez les familles de polices système à remplacer. Les paramètres de secours s’appliquent à la chaîne de secours du système.</string>
     <string name="device_ready">Appareil prêt</string>
     <string name="device_check">Vérifier l’appareil</string>
-    <string name="device_version">Android %1$s · Magisk %2$s</string>
+    <string name="device_version">Android %1$s · %2$s</string>
     <string name="device_current_family">%1$s · %2$s</string>
     <string name="device_root_required">L’accès root est nécessaire pour lire la configuration active des polices.</string>
     <string name="action_check">Vérifier</string>
@@ -118,8 +118,8 @@ Redémarrez ensuite l’appareil.</string>
     <string name="error_font_size_invalid">La taille du fichier de police est incorrecte. Le maximum est de 128 Mo.</string>
     <string name="error_font_single_face">Choisissez un seul fichier .ttf ou .otf. Les collections de polices ne sont pas prises en charge.</string>
     <string name="error_font_data_invalid">Le fichier de police est endommagé ou n’est pas pris en charge.</string>
-    <string name="error_root_permission">L’accès root n’a pas été accordé. Réessayez. Si vous avez refusé la demande, autorisez 字序 dans les paramètres de superutilisateur de Magisk.</string>
-    <string name="error_system_updated">Le système a été mis à jour. Désactivez le module, redémarrez, puis vérifiez à nouveau.</string>
+    <string name="error_root_permission">L’accès root n’a pas été accordé. Réessayez. Si vous avez refusé la demande, autorisez 字序 dans les paramètres de superutilisateur de Magisk / KernelSU.</string>
+    <string name="error_system_updated">La configuration de polices d’origine ne peut pas être vérifiée pour ce système. Désactivez le module, redémarrez, puis vérifiez à nouveau.</string>
     <string name="error_selinux_label_missing">Impossible de lire l’étiquette SELinux de la configuration des polices.</string>
     <string name="error_selinux_label_unsupported">Cette étiquette SELinux n’est pas prise en charge.</string>
     <string name="error_font_config_conflict">Un autre module a modifié la configuration des polices. Désactivez le module en conflit et redémarrez.</string>
@@ -142,7 +142,7 @@ Redémarrez ensuite l’appareil.</string>
     <string name="error_conflict_detected">Un module de polices en conflit a été détecté.</string>
     <string name="error_config_changed">La configuration des polices a changé. Régénérez le module.</string>
     <string name="error_module_integrity">Échec de la vérification du fichier du module.</string>
-    <string name="error_magisk_module_missing">Magisk n’a pas créé le dossier du module.</string>
+    <string name="error_magisk_module_missing">Magisk / KernelSU n’a pas créé le dossier du module.</string>
     <string name="error_installed_module_integrity">Échec de la vérification du module installé.</string>
     <string name="error_root_command">Échec de la commande root (code %1$s) : %2$s</string>
     <string name="error_module_not_generated">Générez d’abord un module.</string>

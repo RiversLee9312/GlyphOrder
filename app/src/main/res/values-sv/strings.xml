@@ -11,7 +11,7 @@
     <string name="accessibility_change_language">Byt appspråk</string>
     <string name="busy_processing">Arbetar…</string>
     <string name="dialog_install_title">Installera typsnittsmodul?</string>
-    <string name="dialog_install_body">Ändringarna börjar gälla efter en omstart. Inaktivera modulen i den här appen eller Magisk och starta om igen för att återställa systemtypsnitten.</string>
+    <string name="dialog_install_body">Ändringarna börjar gälla efter en omstart. Inaktivera modulen i den här appen eller Magisk / KernelSU och starta om igen för att återställa systemtypsnitten.</string>
     <string name="dialog_restore_title">Återställa systemtypsnitt?</string>
     <string name="dialog_restore_body">Inaktivera GlyphOrders typsnittsmodul. Systemtypsnitten återställs efter en omstart.</string>
     <string name="dialog_reboot_title">Starta om nu?</string>
@@ -83,7 +83,7 @@
     <string name="targets_description">Välj vilka systemtypsnittsfamiljer som ska ersättas. Reservinställningarna gäller systemets reservkedja.</string>
     <string name="device_ready">Enheten är klar</string>
     <string name="device_check">Kontrollera enheten</string>
-    <string name="device_version">Android %1$s · Magisk %2$s</string>
+    <string name="device_version">Android %1$s · %2$s</string>
     <string name="device_current_family">%1$s · %2$s</string>
     <string name="device_root_required">Rootåtkomst krävs för att läsa den aktiva typsnittskonfigurationen.</string>
     <string name="action_check">Kontrollera</string>
@@ -121,8 +121,8 @@
     <string name="error_font_size_invalid">Typsnittsfilens storlek är ogiltig. Högsta storlek är 128 MB.</string>
     <string name="error_font_single_face">Välj en enda .ttf- eller .otf-fil. Typsnittssamlingar stöds inte.</string>
     <string name="error_font_data_invalid">Typsnittsfilen är skadad eller stöds inte.</string>
-    <string name="error_root_permission">Rootåtkomst beviljades inte. Försök igen. Om du nekade begäran tillåter du GlyphOrder i Magisks superanvändarinställningar.</string>
-    <string name="error_system_updated">Systemet har uppdaterats. Inaktivera modulen, starta om och kontrollera igen.</string>
+    <string name="error_root_permission">Rootåtkomst beviljades inte. Försök igen. Om du nekade begäran tillåter du GlyphOrder i Magisk / KernelSUs superanvändarinställningar.</string>
+    <string name="error_system_updated">Den ursprungliga teckensnittskonfigurationen kan inte verifieras för detta system. Inaktivera modulen, starta om och kontrollera igen.</string>
     <string name="error_selinux_label_missing">Det gick inte att läsa SELinux-etiketten för typsnittskonfigurationen.</string>
     <string name="error_selinux_label_unsupported">Den här SELinux-etiketten stöds inte.</string>
     <string name="error_font_config_conflict">En annan modul ändrade typsnittskonfigurationen. Inaktivera den motstridiga modulen och starta om.</string>
@@ -145,7 +145,7 @@
     <string name="error_conflict_detected">En motstridig typsnittsmodul upptäcktes.</string>
     <string name="error_config_changed">Typsnittskonfigurationen har ändrats. Generera modulen igen.</string>
     <string name="error_module_integrity">Verifieringen av modulfilen misslyckades.</string>
-    <string name="error_magisk_module_missing">Magisk skapade inte modulens katalog.</string>
+    <string name="error_magisk_module_missing">Magisk / KernelSU skapade inte modulens katalog.</string>
     <string name="error_installed_module_integrity">Verifieringen av den installerade modulen misslyckades.</string>
     <string name="error_root_command">Rootkommandot misslyckades (kod %1$s): %2$s</string>
     <string name="error_module_not_generated">Generera en modul först.</string>

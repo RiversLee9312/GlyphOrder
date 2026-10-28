@@ -89,12 +89,15 @@ class DeviceIntegrationTest {
             assertTrue(text("customize.sh").contains("system_font_fallback_file"))
             assertTrue(text("system/etc/font_fallback.xml").contains("NotoColorEmoji.ttf"))
             assertEquals(snapshot.configs.getValue("/system/etc/font_fallback.xml"), text("baseline/system/etc/font_fallback.xml"))
+            assertTrue(SystemBuild.fromManifest(org.json.JSONObject(text("baseline.json"))).matches(SystemBuild.current()))
+            assertTrue(text("customize.sh").contains("getprop ro.build.version.sdk"))
+            assertTrue(text("customize.sh").contains("getprop ro.build.version.incremental"))
         }
         assertEquals(before, CONFIG_PATHS.filter(Root::exists).associateWith(Root::read))
     }
 
-    /** Opt-in only. Stages a same-font module through Magisk and leaves it disabled. Never reboots. */
-    @Test fun officialMagiskInstallAndDisable() {
+    /** Opt-in only. Uses the active root manager and leaves the module disabled. Never reboots. */
+    @Test fun officialRootManagerInstallAndDisable() {
         org.junit.Assume.assumeTrue(InstrumentationRegistry.getArguments().getString("installModule") == "true")
         val store = FontStore(context)
         val font = store.import(uri("Roboto.ttf"))

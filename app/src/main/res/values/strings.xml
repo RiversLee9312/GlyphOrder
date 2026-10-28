@@ -13,7 +13,7 @@
     <string name="busy_processing">Working…</string>
 
     <string name="dialog_install_title">Install font module?</string>
-    <string name="dialog_install_body">The changes take effect after a reboot. Disable the module in this app or Magisk, then reboot again to restore the system fonts.</string>
+    <string name="dialog_install_body">The changes take effect after a reboot. Disable the module in this app or Magisk / KernelSU, then reboot again to restore the system fonts.</string>
     <string name="dialog_restore_title">Restore system fonts?</string>
     <string name="dialog_restore_body">Disable the GlyphOrder font module. The system fonts will be restored after a reboot.</string>
     <string name="dialog_reboot_title">Reboot now?</string>
@@ -94,7 +94,7 @@
 
     <string name="device_ready">Device ready</string>
     <string name="device_check">Check device</string>
-    <string name="device_version">Android %1$s · Magisk %2$s</string>
+    <string name="device_version">Android %1$s · %2$s</string>
     <string name="device_current_family">%1$s · %2$s</string>
     <string name="device_root_required">Reading the active font configuration requires root access.</string>
     <string name="action_check">Check</string>
@@ -138,8 +138,8 @@ Then reboot the device.</string>
     <string name="error_font_size_invalid">The font file size is invalid. The maximum size is 128 MB.</string>
     <string name="error_font_single_face">Choose one .ttf or .otf font file. Font collections are not supported.</string>
     <string name="error_font_data_invalid">The font file is damaged or unsupported.</string>
-    <string name="error_root_permission">Root access was not granted. Try again. If you denied the request, allow GlyphOrder in Magisk\'s superuser settings.</string>
-    <string name="error_system_updated">The system has been updated. Disable the module, reboot, and check again.</string>
+    <string name="error_root_permission">Root access was not granted. Try again. If you denied the request, allow GlyphOrder in Magisk / KernelSU\'s superuser settings.</string>
+    <string name="error_system_updated">The font baseline cannot be verified for this system. Disable the module, reboot, and check again.</string>
     <string name="error_selinux_label_missing">The SELinux label for the font configuration could not be read.</string>
     <string name="error_selinux_label_unsupported">This SELinux label is not supported.</string>
     <string name="error_font_config_conflict">Another module changed the font configuration. Disable the conflicting module and reboot.</string>
@@ -162,7 +162,7 @@ Then reboot the device.</string>
     <string name="error_conflict_detected">A conflicting font module was detected.</string>
     <string name="error_config_changed">The font configuration changed. Generate the module again.</string>
     <string name="error_module_integrity">Module file verification failed.</string>
-    <string name="error_magisk_module_missing">Magisk did not create the module directory.</string>
+    <string name="error_magisk_module_missing">Magisk / KernelSU did not create the module directory.</string>
     <string name="error_installed_module_integrity">Installed module verification failed.</string>
     <string name="error_root_command">Root command failed (code %1$s): %2$s</string>
     <string name="error_module_not_generated">Generate a module first.</string>

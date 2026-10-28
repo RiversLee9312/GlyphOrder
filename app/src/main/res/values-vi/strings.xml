@@ -11,7 +11,7 @@
     <string name="accessibility_change_language">Đổi ngôn ngữ ứng dụng</string>
     <string name="busy_processing">Đang xử lý…</string>
     <string name="dialog_install_title">Cài đặt mô-đun phông chữ?</string>
-    <string name="dialog_install_body">Thay đổi có hiệu lực sau khi khởi động lại. Hãy tắt mô-đun trong ứng dụng này hoặc Magisk, rồi khởi động lại lần nữa để khôi phục phông chữ hệ thống.</string>
+    <string name="dialog_install_body">Thay đổi có hiệu lực sau khi khởi động lại. Hãy tắt mô-đun trong ứng dụng này hoặc Magisk / KernelSU, rồi khởi động lại lần nữa để khôi phục phông chữ hệ thống.</string>
     <string name="dialog_restore_title">Khôi phục phông chữ hệ thống?</string>
     <string name="dialog_restore_body">Tắt mô-đun phông chữ GlyphOrder. Phông chữ hệ thống sẽ được khôi phục sau khi khởi động lại.</string>
     <string name="dialog_reboot_title">Khởi động lại ngay?</string>
@@ -83,7 +83,7 @@
     <string name="targets_description">Chọn các họ phông hệ thống cần thay thế. Cài đặt dự phòng áp dụng cho chuỗi dự phòng của hệ thống.</string>
     <string name="device_ready">Thiết bị sẵn sàng</string>
     <string name="device_check">Kiểm tra thiết bị</string>
-    <string name="device_version">Android %1$s · Magisk %2$s</string>
+    <string name="device_version">Android %1$s · %2$s</string>
     <string name="device_current_family">%1$s · %2$s</string>
     <string name="device_root_required">Cần quyền root để đọc cấu hình phông chữ đang hoạt động.</string>
     <string name="action_check">Kiểm tra</string>
@@ -121,8 +121,8 @@
     <string name="error_font_size_invalid">Kích thước tệp phông chữ không hợp lệ. Tối đa là 128 MB.</string>
     <string name="error_font_single_face">Chọn một tệp .ttf hoặc .otf. Không hỗ trợ bộ sưu tập phông chữ.</string>
     <string name="error_font_data_invalid">Tệp phông chữ bị hỏng hoặc không được hỗ trợ.</string>
-    <string name="error_root_permission">Chưa cấp quyền root. Hãy thử lại. Nếu bạn đã từ chối yêu cầu, hãy cho phép GlyphOrder trong cài đặt siêu người dùng của Magisk.</string>
-    <string name="error_system_updated">Hệ thống đã được cập nhật. Tắt mô-đun, khởi động lại rồi kiểm tra lại.</string>
+    <string name="error_root_permission">Chưa cấp quyền root. Hãy thử lại. Nếu bạn đã từ chối yêu cầu, hãy cho phép GlyphOrder trong cài đặt siêu người dùng của Magisk / KernelSU.</string>
+    <string name="error_system_updated">Không thể xác minh cấu hình phông chữ gốc cho hệ thống này. Tắt mô-đun, khởi động lại rồi kiểm tra lần nữa.</string>
     <string name="error_selinux_label_missing">Không thể đọc nhãn SELinux của cấu hình phông chữ.</string>
     <string name="error_selinux_label_unsupported">Không hỗ trợ nhãn SELinux này.</string>
     <string name="error_font_config_conflict">Mô-đun khác đã thay đổi cấu hình phông chữ. Tắt mô-đun xung đột và khởi động lại.</string>
@@ -145,7 +145,7 @@
     <string name="error_conflict_detected">Đã phát hiện mô-đun phông chữ xung đột.</string>
     <string name="error_config_changed">Cấu hình phông chữ đã thay đổi. Hãy tạo lại mô-đun.</string>
     <string name="error_module_integrity">Xác minh tệp mô-đun thất bại.</string>
-    <string name="error_magisk_module_missing">Magisk không tạo thư mục mô-đun.</string>
+    <string name="error_magisk_module_missing">Magisk / KernelSU không tạo thư mục mô-đun.</string>
     <string name="error_installed_module_integrity">Xác minh mô-đun đã cài đặt thất bại.</string>
     <string name="error_root_command">Lệnh root thất bại (mã %1$s): %2$s</string>
     <string name="error_module_not_generated">Trước tiên hãy tạo mô-đun.</string>

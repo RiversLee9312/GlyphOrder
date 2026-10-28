@@ -11,7 +11,7 @@
     <string name="accessibility_change_language">เปลี่ยนภาษาของแอป</string>
     <string name="busy_processing">กำลังดำเนินการ…</string>
     <string name="dialog_install_title">ติดตั้งโมดูลแบบอักษรไหม</string>
-    <string name="dialog_install_body">การเปลี่ยนแปลงจะมีผลหลังจากรีบูต ปิดใช้โมดูลในแอปนี้หรือ Magisk แล้วรีบูตอีกครั้งเพื่อคืนค่าแบบอักษรระบบ</string>
+    <string name="dialog_install_body">การเปลี่ยนแปลงจะมีผลหลังจากรีบูต ปิดใช้โมดูลในแอปนี้หรือ Magisk / KernelSU แล้วรีบูตอีกครั้งเพื่อคืนค่าแบบอักษรระบบ</string>
     <string name="dialog_restore_title">คืนค่าแบบอักษรระบบไหม</string>
     <string name="dialog_restore_body">ปิดใช้โมดูลแบบอักษร GlyphOrder แบบอักษรระบบจะคืนค่าหลังจากรีบูต</string>
     <string name="dialog_reboot_title">รีบูตตอนนี้ไหม</string>
@@ -83,7 +83,7 @@
     <string name="targets_description">เลือกตระกูลแบบอักษรระบบที่ต้องการแทนที่ การตั้งค่าสำรองใช้กับลำดับแบบอักษรสำรองของระบบ</string>
     <string name="device_ready">อุปกรณ์พร้อมแล้ว</string>
     <string name="device_check">ตรวจสอบอุปกรณ์</string>
-    <string name="device_version">Android %1$s · Magisk %2$s</string>
+    <string name="device_version">Android %1$s · %2$s</string>
     <string name="device_current_family">%1$s · %2$s</string>
     <string name="device_root_required">ต้องมีสิทธิ์ root เพื่ออ่านการกำหนดค่าแบบอักษรที่ใช้งานอยู่</string>
     <string name="action_check">ตรวจสอบ</string>
@@ -121,8 +121,8 @@
     <string name="error_font_size_invalid">ขนาดไฟล์แบบอักษรไม่ถูกต้อง ขนาดสูงสุดคือ 128 MB</string>
     <string name="error_font_single_face">เลือกไฟล์ .ttf หรือ .otf เพียงไฟล์เดียว ไม่รองรับชุดแบบอักษร</string>
     <string name="error_font_data_invalid">ไฟล์แบบอักษรเสียหายหรือไม่รองรับ</string>
-    <string name="error_root_permission">ไม่ได้รับสิทธิ์ root ลองอีกครั้ง หากปฏิเสธคำขอ ให้สิทธิ์ GlyphOrder ในการตั้งค่า superuser ของ Magisk</string>
-    <string name="error_system_updated">ระบบได้รับการอัปเดตแล้ว ปิดใช้โมดูล รีบูต แล้วตรวจสอบอีกครั้ง</string>
+    <string name="error_root_permission">ไม่ได้รับสิทธิ์ root ลองอีกครั้ง หากปฏิเสธคำขอ ให้สิทธิ์ GlyphOrder ในการตั้งค่า superuser ของ Magisk / KernelSU</string>
+    <string name="error_system_updated">ไม่สามารถตรวจสอบการกำหนดค่าแบบอักษรเดิมสำหรับระบบนี้ได้ ปิดใช้โมดูล รีบูต แล้วตรวจสอบอีกครั้ง</string>
     <string name="error_selinux_label_missing">อ่านป้ายกำกับ SELinux ของการกำหนดค่าแบบอักษรไม่ได้</string>
     <string name="error_selinux_label_unsupported">ไม่รองรับป้ายกำกับ SELinux นี้</string>
     <string name="error_font_config_conflict">โมดูลอื่นเปลี่ยนการกำหนดค่าแบบอักษร ปิดใช้โมดูลที่ขัดแย้งกันแล้วรีบูต</string>
@@ -145,7 +145,7 @@
     <string name="error_conflict_detected">ตรวจพบโมดูลแบบอักษรที่ขัดแย้งกัน</string>
     <string name="error_config_changed">การกำหนดค่าแบบอักษรเปลี่ยนไป สร้างโมดูลใหม่</string>
     <string name="error_module_integrity">ตรวจสอบไฟล์โมดูลไม่สำเร็จ</string>
-    <string name="error_magisk_module_missing">Magisk ไม่ได้สร้างไดเรกทอรีโมดูล</string>
+    <string name="error_magisk_module_missing">Magisk / KernelSU ไม่ได้สร้างไดเรกทอรีโมดูล</string>
     <string name="error_installed_module_integrity">ตรวจสอบโมดูลที่ติดตั้งไม่สำเร็จ</string>
     <string name="error_root_command">คำสั่ง root ล้มเหลว (รหัส %1$s): %2$s</string>
     <string name="error_module_not_generated">สร้างโมดูลก่อน</string>

@@ -11,7 +11,7 @@
     <string name="accessibility_change_language">變更應用程式語言</string>
     <string name="busy_processing">處理中…</string>
     <string name="dialog_install_title">安裝字體模組？</string>
-    <string name="dialog_install_body">重新啟動後生效。可在本應用程式或 Magisk 中停用模組，再次重新啟動即可還原系統字體。</string>
+    <string name="dialog_install_body">重新啟動後生效。可在本應用程式或 Magisk / KernelSU 中停用模組，再次重新啟動即可還原系統字體。</string>
     <string name="dialog_restore_title">還原系統字體？</string>
     <string name="dialog_restore_body">停用字序字體模組，重新啟動後還原系統字體。</string>
     <string name="dialog_reboot_title">立即重新啟動？</string>
@@ -77,7 +77,7 @@
     <string name="targets_description">選擇要替換的系統字體 family。後備設定會套用至系統後備鏈。</string>
     <string name="device_ready">裝置已就緒</string>
     <string name="device_check">檢查裝置</string>
-    <string name="device_version">Android %1$s · Magisk %2$s</string>
+    <string name="device_version">Android %1$s · %2$s</string>
     <string name="device_current_family">%1$s · %2$s</string>
     <string name="device_root_required">讀取實際字體設定需要 Root 權限。</string>
     <string name="action_check">檢查</string>
@@ -118,8 +118,8 @@
     <string name="error_font_size_invalid">字體檔案大小無效，上限為 128 MB。</string>
     <string name="error_font_single_face">請選擇單一 .ttf 或 .otf 字體檔案；目前不支援字體集合。</string>
     <string name="error_font_data_invalid">字體檔案已損毀或不受支援。</string>
-    <string name="error_root_permission">未取得 Root 權限。請重試；若先前拒絕了要求，請在 Magisk 的超級使用者設定中允許字序。</string>
-    <string name="error_system_updated">系統已更新。請先停用模組並重新啟動，再次檢查。</string>
+    <string name="error_root_permission">未取得 Root 權限。請重試；若先前拒絕了要求，請在 Magisk / KernelSU 的超級使用者設定中允許字序。</string>
+    <string name="error_system_updated">無法確認字型基準適用於目前的系統。請先停用模組並重新啟動，再次檢查。</string>
     <string name="error_selinux_label_missing">無法讀取字體設定的 SELinux 標籤。</string>
     <string name="error_selinux_label_unsupported">不支援此 SELinux 標籤。</string>
     <string name="error_font_config_conflict">其他模組已變更字體設定。請停用衝突模組並重新啟動。</string>
@@ -142,7 +142,7 @@
     <string name="error_conflict_detected">偵測到衝突的字體模組。</string>
     <string name="error_config_changed">字體設定已變更，請重新產生模組。</string>
     <string name="error_module_integrity">模組檔案驗證失敗。</string>
-    <string name="error_magisk_module_missing">Magisk 未建立模組目錄。</string>
+    <string name="error_magisk_module_missing">Magisk / KernelSU 未建立模組目錄。</string>
     <string name="error_installed_module_integrity">已安裝模組驗證失敗。</string>
     <string name="error_root_command">Root 命令失敗（代碼 %1$s）：%2$s</string>
     <string name="error_module_not_generated">請先產生模組。</string>

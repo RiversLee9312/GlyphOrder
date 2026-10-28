@@ -11,7 +11,7 @@
     <string name="accessibility_change_language">Zmień język aplikacji</string>
     <string name="busy_processing">Przetwarzanie…</string>
     <string name="dialog_install_title">Zainstalować moduł czcionek?</string>
-    <string name="dialog_install_body">Zmiany zaczną obowiązywać po ponownym uruchomieniu. Wyłącz moduł w tej aplikacji lub Magisk, a następnie uruchom urządzenie ponownie, aby przywrócić czcionki systemowe.</string>
+    <string name="dialog_install_body">Zmiany zaczną obowiązywać po ponownym uruchomieniu. Wyłącz moduł w tej aplikacji lub Magisk / KernelSU, a następnie uruchom urządzenie ponownie, aby przywrócić czcionki systemowe.</string>
     <string name="dialog_restore_title">Przywrócić czcionki systemowe?</string>
     <string name="dialog_restore_body">Wyłącz moduł czcionek GlyphOrder. Czcionki systemowe zostaną przywrócone po ponownym uruchomieniu.</string>
     <string name="dialog_reboot_title">Uruchomić ponownie teraz?</string>
@@ -77,7 +77,7 @@
     <string name="targets_description">Wybierz systemowe rodziny czcionek do zastąpienia. Ustawienia zapasowe dotyczą systemowego łańcucha czcionek zapasowych.</string>
     <string name="device_ready">Urządzenie gotowe</string>
     <string name="device_check">Sprawdź urządzenie</string>
-    <string name="device_version">Android %1$s · Magisk %2$s</string>
+    <string name="device_version">Android %1$s · %2$s</string>
     <string name="device_current_family">%1$s · %2$s</string>
     <string name="device_root_required">Odczyt aktywnej konfiguracji czcionek wymaga dostępu root.</string>
     <string name="action_check">Sprawdź</string>
@@ -115,8 +115,8 @@
     <string name="error_font_size_invalid">Rozmiar pliku czcionki jest nieprawidłowy. Maksymalny rozmiar to 128 MB.</string>
     <string name="error_font_single_face">Wybierz jeden plik .ttf lub .otf. Kolekcje czcionek nie są obsługiwane.</string>
     <string name="error_font_data_invalid">Plik czcionki jest uszkodzony lub nieobsługiwany.</string>
-    <string name="error_root_permission">Nie przyznano dostępu root. Spróbuj ponownie. Jeśli odrzucono prośbę, zezwól aplikacji GlyphOrder w ustawieniach superużytkownika Magisk.</string>
-    <string name="error_system_updated">System został zaktualizowany. Wyłącz moduł, uruchom urządzenie ponownie i sprawdź ponownie.</string>
+    <string name="error_root_permission">Nie przyznano dostępu root. Spróbuj ponownie. Jeśli odrzucono prośbę, zezwól aplikacji GlyphOrder w ustawieniach superużytkownika Magisk / KernelSU.</string>
+    <string name="error_system_updated">Nie można zweryfikować oryginalnej konfiguracji czcionek dla tego systemu. Wyłącz moduł, uruchom urządzenie ponownie i sprawdź ponownie.</string>
     <string name="error_selinux_label_missing">Nie można odczytać etykiety SELinux konfiguracji czcionek.</string>
     <string name="error_selinux_label_unsupported">Ta etykieta SELinux nie jest obsługiwana.</string>
     <string name="error_font_config_conflict">Inny moduł zmienił konfigurację czcionek. Wyłącz konfliktujący moduł i uruchom urządzenie ponownie.</string>
@@ -139,7 +139,7 @@
     <string name="error_conflict_detected">Wykryto konfliktujący moduł czcionek.</string>
     <string name="error_config_changed">Konfiguracja czcionek uległa zmianie. Utwórz moduł ponownie.</string>
     <string name="error_module_integrity">Nie udało się zweryfikować pliku modułu.</string>
-    <string name="error_magisk_module_missing">Magisk nie utworzył katalogu modułu.</string>
+    <string name="error_magisk_module_missing">Magisk / KernelSU nie utworzył katalogu modułu.</string>
     <string name="error_installed_module_integrity">Nie udało się zweryfikować zainstalowanego modułu.</string>
     <string name="error_root_command">Polecenie root nie powiodło się (kod %1$s): %2$s</string>
     <string name="error_module_not_generated">Najpierw utwórz moduł.</string>

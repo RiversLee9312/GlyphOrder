@@ -11,7 +11,7 @@
     <string name="accessibility_change_language">تغيير لغة التطبيق</string>
     <string name="busy_processing">جارٍ التنفيذ…</string>
     <string name="dialog_install_title">تثبيت وحدة الخطوط؟</string>
-    <string name="dialog_install_body">تسري التغييرات بعد إعادة التشغيل. عطّل الوحدة في هذا التطبيق أو Magisk، ثم أعد التشغيل مرة أخرى لاستعادة خطوط النظام.</string>
+    <string name="dialog_install_body">تسري التغييرات بعد إعادة التشغيل. عطّل الوحدة في هذا التطبيق أو Magisk / KernelSU، ثم أعد التشغيل مرة أخرى لاستعادة خطوط النظام.</string>
     <string name="dialog_restore_title">استعادة خطوط النظام؟</string>
     <string name="dialog_restore_body">عطّل وحدة خطوط GlyphOrder. ستُستعاد خطوط النظام بعد إعادة التشغيل.</string>
     <string name="dialog_reboot_title">إعادة التشغيل الآن؟</string>
@@ -77,7 +77,7 @@
     <string name="targets_description">اختر عائلات خطوط النظام التي تريد استبدالها. تنطبق إعدادات الخطوط الاحتياطية على سلسلة الخطوط الاحتياطية للنظام.</string>
     <string name="device_ready">الجهاز جاهز</string>
     <string name="device_check">فحص الجهاز</string>
-    <string name="device_version">Android %1$s · Magisk %2$s</string>
+    <string name="device_version">Android %1$s · %2$s</string>
     <string name="device_current_family">%1$s · %2$s</string>
     <string name="device_root_required">يلزم الوصول إلى root لقراءة إعداد الخطوط النشط.</string>
     <string name="action_check">فحص</string>
@@ -115,8 +115,8 @@
     <string name="error_font_size_invalid">حجم ملف الخط غير صالح. الحد الأقصى 128 MB.</string>
     <string name="error_font_single_face">اختر ملف خط واحدًا بصيغة .ttf أو .otf. مجموعات الخطوط غير مدعومة.</string>
     <string name="error_font_data_invalid">ملف الخط تالف أو غير مدعوم.</string>
-    <string name="error_root_permission">لم يتم منح صلاحية root. حاول مرة أخرى. إذا رفضت الطلب، اسمح لـ GlyphOrder من إعدادات المستخدم المتميز في Magisk.</string>
-    <string name="error_system_updated">تم تحديث النظام. عطّل الوحدة وأعد التشغيل ثم تحقق مجددًا.</string>
+    <string name="error_root_permission">لم يتم منح صلاحية root. حاول مرة أخرى. إذا رفضت الطلب، اسمح لـ GlyphOrder من إعدادات المستخدم المتميز في Magisk / KernelSU.</string>
+    <string name="error_system_updated">تعذّر التحقق من توافق إعدادات الخط الأساسية مع هذا النظام. عطّل الوحدة وأعد التشغيل ثم تحقق مجددًا.</string>
     <string name="error_selinux_label_missing">تعذرت قراءة تصنيف SELinux لإعداد الخطوط.</string>
     <string name="error_selinux_label_unsupported">تصنيف SELinux هذا غير مدعوم.</string>
     <string name="error_font_config_conflict">غيّرت وحدة أخرى إعداد الخطوط. عطّل الوحدة المتعارضة وأعد التشغيل.</string>
@@ -139,7 +139,7 @@
     <string name="error_conflict_detected">تم اكتشاف وحدة خطوط متعارضة.</string>
     <string name="error_config_changed">تغير إعداد الخطوط. أنشئ الوحدة مرة أخرى.</string>
     <string name="error_module_integrity">تعذر التحقق من ملف الوحدة.</string>
-    <string name="error_magisk_module_missing">لم ينشئ Magisk دليل الوحدة.</string>
+    <string name="error_magisk_module_missing">لم ينشئ Magisk / KernelSU دليل الوحدة.</string>
     <string name="error_installed_module_integrity">تعذر التحقق من الوحدة المثبتة.</string>
     <string name="error_root_command">فشل أمر root (الرمز %1$s): %2$s</string>
     <string name="error_module_not_generated">أنشئ وحدة أولًا.</string>

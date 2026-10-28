@@ -11,7 +11,7 @@
     <string name="accessibility_change_language">Uygulama dilini değiştir</string>
     <string name="busy_processing">İşleniyor…</string>
     <string name="dialog_install_title">Yazı tipi modülü yüklensin mi?</string>
-    <string name="dialog_install_body">Değişiklikler yeniden başlatmadan sonra uygulanır. Sistem yazı tiplerini geri yüklemek için modülü bu uygulamada veya Magisk\'te devre dışı bırakın ve cihazı yeniden başlatın.</string>
+    <string name="dialog_install_body">Değişiklikler yeniden başlatmadan sonra uygulanır. Sistem yazı tiplerini geri yüklemek için modülü bu uygulamada veya Magisk / KernelSU\'te devre dışı bırakın ve cihazı yeniden başlatın.</string>
     <string name="dialog_restore_title">Sistem yazı tipleri geri yüklensin mi?</string>
     <string name="dialog_restore_body">GlyphOrder yazı tipi modülünü devre dışı bırakın. Sistem yazı tipleri yeniden başlatmadan sonra geri yüklenir.</string>
     <string name="dialog_reboot_title">Şimdi yeniden başlatılsın mı?</string>
@@ -83,7 +83,7 @@
     <string name="targets_description">Değiştirilecek sistem yazı tipi ailelerini seçin. Yedek ayarları sistemin yedek zincirine uygulanır.</string>
     <string name="device_ready">Cihaz hazır</string>
     <string name="device_check">Cihazı denetle</string>
-    <string name="device_version">Android %1$s · Magisk %2$s</string>
+    <string name="device_version">Android %1$s · %2$s</string>
     <string name="device_current_family">%1$s · %2$s</string>
     <string name="device_root_required">Etkin yazı tipi yapılandırmasını okumak için root erişimi gerekir.</string>
     <string name="action_check">Denetle</string>
@@ -121,8 +121,8 @@
     <string name="error_font_size_invalid">Yazı tipi dosyasının boyutu geçersiz. En fazla 128 MB olabilir.</string>
     <string name="error_font_single_face">Tek bir .ttf veya .otf dosyası seçin. Yazı tipi koleksiyonları desteklenmez.</string>
     <string name="error_font_data_invalid">Yazı tipi dosyası bozuk veya desteklenmiyor.</string>
-    <string name="error_root_permission">Root erişimi verilmedi. Yeniden deneyin. İsteği reddettiyseniz Magisk süper kullanıcı ayarlarından GlyphOrder\'a izin verin.</string>
-    <string name="error_system_updated">Sistem güncellendi. Modülü devre dışı bırakın, cihazı yeniden başlatın ve tekrar denetleyin.</string>
+    <string name="error_root_permission">Root erişimi verilmedi. Yeniden deneyin. İsteği reddettiyseniz Magisk / KernelSU süper kullanıcı ayarlarından GlyphOrder\'a izin verin.</string>
+    <string name="error_system_updated">Özgün yazı tipi yapılandırması bu sistem için doğrulanamıyor. Modülü devre dışı bırakın, cihazı yeniden başlatın ve tekrar denetleyin.</string>
     <string name="error_selinux_label_missing">Yazı tipi yapılandırmasının SELinux etiketi okunamadı.</string>
     <string name="error_selinux_label_unsupported">Bu SELinux etiketi desteklenmiyor.</string>
     <string name="error_font_config_conflict">Başka bir modül yazı tipi yapılandırmasını değiştirdi. Çakışan modülü devre dışı bırakıp cihazı yeniden başlatın.</string>
@@ -145,7 +145,7 @@
     <string name="error_conflict_detected">Çakışan bir yazı tipi modülü algılandı.</string>
     <string name="error_config_changed">Yazı tipi yapılandırması değişti. Modülü yeniden oluşturun.</string>
     <string name="error_module_integrity">Modül dosyası doğrulanamadı.</string>
-    <string name="error_magisk_module_missing">Magisk modül dizinini oluşturmadı.</string>
+    <string name="error_magisk_module_missing">Magisk / KernelSU modül dizinini oluşturmadı.</string>
     <string name="error_installed_module_integrity">Yüklü modül doğrulanamadı.</string>
     <string name="error_root_command">Root komutu başarısız (kod %1$s): %2$s</string>
     <string name="error_module_not_generated">Önce bir modül oluşturun.</string>

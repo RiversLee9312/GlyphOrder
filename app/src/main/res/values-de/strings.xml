@@ -11,7 +11,7 @@
     <string name="accessibility_change_language">App-Sprache ändern</string>
     <string name="busy_processing">Wird verarbeitet…</string>
     <string name="dialog_install_title">Schriftmodul installieren?</string>
-    <string name="dialog_install_body">Die Änderungen werden nach einem Neustart wirksam. Deaktiviere das Modul in dieser App oder in Magisk und starte das Gerät erneut, um die Systemschriften wiederherzustellen.</string>
+    <string name="dialog_install_body">Die Änderungen werden nach einem Neustart wirksam. Deaktiviere das Modul in dieser App oder in Magisk / KernelSU und starte das Gerät erneut, um die Systemschriften wiederherzustellen.</string>
     <string name="dialog_restore_title">Systemschriften wiederherstellen?</string>
     <string name="dialog_restore_body">Das 字序-Schriftmodul wird deaktiviert. Nach einem Neustart werden die Systemschriften wiederhergestellt.</string>
     <string name="dialog_reboot_title">Jetzt neu starten?</string>
@@ -77,7 +77,7 @@
     <string name="targets_description">Wähle die zu ersetzenden System-Schriftfamilien aus. Fallback-Einstellungen gelten für die System-Fallback-Kette.</string>
     <string name="device_ready">Gerät bereit</string>
     <string name="device_check">Gerät prüfen</string>
-    <string name="device_version">Android %1$s · Magisk %2$s</string>
+    <string name="device_version">Android %1$s · %2$s</string>
     <string name="device_current_family">%1$s · %2$s</string>
     <string name="device_root_required">Zum Lesen der aktiven Schriftkonfiguration ist Root-Zugriff erforderlich.</string>
     <string name="action_check">Prüfen</string>
@@ -118,8 +118,8 @@ Starte anschließend das Gerät neu.</string>
     <string name="error_font_size_invalid">Die Größe der Schriftdatei ist ungültig. Das Maximum beträgt 128 MB.</string>
     <string name="error_font_single_face">Wähle eine einzelne .ttf- oder .otf-Datei. Schriftsammlungen werden nicht unterstützt.</string>
     <string name="error_font_data_invalid">Die Schriftdatei ist beschädigt oder wird nicht unterstützt.</string>
-    <string name="error_root_permission">Root-Zugriff wurde nicht gewährt. Versuche es erneut. Falls du abgelehnt hast, erlaube 字序 in den Superuser-Einstellungen von Magisk.</string>
-    <string name="error_system_updated">Das System wurde aktualisiert. Deaktiviere das Modul, starte neu und prüfe erneut.</string>
+    <string name="error_root_permission">Root-Zugriff wurde nicht gewährt. Versuche es erneut. Falls du abgelehnt hast, erlaube 字序 in den Superuser-Einstellungen von Magisk / KernelSU.</string>
+    <string name="error_system_updated">Die ursprüngliche Schriftkonfiguration lässt sich für dieses System nicht bestätigen. Deaktiviere das Modul, starte neu und prüfe erneut.</string>
     <string name="error_selinux_label_missing">Das SELinux-Label der Schriftkonfiguration konnte nicht gelesen werden.</string>
     <string name="error_selinux_label_unsupported">Dieses SELinux-Label wird nicht unterstützt.</string>
     <string name="error_font_config_conflict">Ein anderes Modul hat die Schriftkonfiguration geändert. Deaktiviere das kollidierende Modul und starte neu.</string>
@@ -142,7 +142,7 @@ Starte anschließend das Gerät neu.</string>
     <string name="error_conflict_detected">Ein kollidierendes Schriftmodul wurde erkannt.</string>
     <string name="error_config_changed">Die Schriftkonfiguration hat sich geändert. Erstelle das Modul neu.</string>
     <string name="error_module_integrity">Prüfung der Moduldatei fehlgeschlagen.</string>
-    <string name="error_magisk_module_missing">Magisk hat das Modulverzeichnis nicht erstellt.</string>
+    <string name="error_magisk_module_missing">Magisk / KernelSU hat das Modulverzeichnis nicht erstellt.</string>
     <string name="error_installed_module_integrity">Prüfung des installierten Moduls fehlgeschlagen.</string>
     <string name="error_root_command">Root-Befehl fehlgeschlagen (Code %1$s): %2$s</string>
     <string name="error_module_not_generated">Erstelle zuerst ein Modul.</string>

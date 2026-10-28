@@ -11,7 +11,7 @@
     <string name="accessibility_change_language">تغییر زبان برنامه</string>
     <string name="busy_processing">در حال پردازش…</string>
     <string name="dialog_install_title">قلم نصب شود؟</string>
-    <string name="dialog_install_body">تغییرات پس از راه‌اندازی دوباره اعمال می‌شود. برای بازگرداندن قلم‌های سیستم، ماژول را در این برنامه یا Magisk غیرفعال کنید و دوباره دستگاه را راه‌اندازی کنید.</string>
+    <string name="dialog_install_body">تغییرات پس از راه‌اندازی دوباره اعمال می‌شود. برای بازگرداندن قلم‌های سیستم، ماژول را در این برنامه یا Magisk / KernelSU غیرفعال کنید و دوباره دستگاه را راه‌اندازی کنید.</string>
     <string name="dialog_restore_title">قلم‌های سیستم بازگردانده شود؟</string>
     <string name="dialog_restore_body">ماژول قلم GlyphOrder را غیرفعال کنید. قلم‌های سیستم پس از راه‌اندازی دوباره بازمی‌گردند.</string>
     <string name="dialog_reboot_title">اکنون راه‌اندازی دوباره شود؟</string>
@@ -83,7 +83,7 @@
     <string name="targets_description">خانواده‌های قلم سیستم را برای جایگزینی انتخاب کنید. تنظیمات جایگزین برای زنجیرهٔ جایگزین سیستم اعمال می‌شوند.</string>
     <string name="device_ready">دستگاه آماده است</string>
     <string name="device_check">بررسی دستگاه</string>
-    <string name="device_version">Android %1$s · Magisk %2$s</string>
+    <string name="device_version">Android %1$s · %2$s</string>
     <string name="device_current_family">%1$s · %2$s</string>
     <string name="device_root_required">برای خواندن پیکربندی فعال قلم به دسترسی root نیاز است.</string>
     <string name="action_check">بررسی</string>
@@ -121,8 +121,8 @@
     <string name="error_font_size_invalid">اندازهٔ فایل قلم نامعتبر است. حداکثر ۱۲۸ مگابایت است.</string>
     <string name="error_font_single_face">یک فایل .ttf یا .otf انتخاب کنید. مجموعه‌های قلم پشتیبانی نمی‌شوند.</string>
     <string name="error_font_data_invalid">فایل قلم خراب است یا پشتیبانی نمی‌شود.</string>
-    <string name="error_root_permission">دسترسی root داده نشد. دوباره تلاش کنید. اگر درخواست را رد کردید، در تنظیمات superuser‏ Magisk به GlyphOrder اجازه دهید.</string>
-    <string name="error_system_updated">سیستم به‌روزرسانی شده است. ماژول را غیرفعال کنید، دستگاه را دوباره راه‌اندازی و دوباره بررسی کنید.</string>
+    <string name="error_root_permission">دسترسی root داده نشد. دوباره تلاش کنید. اگر درخواست را رد کردید، در تنظیمات superuser‏ Magisk / KernelSU به GlyphOrder اجازه دهید.</string>
+    <string name="error_system_updated">سازگاری پیکربندی اصلی قلم‌ها با این سیستم قابل تأیید نیست. ماژول را غیرفعال کنید، دستگاه را دوباره راه‌اندازی و دوباره بررسی کنید.</string>
     <string name="error_selinux_label_missing">خواندن برچسب SELinux پیکربندی قلم ممکن نشد.</string>
     <string name="error_selinux_label_unsupported">این برچسب SELinux پشتیبانی نمی‌شود.</string>
     <string name="error_font_config_conflict">ماژول دیگری پیکربندی قلم را تغییر داده است. ماژول ناسازگار را غیرفعال و دستگاه را دوباره راه‌اندازی کنید.</string>
@@ -145,7 +145,7 @@
     <string name="error_conflict_detected">ماژول قلم ناسازگاری شناسایی شد.</string>
     <string name="error_config_changed">پیکربندی قلم تغییر کرده است. ماژول را دوباره بسازید.</string>
     <string name="error_module_integrity">بررسی فایل ماژول ناموفق بود.</string>
-    <string name="error_magisk_module_missing">Magisk پوشهٔ ماژول را نساخت.</string>
+    <string name="error_magisk_module_missing">Magisk / KernelSU پوشهٔ ماژول را نساخت.</string>
     <string name="error_installed_module_integrity">بررسی ماژول نصب‌شده ناموفق بود.</string>
     <string name="error_root_command">فرمان root ناموفق بود (کد %1$s): %2$s</string>
     <string name="error_module_not_generated">ابتدا یک ماژول بسازید.</string>

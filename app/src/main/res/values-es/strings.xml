@@ -11,7 +11,7 @@
     <string name="accessibility_change_language">Cambiar el idioma de la aplicación</string>
     <string name="busy_processing">Procesando…</string>
     <string name="dialog_install_title">¿Instalar el módulo de fuentes?</string>
-    <string name="dialog_install_body">Los cambios se aplicarán al reiniciar. Desactiva el módulo en esta aplicación o en Magisk y reinicia de nuevo para restaurar las fuentes del sistema.</string>
+    <string name="dialog_install_body">Los cambios se aplicarán al reiniciar. Desactiva el módulo en esta aplicación o en Magisk / KernelSU y reinicia de nuevo para restaurar las fuentes del sistema.</string>
     <string name="dialog_restore_title">¿Restaurar las fuentes del sistema?</string>
     <string name="dialog_restore_body">Desactiva el módulo de fuentes GlyphOrder. Las fuentes del sistema se restaurarán al reiniciar.</string>
     <string name="dialog_reboot_title">¿Reiniciar ahora?</string>
@@ -77,7 +77,7 @@
     <string name="targets_description">Elige las familias de fuentes del sistema que quieres sustituir. Los respaldos se aplican a la cadena de respaldo del sistema.</string>
     <string name="device_ready">Dispositivo listo</string>
     <string name="device_check">Comprobar dispositivo</string>
-    <string name="device_version">Android %1$s · Magisk %2$s</string>
+    <string name="device_version">Android %1$s · %2$s</string>
     <string name="device_current_family">%1$s · %2$s</string>
     <string name="device_root_required">Se necesita acceso root para leer la configuración activa de fuentes.</string>
     <string name="action_check">Comprobar</string>
@@ -118,8 +118,8 @@ Después, reinicia el dispositivo.</string>
     <string name="error_font_size_invalid">El tamaño del archivo de fuente no es válido. El máximo es 128 MB.</string>
     <string name="error_font_single_face">Elige un único archivo .ttf u .otf. No se admiten colecciones de fuentes.</string>
     <string name="error_font_data_invalid">El archivo de fuente está dañado o no es compatible.</string>
-    <string name="error_root_permission">No se concedió acceso root. Inténtalo de nuevo. Si rechazaste la solicitud, permite 字序 en los ajustes de superusuario de Magisk.</string>
-    <string name="error_system_updated">El sistema se ha actualizado. Desactiva el módulo, reinicia y vuelve a comprobarlo.</string>
+    <string name="error_root_permission">No se concedió acceso root. Inténtalo de nuevo. Si rechazaste la solicitud, permite 字序 en los ajustes de superusuario de Magisk / KernelSU.</string>
+    <string name="error_system_updated">No se puede verificar la configuración original de fuentes para este sistema. Desactiva el módulo, reinicia y vuelve a comprobarlo.</string>
     <string name="error_selinux_label_missing">No se pudo leer la etiqueta SELinux de la configuración de fuentes.</string>
     <string name="error_selinux_label_unsupported">Esta etiqueta SELinux no es compatible.</string>
     <string name="error_font_config_conflict">Otro módulo cambió la configuración de fuentes. Desactiva el módulo en conflicto y reinicia.</string>
@@ -142,7 +142,7 @@ Después, reinicia el dispositivo.</string>
     <string name="error_conflict_detected">Se detectó un módulo de fuentes en conflicto.</string>
     <string name="error_config_changed">La configuración de fuentes ha cambiado. Genera el módulo de nuevo.</string>
     <string name="error_module_integrity">No se pudo verificar el archivo del módulo.</string>
-    <string name="error_magisk_module_missing">Magisk no creó el directorio del módulo.</string>
+    <string name="error_magisk_module_missing">Magisk / KernelSU no creó el directorio del módulo.</string>
     <string name="error_installed_module_integrity">No se pudo verificar el módulo instalado.</string>
     <string name="error_root_command">Falló el comando root (código %1$s): %2$s</string>
     <string name="error_module_not_generated">Genera un módulo primero.</string>

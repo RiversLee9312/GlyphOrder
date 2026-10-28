@@ -11,7 +11,7 @@
     <string name="accessibility_change_language">ऐप की भाषा बदलें</string>
     <string name="busy_processing">काम हो रहा है…</string>
     <string name="dialog_install_title">फ़ॉन्ट मॉड्यूल इंस्टॉल करें?</string>
-    <string name="dialog_install_body">बदलाव रीबूट के बाद लागू होंगे। सिस्टम फ़ॉन्ट वापस पाने के लिए इस ऐप या Magisk में मॉड्यूल बंद करें, फिर दोबारा रीबूट करें।</string>
+    <string name="dialog_install_body">बदलाव रीबूट के बाद लागू होंगे। सिस्टम फ़ॉन्ट वापस पाने के लिए इस ऐप या Magisk / KernelSU में मॉड्यूल बंद करें, फिर दोबारा रीबूट करें।</string>
     <string name="dialog_restore_title">सिस्टम फ़ॉन्ट वापस लाएँ?</string>
     <string name="dialog_restore_body">GlyphOrder फ़ॉन्ट मॉड्यूल बंद करें। रीबूट के बाद सिस्टम फ़ॉन्ट वापस आ जाएँगे।</string>
     <string name="dialog_reboot_title">अभी रीबूट करें?</string>
@@ -77,7 +77,7 @@
     <string name="targets_description">बदलने के लिए सिस्टम फ़ॉन्ट परिवार चुनें। वैकल्पिक सेटिंग सिस्टम की फ़ॉलबैक शृंखला पर लागू होती हैं।</string>
     <string name="device_ready">डिवाइस तैयार है</string>
     <string name="device_check">डिवाइस जाँचें</string>
-    <string name="device_version">Android %1$s · Magisk %2$s</string>
+    <string name="device_version">Android %1$s · %2$s</string>
     <string name="device_current_family">%1$s · %2$s</string>
     <string name="device_root_required">सक्रिय फ़ॉन्ट कॉन्फ़िगरेशन पढ़ने के लिए root access ज़रूरी है।</string>
     <string name="action_check">जाँचें</string>
@@ -115,8 +115,8 @@
     <string name="error_font_size_invalid">फ़ॉन्ट फ़ाइल का आकार अमान्य है। अधिकतम 128 MB है।</string>
     <string name="error_font_single_face">एक .ttf या .otf फ़ाइल चुनें। फ़ॉन्ट कलेक्शन समर्थित नहीं हैं।</string>
     <string name="error_font_data_invalid">फ़ॉन्ट फ़ाइल खराब है या समर्थित नहीं है।</string>
-    <string name="error_root_permission">Root access नहीं मिला। फिर कोशिश करें। अनुरोध अस्वीकार किया था तो Magisk की superuser settings में GlyphOrder को अनुमति दें।</string>
-    <string name="error_system_updated">सिस्टम अपडेट हुआ है। मॉड्यूल बंद करें, रीबूट करें और फिर जाँचें।</string>
+    <string name="error_root_permission">Root access नहीं मिला। फिर कोशिश करें। अनुरोध अस्वीकार किया था तो Magisk / KernelSU की superuser settings में GlyphOrder को अनुमति दें।</string>
+    <string name="error_system_updated">इस सिस्टम के लिए मूल फ़ॉन्ट कॉन्फ़िगरेशन की पुष्टि नहीं हो सकी। मॉड्यूल बंद करें, रीबूट करें और फिर जाँचें।</string>
     <string name="error_selinux_label_missing">फ़ॉन्ट कॉन्फ़िगरेशन का SELinux लेबल पढ़ा नहीं जा सका।</string>
     <string name="error_selinux_label_unsupported">यह SELinux लेबल समर्थित नहीं है।</string>
     <string name="error_font_config_conflict">किसी दूसरे मॉड्यूल ने फ़ॉन्ट कॉन्फ़िगरेशन बदला है। टकराने वाला मॉड्यूल बंद करके रीबूट करें।</string>
@@ -139,7 +139,7 @@
     <string name="error_conflict_detected">टकराने वाला फ़ॉन्ट मॉड्यूल मिला।</string>
     <string name="error_config_changed">फ़ॉन्ट कॉन्फ़िगरेशन बदल गया। मॉड्यूल फिर बनाएँ।</string>
     <string name="error_module_integrity">मॉड्यूल फ़ाइल सत्यापन विफल हुआ।</string>
-    <string name="error_magisk_module_missing">Magisk ने मॉड्यूल निर्देशिका नहीं बनाई।</string>
+    <string name="error_magisk_module_missing">Magisk / KernelSU ने मॉड्यूल निर्देशिका नहीं बनाई।</string>
     <string name="error_installed_module_integrity">इंस्टॉल किए गए मॉड्यूल का सत्यापन विफल हुआ।</string>
     <string name="error_root_command">Root कमांड विफल (कोड %1$s): %2$s</string>
     <string name="error_module_not_generated">पहले मॉड्यूल बनाएँ।</string>

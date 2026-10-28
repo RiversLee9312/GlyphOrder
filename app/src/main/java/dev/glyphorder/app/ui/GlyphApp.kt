@@ -507,8 +507,8 @@ private fun ApplyPage(state: AppState, vm: AppViewModel, targets: () -> Unit, ch
                     Text(if (device != null) stringResource(R.string.device_ready) else stringResource(R.string.device_check), style = MaterialTheme.typography.titleLarge)
                 }
                 if (device != null) {
-                    val androidVersion = when (device.sdk) { 36 -> 16; 35 -> 15; else -> 14 }
-                    Text(stringResource(R.string.device_version, formattedNumber(androidVersion), device.magisk.substringBefore(':')), style = MaterialTheme.typography.bodyMedium)
+                    val androidVersion = when (device.sdk) { 37 -> 17; 36 -> 16; 35 -> 15; else -> 14 }
+                    Text(stringResource(R.string.device_version, formattedNumber(androidVersion), device.rootManager), style = MaterialTheme.typography.bodyMedium)
                     Text(stringResource(R.string.device_current_family, "sans-serif", device.currentFamily), style = MaterialTheme.typography.bodySmall)
                 } else {
                     Text(stringResource(R.string.device_root_required), style = MaterialTheme.typography.bodyMedium)
