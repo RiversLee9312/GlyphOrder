@@ -28,6 +28,19 @@ TREE = json.loads(tree_path.read_text(encoding='utf-8-sig'))
 CACHE = ROOT / 'artifacts/noto'
 CACHE.mkdir(exist_ok=True)
 
+# These script fonts include Han component/example glyphs. Those glyphs remain
+# available for missing-character fallback, but must not outrank real CJK faces.
+SCRIPT_ROUTES = {
+    'NotoSerifKhitanSmallScript-Regular.ttf': {'Kits'},
+    'NotoTraditionalNushu-Regular.ttf': {'Nshu'},
+    'NotoSansPhagsPa-Regular.ttf': {'Phag'},
+}
+
+
+def routing_scripts(path, scripts):
+    intended = SCRIPT_ROUTES.get(path.name)
+    return scripts & intended if intended is not None else scripts
+
 def download(url, path, blob=None):
     if path.exists():
         data = path.read_bytes()
@@ -121,8 +134,8 @@ if __name__ == '__main__':
         counts = Counter(ud.script(chr(cp)) for cp in chars)
         # Full builds include Latin helper glyphs. Route them to their actual script,
         # rather than letting every Noto family compete for Latin.
-        scripts = sorted(s for s in counts if s not in ('Zyyy', 'Zinh', 'Zzzz') and
-                         (s != 'Latn' or path.name == 'NotoSans-Regular.ttf'))
+        scripts = sorted(routing_scripts(path, {s for s in counts if s not in ('Zyyy', 'Zinh', 'Zzzz') and
+                         (s != 'Latn' or path.name == 'NotoSans-Regular.ttf')}))
         tags = ['und-' + s for s in scripts]
         if path.name.startswith('NotoSansCJK'):
             tags += ['zh-Hans', 'zh-Hant', 'ja', 'ko']

@@ -11,6 +11,39 @@ class FontConfigTest {
     private val variable = static.copy(id = "v", fileName = "var.otf", axes = listOf(FontAxis("wght", 200f, 400f, 800f), FontAxis("wdth", 75f, 100f, 125f)))
     private fun fontNodes(text: String) = FontConfig.parse(text).getElementsByTagName("font").let { n -> (0 until n.length).map { n.item(it) as Element } }
 
+    @Test fun explicitFallbackOrderPrecedesStockCjkAndNeverAddsAnAutomaticScriptFont() {
+        val second = static.copy(id = "second", fileName = "second.ttf", coverage = listOf(0x4e00..0x9fff))
+        val hidden = static.copy(id = "khitan", fileName = "khitan.ttf", hidden = true,
+            fallbackGroup = "noto", fallbackTags = setOf("und-Hani", "und-Kits"))
+        val combination = FontCombination("combo", "Example", listOf(static.id, second.id))
+        val plan = CombinationPlan.resolve(FontPlan(combinationId = combination.id), listOf(combination))
+        val result = FontConfig.patch(xml, true, plan, listOf(static, second, hidden))
+        val chinese = FontConfig.parse(result).getElementsByTagName("family").let { nodes ->
+            (0 until nodes.length).map { nodes.item(it) as Element }.filter { "zh-Hans" in it.getAttribute("lang").split(',') }
+        }
+        val sequence = chinese.flatMap { family ->
+            family.getElementsByTagName("font").let { nodes -> (0 until nodes.length).map { nodes.item(it).textContent.trim() } }
+        }
+        assertTrue(sequence.indexOf("GlyphOrder-abc.ttf") < sequence.indexOf("GlyphOrder-second.ttf"))
+        assertTrue(sequence.indexOf("GlyphOrder-second.ttf") < sequence.indexOf("CJK.ttc"))
+        assertFalse(result.contains("GlyphOrder-khitan.ttf"))
+        assertTrue(result.contains("NotoColorEmoji.ttf"))
+    }
+
+    @Test fun differentCombinationsKeepFallbackFontsScopedToTheirSelectedStyles() {
+        val second = static.copy(id = "second", fileName = "second.ttf")
+        val combinations = listOf(FontCombination("sans", "Sans", listOf(static.id, second.id)),
+            FontCombination("serif", "Serif", listOf(variable.id)))
+        val raw = FontPlan(styleMode = true, styleCombinations = mapOf("sans" to "sans", "serif" to "serif"))
+        val plan = FontSelection.forDevice(CombinationPlan.resolve(raw, combinations), listOf("sans-serif", "serif"))
+        val result = FontConfig.patch(xml, true, plan, listOf(static, variable, second))
+        val fallback = fontNodes(result).filter { it.textContent.trim() == "GlyphOrder-second.ttf" }
+        assertTrue(fallback.isNotEmpty())
+        assertTrue(fallback.all { it.getAttribute("fallbackFor") == "sans-serif" })
+        assertTrue(fontNodes(result).filter { it.textContent.trim() == "GlyphOrder-var.otf" && !(it.parentNode as Element).hasAttribute("name") }
+            .all { it.getAttribute("fallbackFor") == "serif" })
+    }
+
     @Test fun staticDoesNotReceiveVariationAxes() {
         val result = FontConfig.patch(xml, true, FontPlan(primary = "a", axes = mapOf("a" to mapOf("wght" to 800f))), listOf(static))
         val f = fontNodes(result).first()
@@ -63,6 +96,21 @@ class FontConfigTest {
         assertTrue(supplements.all { it.getAttribute("fallbackFor") == "serif" })
         assertTrue(nodes.filter { it.textContent.contains("GlyphOrder-") && !(it.parentNode as Element).hasAttribute("name") }
             .all { it.getAttribute("fallbackFor") in setOf("sans-serif", "serif") })
+    }
+
+    @Test fun preferredDesignCanReplaceOnlyFullyCoveredGenericSupplementsOnTheSameRoute() {
+        val primary = static.copy(preset = "noto-serif", coverage = listOf(65..90))
+        val preferred = static.copy(id = "preferred", fileName = "serif-arabic.ttf", hidden = true,
+            fallbackGroup = "noto-serif", fallbackTags = setOf("und-Arab"), coverage = listOf(0x600..0x6ff))
+        val generic = preferred.copy(id = "generic", fileName = "sans-arabic.ttf", fallbackGroup = "noto")
+        val additional = generic.copy(id = "additional", fileName = "extra.ttf", coverage = listOf(0x600..0x700))
+        val otherRoute = generic.copy(id = "other", fileName = "other.ttf", fallbackTags = setOf("und-Syrc"))
+        val unknown = generic.copy(id = "unknown", fileName = "unknown.ttf", coverage = emptyList())
+        val result = FontConfig.patch(xml, true, FontPlan(primary = primary.id),
+            listOf(primary, preferred, generic, additional, otherRoute, unknown))
+        assertTrue(result.contains("GlyphOrder-serif-arabic.ttf"))
+        assertFalse(result.contains("GlyphOrder-sans-arabic.ttf"))
+        listOf("extra.ttf", "other.ttf", "unknown.ttf").forEach { assertTrue(result.contains("GlyphOrder-$it")) }
     }
 
     @Test fun mixedModePreservesUnselectedFamiliesAndScopesManualAndUniversalFonts() {

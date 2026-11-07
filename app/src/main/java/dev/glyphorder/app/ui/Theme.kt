@@ -11,6 +11,7 @@ fun GlyphTheme(content: @Composable () -> Unit) {
     val context = LocalContext.current
     val dark = isSystemInDarkTheme()
     MaterialExpressiveTheme(
+        motionScheme = MotionScheme.expressive(),
         colorScheme = if (dark) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context),
         content = content
     )

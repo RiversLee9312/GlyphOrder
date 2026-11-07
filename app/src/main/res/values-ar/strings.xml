@@ -34,7 +34,7 @@
     <string name="font_library">مكتبة الخطوط</string>
     <string name="action_import">استيراد</string>
     <string name="font_library_empty">لا توجد خطوط بعد</string>
-    <string name="font_files_supported">استورد ملفات خطوط .ttf أو .otf</string>
+    <string name="font_files_supported">TTF · OTF · ZIP</string>
     <string name="action_choose_file">اختيار الملفات</string>
     <string name="font_selected_primary">تم اختياره خطًا أساسيًا</string>
     <string name="font_removed">تمت إزالة الخط</string>
@@ -107,7 +107,7 @@
     <string name="notice_module_disabled">تم تعطيل الوحدة. أعد التشغيل لاستعادة خطوط النظام.</string>
     <string name="notice_module_saved">تم حفظ الوحدة</string>
     <string name="error_operation_failed">تعذر إكمال العملية.</string>
-    <string name="error_font_extension">اختر ملف خط بصيغة .ttf أو .otf.</string>
+    <string name="error_font_extension">اختر ملفات TTF/OTF أو عائلة خطوط ZIP.</string>
     <string name="error_font_too_large">يتجاوز حجم ملف الخط 128 MB.</string>
     <string name="error_file_read">تعذرت قراءة الملف.</string>
     <string name="error_font_save">تعذر حفظ الخط.</string>
@@ -164,7 +164,7 @@
     <string name="automatic_fallback_title">إكمال المحارف المفقودة تلقائيًا</string>
     <string name="action_reset_fallbacks">استعادة الخطوط البديلة الافتراضية</string>
     <string name="application_mode">طريقة التطبيق</string>
-    <string name="mode_single">خط واحد</string>
+    <string name="mode_single">تركيبة واحدة</string>
     <string name="mode_styles">دمج حسب النمط</string>
     <string name="style_sans">بلا زوائد</string>
     <string name="style_serif">بزوائد</string>
@@ -186,4 +186,22 @@
     <string name="misans_notice">ترخيص خطوط Xiaomi</string>
     <string name="title_software_licenses">مكتبات البرامج</string>
     <string name="title_artwork_licenses">الأيقونات</string>
+    <string name="chain_description">تُجرَّب الخطوط بالترتيب، ثم تُستخدم خطوط النظام.</string>
+    <string name="action_reorder">إعادة الترتيب</string>
+    <string name="font_combination">تركيبة خطوط</string>
+    <string name="action_create_combination">تركيبة جديدة</string>
+    <string name="combination_name">الاسم</string>
+    <string name="combinations_empty">أنشئ تركيبة في صفحة الخطوط أولاً.</string>
+    <string name="system_font_override">يستبدل النظام عائلات الخطوط. اختر Roboto في إعدادات خطوط النظام لتطبيق أنماط مختلفة.</string>
+    <string name="action_system_font_settings">إعدادات العرض</string>
+    <string name="search_fonts">البحث عن الخطوط</string>
+    <string name="error_settings_unavailable">تعذر فتح الإعدادات. افتح إعدادات خطوط النظام يدويًا.</string>
+    <string name="font_family">عائلة الخط</string>
+    <string name="font_family_faces">أوجه الخط</string>
+    <string name="action_add_faces">إضافة أوجه</string>
+    <string name="action_remove_family">إزالة العائلة</string>
+    <string name="face_upright">عادي</string>
+    <string name="face_italic">مائل</string>
+    <string name="error_font_family_conflict">تحتوي العائلة على أوجه متعارضة. اختر مجموعة متسقة من ملفات الأوزان.</string>
+    <string name="preview_glyphs_sample">نسيم الصباح ١٢٣</string>
 </resources>

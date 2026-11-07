@@ -34,7 +34,7 @@
     <string name="font_library">फ़ॉन्ट लाइब्रेरी</string>
     <string name="action_import">आयात करें</string>
     <string name="font_library_empty">अभी कोई फ़ॉन्ट नहीं</string>
-    <string name="font_files_supported">.ttf या .otf फ़ॉन्ट फ़ाइलें आयात करें</string>
+    <string name="font_files_supported">TTF · OTF · ZIP</string>
     <string name="action_choose_file">फ़ाइलें चुनें</string>
     <string name="font_selected_primary">मुख्य फ़ॉन्ट के रूप में चुना गया</string>
     <string name="font_removed">फ़ॉन्ट हटाया गया</string>
@@ -107,7 +107,7 @@
     <string name="notice_module_disabled">मॉड्यूल बंद है। सिस्टम फ़ॉन्ट वापस पाने के लिए रीबूट करें।</string>
     <string name="notice_module_saved">मॉड्यूल सहेजा गया</string>
     <string name="error_operation_failed">ऑपरेशन पूरा नहीं हो सका।</string>
-    <string name="error_font_extension">.ttf या .otf फ़ॉन्ट फ़ाइल चुनें।</string>
+    <string name="error_font_extension">TTF/OTF फ़ाइलें या ZIP फ़ॉन्ट परिवार चुनें।</string>
     <string name="error_font_too_large">फ़ॉन्ट फ़ाइल 128 MB से बड़ी है।</string>
     <string name="error_file_read">फ़ाइल पढ़ी नहीं जा सकी।</string>
     <string name="error_font_save">फ़ॉन्ट सहेजा नहीं जा सका।</string>
@@ -164,7 +164,7 @@
     <string name="automatic_fallback_title">छूटे अक्षर अपने आप भरें</string>
     <string name="action_reset_fallbacks">डिफ़ॉल्ट फ़ॉलबैक बहाल करें</string>
     <string name="application_mode">लागू करने का तरीका</string>
-    <string name="mode_single">एक फ़ॉन्ट</string>
+    <string name="mode_single">एक संयोजन</string>
     <string name="mode_styles">शैली के अनुसार</string>
     <string name="style_sans">सैंस सेरिफ़</string>
     <string name="style_serif">सेरिफ़</string>
@@ -186,4 +186,22 @@
     <string name="misans_notice">Xiaomi फ़ॉन्ट लाइसेंस</string>
     <string name="title_software_licenses">सॉफ़्टवेयर लाइब्रेरी</string>
     <string name="title_artwork_licenses">आइकन</string>
+    <string name="chain_description">फ़ॉन्ट इसी क्रम में आज़माए जाते हैं। सिस्टम फ़ॉन्ट सबसे अंत में आते हैं।</string>
+    <string name="action_reorder">क्रम बदलें</string>
+    <string name="font_combination">फ़ॉन्ट संयोजन</string>
+    <string name="action_create_combination">नया संयोजन</string>
+    <string name="combination_name">नाम</string>
+    <string name="combinations_empty">पहले फ़ॉन्ट पेज पर संयोजन बनाएँ।</string>
+    <string name="system_font_override">सिस्टम फ़ॉन्ट परिवार बदल रहा है। अलग शैलियाँ लागू करने के लिए सिस्टम की फ़ॉन्ट सेटिंग में Roboto चुनें।</string>
+    <string name="action_system_font_settings">डिसप्ले सेटिंग</string>
+    <string name="search_fonts">फ़ॉन्ट खोजें</string>
+    <string name="error_settings_unavailable">सेटिंग नहीं खुल सकीं। सिस्टम की फ़ॉन्ट सेटिंग खुद खोलें।</string>
+    <string name="font_family">फ़ॉन्ट परिवार</string>
+    <string name="font_family_faces">फ़ॉन्ट रूप</string>
+    <string name="action_add_faces">रूप जोड़ें</string>
+    <string name="action_remove_family">परिवार हटाएँ</string>
+    <string name="face_upright">सीधा</string>
+    <string name="face_italic">इटैलिक</string>
+    <string name="error_font_family_conflict">परिवार में असंगत रूप हैं। वज़न फ़ाइलों का एक समान सेट चुनें।</string>
+    <string name="preview_glyphs_sample">सुबह की रोशनी १२३</string>
 </resources>

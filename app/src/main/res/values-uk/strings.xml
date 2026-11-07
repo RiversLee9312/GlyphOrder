@@ -34,7 +34,7 @@
     <string name="font_library">Бібліотека шрифтів</string>
     <string name="action_import">Імпортувати</string>
     <string name="font_library_empty">Шрифтів поки немає</string>
-    <string name="font_files_supported">Імпортуйте файли шрифтів .ttf або .otf</string>
+    <string name="font_files_supported">TTF · OTF · ZIP</string>
     <string name="action_choose_file">Вибрати файли</string>
     <string name="font_selected_primary">Вибрано як основний шрифт</string>
     <string name="font_removed">Шрифт видалено</string>
@@ -107,7 +107,7 @@
     <string name="notice_module_disabled">Модуль вимкнено. Перезавантажте пристрій, щоб відновити системні шрифти.</string>
     <string name="notice_module_saved">Модуль збережено</string>
     <string name="error_operation_failed">Не вдалося завершити операцію.</string>
-    <string name="error_font_extension">Виберіть файл шрифту .ttf або .otf.</string>
+    <string name="error_font_extension">Виберіть файли TTF/OTF або ZIP із сімейством шрифтів.</string>
     <string name="error_font_too_large">Розмір файлу шрифту перевищує 128 МБ.</string>
     <string name="error_file_read">Не вдалося прочитати файл.</string>
     <string name="error_font_save">Не вдалося зберегти шрифт.</string>
@@ -164,7 +164,7 @@
     <string name="automatic_fallback_title">Автоматично доповнювати символи</string>
     <string name="action_reset_fallbacks">Відновити резервні шрифти</string>
     <string name="application_mode">Режим застосування</string>
-    <string name="mode_single">Один шрифт</string>
+    <string name="mode_single">Один набір</string>
     <string name="mode_styles">За стилями</string>
     <string name="style_sans">Без зарубок</string>
     <string name="style_serif">Із зарубками</string>
@@ -186,4 +186,22 @@
     <string name="misans_notice">Ліцензія шрифтів Xiaomi</string>
     <string name="title_software_licenses">Програмні бібліотеки</string>
     <string name="title_artwork_licenses">Піктограми</string>
+    <string name="chain_description">Шрифти перевіряються по черзі. Системні шрифти використовуються останніми.</string>
+    <string name="action_reorder">Змінити порядок</string>
+    <string name="font_combination">Набір шрифтів</string>
+    <string name="action_create_combination">Новий набір</string>
+    <string name="combination_name">Назва</string>
+    <string name="combinations_empty">Спочатку створіть набір на сторінці «Шрифти».</string>
+    <string name="system_font_override">Система замінює сімейства шрифтів. Виберіть Roboto в системних налаштуваннях шрифтів, щоб застосовувати різні стилі.</string>
+    <string name="action_system_font_settings">Налаштування екрана</string>
+    <string name="search_fonts">Пошук шрифтів</string>
+    <string name="error_settings_unavailable">Не вдалося відкрити налаштування. Відкрийте системні налаштування шрифтів вручну.</string>
+    <string name="font_family">Сімейство шрифтів</string>
+    <string name="font_family_faces">Накреслення</string>
+    <string name="action_add_faces">Додати накреслення</string>
+    <string name="action_remove_family">Видалити сімейство</string>
+    <string name="face_upright">Прямий</string>
+    <string name="face_italic">Курсив</string>
+    <string name="error_font_family_conflict">Сімейство містить несумісні накреслення. Виберіть узгоджений набір файлів насиченості.</string>
+    <string name="preview_glyphs_sample">Свіжий вітер 0123</string>
 </resources>

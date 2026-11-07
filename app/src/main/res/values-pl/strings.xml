@@ -34,7 +34,7 @@
     <string name="font_library">Biblioteka czcionek</string>
     <string name="action_import">Importuj</string>
     <string name="font_library_empty">Brak czcionek</string>
-    <string name="font_files_supported">Importuj pliki czcionek .ttf lub .otf</string>
+    <string name="font_files_supported">TTF · OTF · ZIP</string>
     <string name="action_choose_file">Wybierz pliki</string>
     <string name="font_selected_primary">Wybrano jako czcionkę główną</string>
     <string name="font_removed">Usunięto czcionkę</string>
@@ -107,7 +107,7 @@
     <string name="notice_module_disabled">Moduł wyłączony. Uruchom urządzenie ponownie, aby przywrócić czcionki systemowe.</string>
     <string name="notice_module_saved">Zapisano moduł</string>
     <string name="error_operation_failed">Nie udało się ukończyć operacji.</string>
-    <string name="error_font_extension">Wybierz plik czcionki .ttf lub .otf.</string>
+    <string name="error_font_extension">Wybierz pliki TTF/OTF lub rodzinę czcionek ZIP.</string>
     <string name="error_font_too_large">Plik czcionki przekracza 128 MB.</string>
     <string name="error_file_read">Nie można odczytać pliku.</string>
     <string name="error_font_save">Nie można zapisać czcionki.</string>
@@ -164,7 +164,7 @@
     <string name="automatic_fallback_title">Automatycznie uzupełniaj znaki</string>
     <string name="action_reset_fallbacks">Przywróć czcionki zastępcze</string>
     <string name="application_mode">Tryb stosowania</string>
-    <string name="mode_single">Jedna czcionka</string>
+    <string name="mode_single">Jeden zestaw</string>
     <string name="mode_styles">Łącz według stylu</string>
     <string name="style_sans">Bezszeryfowa</string>
     <string name="style_serif">Szeryfowa</string>
@@ -186,4 +186,22 @@
     <string name="misans_notice">Licencja czcionek Xiaomi</string>
     <string name="title_software_licenses">Biblioteki oprogramowania</string>
     <string name="title_artwork_licenses">Ikony</string>
+    <string name="chain_description">Czcionki są sprawdzane po kolei. Czcionki systemowe są używane na końcu.</string>
+    <string name="action_reorder">Zmień kolejność</string>
+    <string name="font_combination">Zestaw czcionek</string>
+    <string name="action_create_combination">Nowy zestaw</string>
+    <string name="combination_name">Nazwa</string>
+    <string name="combinations_empty">Najpierw utwórz zestaw na stronie Czcionki.</string>
+    <string name="system_font_override">System zastępuje rodziny czcionek. Wybierz Roboto w ustawieniach czcionek systemowych, aby stosować różne style.</string>
+    <string name="action_system_font_settings">Ustawienia wyświetlacza</string>
+    <string name="search_fonts">Szukaj czcionek</string>
+    <string name="error_settings_unavailable">Nie można otworzyć ustawień. Otwórz ręcznie systemowe ustawienia czcionek.</string>
+    <string name="font_family">Rodzina czcionek</string>
+    <string name="font_family_faces">Odmiany czcionki</string>
+    <string name="action_add_faces">Dodaj odmiany</string>
+    <string name="action_remove_family">Usuń rodzinę</string>
+    <string name="face_upright">Prosta</string>
+    <string name="face_italic">Kursywa</string>
+    <string name="error_font_family_conflict">Rodzina zawiera sprzeczne odmiany. Wybierz spójny zestaw plików grubości.</string>
+    <string name="preview_glyphs_sample">Świeży powiew 0123</string>
 </resources>

@@ -40,7 +40,7 @@
     <string name="font_library">Typsnittsbibliotek</string>
     <string name="action_import">Importera</string>
     <string name="font_library_empty">Inga typsnitt ännu</string>
-    <string name="font_files_supported">Importera .ttf- eller .otf-typsnittsfiler</string>
+    <string name="font_files_supported">TTF · OTF · ZIP</string>
     <string name="action_choose_file">Välj filer</string>
     <string name="font_selected_primary">Valt som primärt typsnitt</string>
     <string name="font_removed">Typsnitt borttaget</string>
@@ -113,7 +113,7 @@
     <string name="notice_module_disabled">Modulen är inaktiverad. Starta om för att återställa systemtypsnitten.</string>
     <string name="notice_module_saved">Modulen har sparats</string>
     <string name="error_operation_failed">Det gick inte att slutföra åtgärden.</string>
-    <string name="error_font_extension">Välj en .ttf- eller .otf-typsnittsfil.</string>
+    <string name="error_font_extension">Välj TTF/OTF-filer eller en ZIP-typsnittsfamilj.</string>
     <string name="error_font_too_large">Typsnittsfilen är större än 128 MB.</string>
     <string name="error_file_read">Filen kunde inte läsas.</string>
     <string name="error_font_save">Typsnittet kunde inte sparas.</string>
@@ -170,7 +170,7 @@
     <string name="automatic_fallback_title">Komplettera saknade tecken</string>
     <string name="action_reset_fallbacks">Återställ reservtypsnitt</string>
     <string name="application_mode">Tillämpningsläge</string>
-    <string name="mode_single">Ett typsnitt</string>
+    <string name="mode_single">En kombination</string>
     <string name="mode_styles">Blanda per stil</string>
     <string name="style_sans">Utan seriffer</string>
     <string name="style_serif">Med seriffer</string>
@@ -192,4 +192,22 @@
     <string name="misans_notice">Xiaomis typsnittslicens</string>
     <string name="title_software_licenses">Programbibliotek</string>
     <string name="title_artwork_licenses">Ikoner</string>
+    <string name="chain_description">Typsnitt provas i ordning. Systemtypsnitt används sist.</string>
+    <string name="action_reorder">Ändra ordning</string>
+    <string name="font_combination">Typsnittskombination</string>
+    <string name="action_create_combination">Ny kombination</string>
+    <string name="combination_name">Namn</string>
+    <string name="combinations_empty">Skapa först en kombination under Typsnitt.</string>
+    <string name="system_font_override">Systemet ersätter typsnittsfamiljer. Välj Roboto i systemets typsnittsinställningar för att tillämpa olika stilar.</string>
+    <string name="action_system_font_settings">Skärminställningar</string>
+    <string name="search_fonts">Sök typsnitt</string>
+    <string name="error_settings_unavailable">Det gick inte att öppna inställningarna. Öppna systemets typsnittsinställningar manuellt.</string>
+    <string name="font_family">Typsnittsfamilj</string>
+    <string name="font_family_faces">Typsnittsvarianter</string>
+    <string name="action_add_faces">Lägg till varianter</string>
+    <string name="action_remove_family">Ta bort familj</string>
+    <string name="face_upright">Rak</string>
+    <string name="face_italic">Kursiv</string>
+    <string name="error_font_family_conflict">Familjen innehåller motstridiga varianter. Välj en enhetlig uppsättning viktfiler.</string>
+    <string name="preview_glyphs_sample">Frisk luft Åäö</string>
 </resources>

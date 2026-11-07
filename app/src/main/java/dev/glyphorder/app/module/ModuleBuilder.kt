@@ -18,13 +18,19 @@ data class BuiltModule(val file: File, val hash: String, val build: SystemBuild,
 class ModuleBuilder(private val context: Context) {
     fun build(snapshot: DeviceSnapshot, requested: FontPlan, fonts: List<FontInfo>, directory: File): BuiltModule {
         val plan = dev.glyphorder.app.font.FontSelection.forDevice(requested, snapshot.targets)
+        dev.glyphorder.app.font.FontLibrary.validateFaces(dev.glyphorder.app.font.FontSelection.selected(plan, fonts))
         require(dev.glyphorder.app.font.FontStyles.configured(plan)) { UiError.key("error_select_font") }
         require(snapshot.conflicts.isEmpty()) { UiError.key("error_conflicting_modules", snapshot.conflicts.joinToString()) }
         if (plan.primary != null || plan.styleMode) require(plan.targets.isNotEmpty() && snapshot.targets.containsAll(plan.targets)) { UiError.key("error_select_existing_family") }
-        val ids = ((if (plan.styleMode) plan.styleFonts.values else listOfNotNull(plan.primary)) + plan.fallbacks.values + plan.universal).toSet()
+        val ids = if (dev.glyphorder.app.font.FontStyles.explicit(plan))
+            dev.glyphorder.app.font.FontStyles.groups.flatMap { dev.glyphorder.app.font.FontStyles.chain(plan, it) }.toSet()
+        else ((if (plan.styleMode) plan.styleFonts.values else listOfNotNull(plan.primary)) + plan.orderedFallbacks + plan.fallbacks.values + plan.universal).toSet()
         ids.forEach { id -> require(fonts.any { it.id == id }) { UiError.key("error_selected_font_removed") } }
         val updated = snapshot.configs.mapValues { (path, xml) ->
-            FontConfig.patch(xml, path.endsWith("font_fallback.xml"), plan, fonts, path.startsWith("/product/"), snapshot.fontCoverage, snapshot.targets.toSet())
+            val configTargets = FontPaths.targets(snapshot.configs, path)
+            val scoped = plan.copy(targets = plan.targets.intersect(configTargets))
+            if (scoped.styleMode && dev.glyphorder.app.font.FontStyles.assignments(scoped, scoped.targets).isEmpty()) xml
+            else FontConfig.patch(xml, path == FontPaths.MODERN, scoped, fonts, FontPaths.isCustomization(path), snapshot.fontCoverage, configTargets)
         }
         val maxFamilies = ModuleSafety.validate(updated)
         val referenced = updated.values.flatMap { FontConfig.files(it) }.toSet()
@@ -62,10 +68,12 @@ class ModuleBuilder(private val context: Context) {
                     require(dev.glyphorder.app.font.SfntReader.read(font).id == info.id) { UiError.key("error_font_integrity") }
                     stream.putNextEntry(ZipEntry("system/fonts/GlyphOrder-${info.fileName}"))
                     font.inputStream().use { it.copyTo(stream) }; stream.closeEntry()
-                    // Product customization resolves relative names against /product/fonts.
-                    if (updated["/product/etc/fonts_customization.xml"]?.let(FontConfig::files)?.contains("GlyphOrder-${info.fileName}") == true) {
-                        stream.putNextEntry(ZipEntry("system/product/fonts/GlyphOrder-${info.fileName}"))
-                        font.inputStream().use { it.copyTo(stream) }; stream.closeEntry()
+                    // OEM customizations resolve relative names in their own partition.
+                    updated.filterKeys(FontPaths::isCustomization).forEach { (path, xml) ->
+                        if ("GlyphOrder-${info.fileName}" in FontConfig.files(xml)) {
+                            stream.putNextEntry(ZipEntry(DeviceRepository.overlayPath("${FontPaths.fontDirectory(path)}GlyphOrder-${info.fileName}")))
+                            font.inputStream().use { it.copyTo(stream) }; stream.closeEntry()
+                        }
                     }
                     licenses.putAll(fontStore.licenseFiles(info))
                 }

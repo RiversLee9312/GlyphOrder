@@ -43,12 +43,12 @@
     <string name="font_library">Font library</string>
     <string name="action_import">Import</string>
     <string name="font_library_empty">No fonts yet</string>
-    <string name="font_files_supported">Import .ttf or .otf font files</string>
+    <string name="font_files_supported">TTF · OTF · ZIP</string>
     <string name="action_choose_file">Choose files</string>
     <string name="font_selected_primary">Selected as the primary font</string>
     <string name="font_removed">Font removed</string>
     <string name="preview_glyph_sample" translatable="false">Aa 字</string>
-    <string name="preview_glyphs_sample" translatable="false">Aa 文字 0123</string>
+    <string name="preview_glyphs_sample">The quick brown fox</string>
     <string name="preview_cjk_sample" translatable="false">清风徐来，水波不兴。</string>
     <string name="preview_latin_sample" translatable="false">The quick brown fox</string>
 
@@ -130,7 +130,7 @@ Then reboot the device.</string>
     <string name="notice_module_saved">Module saved</string>
     <string name="error_operation_failed">The operation could not be completed.</string>
 
-    <string name="error_font_extension">Choose a .ttf or .otf font file.</string>
+    <string name="error_font_extension">Choose TTF/OTF files or a ZIP font family.</string>
     <string name="error_font_too_large">The font file exceeds 128 MB.</string>
     <string name="error_file_read">The file could not be read.</string>
     <string name="error_font_save">The font could not be saved.</string>
@@ -188,7 +188,7 @@ Then reboot the device.</string>
     <string name="automatic_fallback_title">Automatic missing-glyph fallback</string>
     <string name="action_reset_fallbacks">Restore default fallbacks</string>
     <string name="application_mode">Application mode</string>
-    <string name="mode_single">Single font</string>
+    <string name="mode_single">One combination</string>
     <string name="mode_styles">Mix by style</string>
     <string name="style_sans">Sans serif</string>
     <string name="style_serif">Serif</string>
@@ -210,4 +210,21 @@ Then reboot the device.</string>
     <string name="misans_notice">Xiaomi font license</string>
     <string name="title_software_licenses">Software libraries</string>
     <string name="title_artwork_licenses">Artwork</string>
+    <string name="chain_description">The first font is primary. Fallbacks follow in order, then system fonts.</string>
+    <string name="action_reorder">Reorder</string>
+    <string name="font_combination">Font combination</string>
+    <string name="action_create_combination">New combination</string>
+    <string name="combination_name">Name</string>
+    <string name="combinations_empty">Create a combination in Fonts first.</string>
+    <string name="system_font_override">The system is replacing font families. Select Roboto in system font settings to apply different styles.</string>
+    <string name="action_system_font_settings">Display settings</string>
+    <string name="search_fonts">Search fonts</string>
+    <string name="error_settings_unavailable">Could not open settings. Open the system font settings manually.</string>
+    <string name="font_family">Font family</string>
+    <string name="font_family_faces">Font faces</string>
+    <string name="action_add_faces">Add faces</string>
+    <string name="action_remove_family">Remove family</string>
+    <string name="face_upright">Upright</string>
+    <string name="face_italic">Italic</string>
+    <string name="error_font_family_conflict">The family contains conflicting faces. Select a consistent set of weight files.</string>
 </resources>

@@ -40,7 +40,7 @@
     <string name="font_library">ফন্ট লাইব্রেরি</string>
     <string name="action_import">আমদানি করুন</string>
     <string name="font_library_empty">এখনও কোনো ফন্ট নেই</string>
-    <string name="font_files_supported">.ttf বা .otf ফন্ট ফাইল আমদানি করুন</string>
+    <string name="font_files_supported">TTF · OTF · ZIP</string>
     <string name="action_choose_file">ফাইল বেছে নিন</string>
     <string name="font_selected_primary">প্রধান ফন্ট হিসেবে বেছে নেওয়া হয়েছে</string>
     <string name="font_removed">ফন্ট সরানো হয়েছে</string>
@@ -113,7 +113,7 @@
     <string name="notice_module_disabled">মডিউল নিষ্ক্রিয়। সিস্টেম ফন্ট ফেরাতে রিস্টার্ট করুন।</string>
     <string name="notice_module_saved">মডিউল সংরক্ষিত</string>
     <string name="error_operation_failed">কাজটি সম্পূর্ণ করা যায়নি।</string>
-    <string name="error_font_extension">.ttf বা .otf ফন্ট ফাইল বেছে নিন।</string>
+    <string name="error_font_extension">TTF/OTF ফাইল বা ZIP ফন্ট পরিবার বেছে নিন।</string>
     <string name="error_font_too_large">ফন্ট ফাইল 128 MB-এর বেশি।</string>
     <string name="error_file_read">ফাইল পড়া যায়নি।</string>
     <string name="error_font_save">ফন্ট সংরক্ষণ করা যায়নি।</string>
@@ -170,7 +170,7 @@
     <string name="automatic_fallback_title">অনুপস্থিত অক্ষর স্বয়ংক্রিয়ভাবে পূরণ</string>
     <string name="action_reset_fallbacks">ডিফল্ট বিকল্প ফন্ট ফেরান</string>
     <string name="application_mode">প্রয়োগের ধরন</string>
-    <string name="mode_single">একটি ফন্ট</string>
+    <string name="mode_single">একটি সমন্বয়</string>
     <string name="mode_styles">শৈলী অনুযায়ী</string>
     <string name="style_sans">স্যান্স সেরিফ</string>
     <string name="style_serif">সেরিফ</string>
@@ -192,4 +192,22 @@
     <string name="misans_notice">Xiaomi ফন্ট লাইসেন্স</string>
     <string name="title_software_licenses">সফটওয়্যার লাইব্রেরি</string>
     <string name="title_artwork_licenses">আইকন</string>
+    <string name="chain_description">ফন্টগুলো ক্রমানুসারে ব্যবহার করা হয়। সবার শেষে সিস্টেম ফন্ট ব্যবহৃত হয়।</string>
+    <string name="action_reorder">ক্রম পরিবর্তন</string>
+    <string name="font_combination">ফন্টের সমন্বয়</string>
+    <string name="action_create_combination">নতুন সমন্বয়</string>
+    <string name="combination_name">নাম</string>
+    <string name="combinations_empty">আগে ফন্ট পাতায় একটি সমন্বয় তৈরি করুন।</string>
+    <string name="system_font_override">সিস্টেম ফন্টের পরিবার বদলে দিচ্ছে। আলাদা শৈলী প্রয়োগ করতে সিস্টেমের ফন্ট সেটিংসে Roboto বেছে নিন।</string>
+    <string name="action_system_font_settings">ডিসপ্লে সেটিংস</string>
+    <string name="search_fonts">ফন্ট খুঁজুন</string>
+    <string name="error_settings_unavailable">সেটিংস খোলা যায়নি। সিস্টেমের ফন্ট সেটিংস নিজে খুলুন।</string>
+    <string name="font_family">ফন্ট পরিবার</string>
+    <string name="font_family_faces">ফন্টের রূপ</string>
+    <string name="action_add_faces">রূপ যোগ করুন</string>
+    <string name="action_remove_family">পরিবার সরান</string>
+    <string name="face_upright">সোজা</string>
+    <string name="face_italic">ইটালিক</string>
+    <string name="error_font_family_conflict">পরিবারে পরস্পরবিরোধী রূপ আছে। একই সেটের ওজনের ফাইল বেছে নিন।</string>
+    <string name="preview_glyphs_sample">সকালের আলো ১২৩</string>
 </resources>

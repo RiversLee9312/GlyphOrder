@@ -21,6 +21,7 @@ object UiError {
             "error_file_read" -> R.string.error_file_read
             "error_font_save" -> R.string.error_font_save
             "error_font_remove" -> R.string.error_font_remove
+            "error_font_family_conflict" -> R.string.error_font_family_conflict
             "error_font_size_invalid" -> R.string.error_font_size_invalid
             "error_font_single_face" -> R.string.error_font_single_face
             "error_font_directory_corrupt", "error_font_table_bounds", "error_font_required_data",

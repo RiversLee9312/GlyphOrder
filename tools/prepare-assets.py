@@ -8,7 +8,8 @@ root = Path(__file__).resolve().parents[1]
 res = root / 'app/src/main/res'
 symbols = ['add', 'text_fields', 'tune', 'layers', 'check', 'chevron_right',
            'arrow_back', 'close', 'delete', 'download', 'restart_alt', 'refresh',
-           'arrow_upward', 'arrow_downward', 'search', 'font_download', 'check_circle', 'info', 'language', 'translate']
+           'arrow_upward', 'arrow_downward', 'search', 'font_download', 'check_circle', 'info', 'language', 'translate',
+           'drag_indicator', 'more_vert']
 for name in symbols:
     url = f'https://raw.githubusercontent.com/google/material-design-icons/master/symbols/web/{name}/materialsymbolsrounded/{name}_24px.svg'
     svg = ET.fromstring(urllib.request.urlopen(url).read())

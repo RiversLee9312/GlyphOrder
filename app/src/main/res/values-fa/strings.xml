@@ -40,7 +40,7 @@
     <string name="font_library">کتابخانهٔ قلم</string>
     <string name="action_import">وارد کردن</string>
     <string name="font_library_empty">هنوز قلمی نیست</string>
-    <string name="font_files_supported">فایل‌های قلم .ttf یا .otf را وارد کنید</string>
+    <string name="font_files_supported">TTF · OTF · ZIP</string>
     <string name="action_choose_file">انتخاب فایل‌ها</string>
     <string name="font_selected_primary">به‌عنوان قلم اصلی انتخاب شد</string>
     <string name="font_removed">قلم حذف شد</string>
@@ -113,7 +113,7 @@
     <string name="notice_module_disabled">ماژول غیرفعال شد. برای بازگرداندن قلم‌های سیستم دستگاه را دوباره راه‌اندازی کنید.</string>
     <string name="notice_module_saved">ماژول ذخیره شد</string>
     <string name="error_operation_failed">انجام عملیات ممکن نشد.</string>
-    <string name="error_font_extension">یک فایل قلم .ttf یا .otf انتخاب کنید.</string>
+    <string name="error_font_extension">فایل‌های TTF/OTF یا یک خانواده قلم ZIP را انتخاب کنید.</string>
     <string name="error_font_too_large">حجم فایل قلم بیشتر از ۱۲۸ مگابایت است.</string>
     <string name="error_file_read">خواندن فایل ممکن نشد.</string>
     <string name="error_font_save">ذخیرهٔ قلم ممکن نشد.</string>
@@ -170,7 +170,7 @@
     <string name="automatic_fallback_title">تکمیل خودکار نویسه‌های ناموجود</string>
     <string name="action_reset_fallbacks">بازگردانی قلم‌های جایگزین پیش‌فرض</string>
     <string name="application_mode">روش اعمال</string>
-    <string name="mode_single">یک قلم</string>
+    <string name="mode_single">یک ترکیب</string>
     <string name="mode_styles">ترکیب بر اساس سبک</string>
     <string name="style_sans">بدون سریف</string>
     <string name="style_serif">سریف</string>
@@ -192,4 +192,22 @@
     <string name="misans_notice">مجوز قلم Xiaomi</string>
     <string name="title_software_licenses">کتابخانه‌های نرم‌افزار</string>
     <string name="title_artwork_licenses">نمادها</string>
+    <string name="chain_description">قلم‌ها به‌ترتیب امتحان می‌شوند. قلم‌های سیستم در پایان استفاده می‌شوند.</string>
+    <string name="action_reorder">تغییر ترتیب</string>
+    <string name="font_combination">ترکیب قلم‌ها</string>
+    <string name="action_create_combination">ترکیب جدید</string>
+    <string name="combination_name">نام</string>
+    <string name="combinations_empty">ابتدا در صفحهٔ قلم‌ها یک ترکیب بسازید.</string>
+    <string name="system_font_override">سیستم خانواده‌های قلم را جایگزین می‌کند. برای اعمال سبک‌های جداگانه، در تنظیمات قلم سیستم Roboto را انتخاب کنید.</string>
+    <string name="action_system_font_settings">تنظیمات نمایش</string>
+    <string name="search_fonts">جستجوی قلم‌ها</string>
+    <string name="error_settings_unavailable">تنظیمات باز نشد. تنظیمات قلم سیستم را دستی باز کنید.</string>
+    <string name="font_family">خانواده قلم</string>
+    <string name="font_family_faces">چهره‌های قلم</string>
+    <string name="action_add_faces">افزودن چهره</string>
+    <string name="action_remove_family">حذف خانواده</string>
+    <string name="face_upright">معمولی</string>
+    <string name="face_italic">مورب</string>
+    <string name="error_font_family_conflict">خانواده شامل چهره‌های ناسازگار است. مجموعه‌ای یکپارچه از فایل‌های وزن انتخاب کنید.</string>
+    <string name="preview_glyphs_sample">نسیم صبح ۱۲۳</string>
 </resources>

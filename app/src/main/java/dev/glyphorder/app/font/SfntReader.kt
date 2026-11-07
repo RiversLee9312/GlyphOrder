@@ -145,6 +145,7 @@ object SfntReader {
             return FontInfo(hash, hash.take(16) + if (signature == 0x4F54544F) ".otf" else ".ttf",
                 names[4]?.second ?: names[16]?.second ?: names[1]?.second ?: file.nameWithoutExtension,
                 names[6]?.second ?: "", weight, italic, axes, file.length(), scripts,
+                family = names[16]?.second ?: names[1]?.second,
                 coverage = CmapCoverage.readCmap(cmap))
         }
     }

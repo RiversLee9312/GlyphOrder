@@ -100,7 +100,7 @@ class ModuleSafetyTest {
         try {
             ZipOutputStream(file.outputStream()).use { zip ->
                 configs.forEach { (path, xml) ->
-                    val overlay = if (path.startsWith("/product/")) "system$path" else path.removePrefix("/")
+                    val overlay = FontPaths.overlay(path)
                     zip.putNextEntry(ZipEntry(overlay)); zip.write(xml.toByteArray()); zip.closeEntry()
                 }
             }
@@ -124,6 +124,17 @@ class ModuleSafetyTest {
         }
         archive(mapOf(legacy to system(1), modern to system(1))) { file ->
             assertThrows(IllegalArgumentException::class.java) { ModuleSafety.validateArchive(file, setOf(legacy)) }
+        }
+    }
+
+    @Test fun colorOsConfigurationAndItsCustomizationAreCheckedBeforeInstall() {
+        val configs = mapOf(legacy to system(1), FontPaths.COLOR_OS to system(253))
+        archive(configs) { ModuleSafety.validateArchive(it, configs.keys) }
+        assertTrue(rejected(configs + (FontPaths.COLOR_OS to system(254))).message.orEmpty().contains(FontPaths.COLOR_OS))
+        val customization = """<fonts-modification><family customizationType="new-named-family" name="op-sans-en"><font>OEM.ttf</font></family></fonts-modification>"""
+        rejected(configs + (FontPaths.COLOR_OS_CUSTOM to customization))
+        archive(configs) {
+            assertThrows(IllegalArgumentException::class.java) { ModuleSafety.validateArchive(it, setOf(legacy)) }
         }
     }
 

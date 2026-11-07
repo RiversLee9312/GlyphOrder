@@ -40,7 +40,7 @@
     <string name="font_library">Library ng font</string>
     <string name="action_import">Mag-import</string>
     <string name="font_library_empty">Wala pang font</string>
-    <string name="font_files_supported">Mag-import ng .ttf o .otf na file ng font</string>
+    <string name="font_files_supported">TTF · OTF · ZIP</string>
     <string name="action_choose_file">Pumili ng mga file</string>
     <string name="font_selected_primary">Pinili bilang pangunahing font</string>
     <string name="font_removed">Inalis ang font</string>
@@ -113,7 +113,7 @@
     <string name="notice_module_disabled">Na-disable ang module. Mag-reboot para maibalik ang mga system font.</string>
     <string name="notice_module_saved">Nai-save ang module</string>
     <string name="error_operation_failed">Hindi nakumpleto ang operasyon.</string>
-    <string name="error_font_extension">Pumili ng .ttf o .otf na file ng font.</string>
+    <string name="error_font_extension">Pumili ng mga TTF/OTF file o ZIP na pamilya ng font.</string>
     <string name="error_font_too_large">Lampas 128 MB ang file ng font.</string>
     <string name="error_file_read">Hindi mabasa ang file.</string>
     <string name="error_font_save">Hindi ma-save ang font.</string>
@@ -170,7 +170,7 @@
     <string name="automatic_fallback_title">Awtomatikong punan ang mga character</string>
     <string name="action_reset_fallbacks">Ibalik ang default na fallback</string>
     <string name="application_mode">Paraan ng paglalapat</string>
-    <string name="mode_single">Isang font</string>
+    <string name="mode_single">Isang kombinasyon</string>
     <string name="mode_styles">Pagsamahin ang estilo</string>
     <string name="style_sans">Sans serif</string>
     <string name="style_serif">Serif</string>
@@ -192,4 +192,22 @@
     <string name="misans_notice">Lisensya ng font ng Xiaomi</string>
     <string name="title_software_licenses">Mga software library</string>
     <string name="title_artwork_licenses">Mga icon</string>
+    <string name="chain_description">Sinusubukan ang mga font ayon sa pagkakasunod. Huling ginagamit ang mga font ng system.</string>
+    <string name="action_reorder">Baguhin ang ayos</string>
+    <string name="font_combination">Kombinasyon ng font</string>
+    <string name="action_create_combination">Bagong kombinasyon</string>
+    <string name="combination_name">Pangalan</string>
+    <string name="combinations_empty">Gumawa muna ng kombinasyon sa Mga Font.</string>
+    <string name="system_font_override">Pinapalitan ng system ang mga pamilya ng font. Piliin ang Roboto sa mga setting ng font ng system para sa magkakaibang estilo.</string>
+    <string name="action_system_font_settings">Mga setting ng display</string>
+    <string name="search_fonts">Maghanap ng mga font</string>
+    <string name="error_settings_unavailable">Hindi mabuksan ang mga setting. Manu-manong buksan ang mga setting ng font ng system.</string>
+    <string name="font_family">Pamilya ng font</string>
+    <string name="font_family_faces">Mga anyo ng font</string>
+    <string name="action_add_faces">Magdagdag ng anyo</string>
+    <string name="action_remove_family">Alisin ang pamilya</string>
+    <string name="face_upright">Patayo</string>
+    <string name="face_italic">Italic</string>
+    <string name="error_font_family_conflict">May magkasalungat na anyo ang pamilya. Pumili ng magkakatugmang file ng timbang.</string>
+    <string name="preview_glyphs_sample">Simoy ng umaga 0123</string>
 </resources>

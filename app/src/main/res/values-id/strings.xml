@@ -40,7 +40,7 @@
     <string name="font_library">Pustaka font</string>
     <string name="action_import">Impor</string>
     <string name="font_library_empty">Belum ada font</string>
-    <string name="font_files_supported">Impor file font .ttf atau .otf</string>
+    <string name="font_files_supported">TTF · OTF · ZIP</string>
     <string name="action_choose_file">Pilih file</string>
     <string name="font_selected_primary">Dipilih sebagai font utama</string>
     <string name="font_removed">Font dihapus</string>
@@ -113,7 +113,7 @@
     <string name="notice_module_disabled">Modul dinonaktifkan. Mulai ulang untuk memulihkan font sistem.</string>
     <string name="notice_module_saved">Modul disimpan</string>
     <string name="error_operation_failed">Operasi tidak dapat diselesaikan.</string>
-    <string name="error_font_extension">Pilih file font .ttf atau .otf.</string>
+    <string name="error_font_extension">Pilih berkas TTF/OTF atau keluarga font ZIP.</string>
     <string name="error_font_too_large">File font melebihi 128 MB.</string>
     <string name="error_file_read">File tidak dapat dibaca.</string>
     <string name="error_font_save">Font tidak dapat disimpan.</string>
@@ -170,7 +170,7 @@
     <string name="automatic_fallback_title">Lengkapi karakter secara otomatis</string>
     <string name="action_reset_fallbacks">Pulihkan font cadangan default</string>
     <string name="application_mode">Mode penerapan</string>
-    <string name="mode_single">Satu font</string>
+    <string name="mode_single">Satu kombinasi</string>
     <string name="mode_styles">Gabung per gaya</string>
     <string name="style_sans">Sans serif</string>
     <string name="style_serif">Serif</string>
@@ -192,4 +192,22 @@
     <string name="misans_notice">Lisensi font Xiaomi</string>
     <string name="title_software_licenses">Pustaka perangkat lunak</string>
     <string name="title_artwork_licenses">Ikon</string>
+    <string name="chain_description">Font dicoba sesuai urutan. Font sistem digunakan paling akhir.</string>
+    <string name="action_reorder">Ubah urutan</string>
+    <string name="font_combination">Kombinasi font</string>
+    <string name="action_create_combination">Kombinasi baru</string>
+    <string name="combination_name">Nama</string>
+    <string name="combinations_empty">Buat kombinasi di halaman Font terlebih dahulu.</string>
+    <string name="system_font_override">Sistem mengganti keluarga font. Pilih Roboto di setelan font sistem untuk menerapkan gaya yang berbeda.</string>
+    <string name="action_system_font_settings">Setelan tampilan</string>
+    <string name="search_fonts">Cari font</string>
+    <string name="error_settings_unavailable">Setelan tidak dapat dibuka. Buka setelan font sistem secara manual.</string>
+    <string name="font_family">Keluarga font</string>
+    <string name="font_family_faces">Rupa font</string>
+    <string name="action_add_faces">Tambah rupa</string>
+    <string name="action_remove_family">Hapus keluarga</string>
+    <string name="face_upright">Tegak</string>
+    <string name="face_italic">Miring</string>
+    <string name="error_font_family_conflict">Keluarga berisi rupa yang bertentangan. Pilih kumpulan berkas bobot yang konsisten.</string>
+    <string name="preview_glyphs_sample">Angin pagi 0123</string>
 </resources>

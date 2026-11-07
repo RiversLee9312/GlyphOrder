@@ -34,7 +34,7 @@
     <string name="font_library">字體庫</string>
     <string name="action_import">匯入</string>
     <string name="font_library_empty">目前沒有字體</string>
-    <string name="font_files_supported">匯入 .ttf 或 .otf 字體檔案</string>
+    <string name="font_files_supported">TTF · OTF · ZIP</string>
     <string name="action_choose_file">選擇檔案</string>
     <string name="font_selected_primary">已選為主要字體</string>
     <string name="font_removed">字體已移除</string>
@@ -110,7 +110,7 @@
     <string name="notice_module_disabled">模組已停用，重新啟動後還原系統字體。</string>
     <string name="notice_module_saved">模組已儲存</string>
     <string name="error_operation_failed">無法完成操作。</string>
-    <string name="error_font_extension">請選擇 .ttf 或 .otf 字體檔案。</string>
+    <string name="error_font_extension">請選擇 TTF、OTF 字型檔案或 ZIP 字型家族。</string>
     <string name="error_font_too_large">字體檔案超過 128 MB。</string>
     <string name="error_file_read">無法讀取檔案。</string>
     <string name="error_font_save">無法儲存字體。</string>
@@ -167,7 +167,7 @@
     <string name="automatic_fallback_title">自動補齊缺字</string>
     <string name="action_reset_fallbacks">還原預設遞補</string>
     <string name="application_mode">套用方式</string>
-    <string name="mode_single">單一字型</string>
+    <string name="mode_single">單一組合</string>
     <string name="mode_styles">依風格組合</string>
     <string name="style_sans">無襯線 · Sans</string>
     <string name="style_serif">襯線 · Serif</string>
@@ -176,7 +176,7 @@
     <string name="style_other">其他字型家族</string>
     <string name="style_mix_description">各類可分別選擇字型。選擇系統預設即可保留該類原樣。</string>
     <string name="style_unavailable">此裝置未偵測到對應家族</string>
-    <string name="action_apply_configured">一鍵套用目前設定</string>
+    <string name="action_apply_configured">套用字型</string>
     <string name="apply_configured_description">依所選字型與範圍偵測、產生並安裝模組，重新啟動後生效。</string>
     <string name="style_casual">休閒 · Casual</string>
     <string name="style_cursive">手寫 · Cursive</string>
@@ -189,4 +189,22 @@
     <string name="misans_notice">小米字型授權協議</string>
     <string name="title_software_licenses">相依函式庫</string>
     <string name="title_artwork_licenses">圖示</string>
+    <string name="chain_description">首項為主字型，其餘依序回退，最後使用系統字型。</string>
+    <string name="action_reorder">調整順序</string>
+    <string name="font_combination">字型組合</string>
+    <string name="action_create_combination">新增組合</string>
+    <string name="combination_name">名稱</string>
+    <string name="combinations_empty">請先在字型頁建立組合。</string>
+    <string name="system_font_override">系統正在統一替換字型。依風格套用前，請在系統字型設定中選擇 Roboto。</string>
+    <string name="action_system_font_settings">顯示設定</string>
+    <string name="search_fonts">搜尋字型</string>
+    <string name="error_settings_unavailable">無法開啟設定，請手動進入系統字型設定。</string>
+    <string name="font_family">字型家族</string>
+    <string name="font_family_faces">家族內字型</string>
+    <string name="action_add_faces">加入字型檔案</string>
+    <string name="action_remove_family">刪除字型家族</string>
+    <string name="face_upright">正體</string>
+    <string name="face_italic">斜體</string>
+    <string name="error_font_family_conflict">字型家族中有重複或衝突的字面，請選擇同一組字重檔案。</string>
+    <string name="preview_glyphs_sample">清風徐來 Aa 0123</string>
 </resources>

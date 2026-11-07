@@ -34,7 +34,7 @@
     <string name="font_library">Biblioteca de fuentes</string>
     <string name="action_import">Importar</string>
     <string name="font_library_empty">Aún no hay fuentes</string>
-    <string name="font_files_supported">Importa archivos de fuente .ttf u .otf</string>
+    <string name="font_files_supported">TTF · OTF · ZIP</string>
     <string name="action_choose_file">Elegir archivos</string>
     <string name="font_selected_primary">Seleccionada como fuente principal</string>
     <string name="font_removed">Fuente quitada</string>
@@ -110,7 +110,7 @@ Después, reinicia el dispositivo.</string>
     <string name="notice_module_disabled">Módulo desactivado. Reinicia para restaurar las fuentes del sistema.</string>
     <string name="notice_module_saved">Módulo guardado</string>
     <string name="error_operation_failed">No se pudo completar la operación.</string>
-    <string name="error_font_extension">Elige un archivo de fuente .ttf u .otf.</string>
+    <string name="error_font_extension">Selecciona archivos TTF/OTF o una familia de fuentes ZIP.</string>
     <string name="error_font_too_large">El archivo de fuente supera los 128 MB.</string>
     <string name="error_file_read">No se pudo leer el archivo.</string>
     <string name="error_font_save">No se pudo guardar la fuente.</string>
@@ -167,7 +167,7 @@ Después, reinicia el dispositivo.</string>
     <string name="automatic_fallback_title">Completar caracteres automáticamente</string>
     <string name="action_reset_fallbacks">Restaurar fuentes de respaldo</string>
     <string name="application_mode">Modo de aplicación</string>
-    <string name="mode_single">Una fuente</string>
+    <string name="mode_single">Una combinación</string>
     <string name="mode_styles">Combinar por estilo</string>
     <string name="style_sans">Sin remates</string>
     <string name="style_serif">Con remates</string>
@@ -189,4 +189,22 @@ Después, reinicia el dispositivo.</string>
     <string name="misans_notice">Licencia de fuentes Xiaomi</string>
     <string name="title_software_licenses">Bibliotecas de software</string>
     <string name="title_artwork_licenses">Iconos</string>
+    <string name="chain_description">Las fuentes se prueban en orden. Las del sistema se usan al final.</string>
+    <string name="action_reorder">Reordenar</string>
+    <string name="font_combination">Combinación de fuentes</string>
+    <string name="action_create_combination">Nueva combinación</string>
+    <string name="combination_name">Nombre</string>
+    <string name="combinations_empty">Primero crea una combinación en Fuentes.</string>
+    <string name="system_font_override">El sistema está sustituyendo las familias. Selecciona Roboto en los ajustes de fuente del sistema para aplicar estilos distintos.</string>
+    <string name="action_system_font_settings">Ajustes de pantalla</string>
+    <string name="search_fonts">Buscar fuentes</string>
+    <string name="error_settings_unavailable">No se pudieron abrir los ajustes. Abre manualmente los ajustes de fuente del sistema.</string>
+    <string name="font_family">Familia de fuentes</string>
+    <string name="font_family_faces">Estilos de fuente</string>
+    <string name="action_add_faces">Añadir estilos</string>
+    <string name="action_remove_family">Eliminar familia</string>
+    <string name="face_upright">Normal</string>
+    <string name="face_italic">Cursiva</string>
+    <string name="error_font_family_conflict">La familia contiene estilos incompatibles. Selecciona un conjunto coherente de archivos de peso.</string>
+    <string name="preview_glyphs_sample">Brisa de la mañana</string>
 </resources>

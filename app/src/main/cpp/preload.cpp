@@ -61,7 +61,8 @@ public:
             return;
         }
         const int count = preloadDirectory("/system/fonts", typeface, warmup)
-                        + preloadDirectory("/product/fonts", typeface, warmup);
+                        + preloadDirectory("/product/fonts", typeface, warmup)
+                        + preloadDirectory("/system_ext/fonts", typeface, warmup);
         env_->DeleteLocalRef(typeface);
         __android_log_print(ANDROID_LOG_DEBUG, TAG, "Preloaded %d font paths before specialization", count);
     }

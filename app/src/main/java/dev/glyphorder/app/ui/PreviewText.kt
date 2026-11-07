@@ -54,7 +54,12 @@ fun previewSpans(text: String, fonts: List<FontInfo>, plan: FontPlan, directory:
         val fallback = plan.fallbacks[tag]?.let { id -> fonts.find { it.id == id } }
         val candidates = (routes[tag].orEmpty() + dependencies).distinctBy { it.id }
         val supplement = candidates.firstOrNull { FontSelection.covers(it, codepoints) }
-        val selected = listOfNotNull(primary, fallback, supplement).distinctBy { it.id }
+        val ordered = plan.orderedFallbacks.mapNotNull { id -> fonts.find { it.id == id } }
+        // The earliest covering entry is enough for this grapheme. Logical families
+        // can include more script faces than CustomFallbackBuilder's native limit.
+        val orderedFace = FontSelection.orderedFaces(plan, fonts, tag, includeOtherScripts = true)
+            .firstOrNull { FontSelection.covers(it, codepoints) }
+        val selected = (listOfNotNull(primary, fallback, orderedFace, supplement)).distinctBy { it.id }
         return cache.getOrPut(selected.joinToString("|") { it.id }) {
             if (selected.isEmpty()) Typeface.create(Typeface.create(systemFamily, Typeface.NORMAL), weight, false)
             else {

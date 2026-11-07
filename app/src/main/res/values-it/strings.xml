@@ -40,7 +40,7 @@
     <string name="font_library">Libreria dei caratteri</string>
     <string name="action_import">Importa</string>
     <string name="font_library_empty">Nessun carattere</string>
-    <string name="font_files_supported">Importa file di carattere .ttf o .otf</string>
+    <string name="font_files_supported">TTF · OTF · ZIP</string>
     <string name="action_choose_file">Scegli file</string>
     <string name="font_selected_primary">Selezionato come carattere principale</string>
     <string name="font_removed">Carattere rimosso</string>
@@ -113,7 +113,7 @@
     <string name="notice_module_disabled">Modulo disattivato. Riavvia per ripristinare i caratteri di sistema.</string>
     <string name="notice_module_saved">Modulo salvato</string>
     <string name="error_operation_failed">Impossibile completare l’operazione.</string>
-    <string name="error_font_extension">Scegli un file di carattere .ttf o .otf.</string>
+    <string name="error_font_extension">Scegli file TTF/OTF o una famiglia di font ZIP.</string>
     <string name="error_font_too_large">Il file di carattere supera 128 MB.</string>
     <string name="error_file_read">Impossibile leggere il file.</string>
     <string name="error_font_save">Impossibile salvare il carattere.</string>
@@ -170,7 +170,7 @@
     <string name="automatic_fallback_title">Completa i caratteri mancanti</string>
     <string name="action_reset_fallbacks">Ripristina i font di riserva</string>
     <string name="application_mode">Modalità di applicazione</string>
-    <string name="mode_single">Un solo font</string>
+    <string name="mode_single">Una combinazione</string>
     <string name="mode_styles">Combina per stile</string>
     <string name="style_sans">Senza grazie</string>
     <string name="style_serif">Con grazie</string>
@@ -192,4 +192,22 @@
     <string name="misans_notice">Licenza dei caratteri Xiaomi</string>
     <string name="title_software_licenses">Librerie software</string>
     <string name="title_artwork_licenses">Icone</string>
+    <string name="chain_description">I font vengono provati in ordine. Quelli di sistema vengono usati per ultimi.</string>
+    <string name="action_reorder">Riordina</string>
+    <string name="font_combination">Combinazione di font</string>
+    <string name="action_create_combination">Nuova combinazione</string>
+    <string name="combination_name">Nome</string>
+    <string name="combinations_empty">Crea prima una combinazione in Font.</string>
+    <string name="system_font_override">Il sistema sostituisce le famiglie di font. Seleziona Roboto nelle impostazioni dei font di sistema per applicare stili diversi.</string>
+    <string name="action_system_font_settings">Impostazioni schermo</string>
+    <string name="search_fonts">Cerca font</string>
+    <string name="error_settings_unavailable">Impossibile aprire le impostazioni. Apri manualmente le impostazioni dei font di sistema.</string>
+    <string name="font_family">Famiglia di font</string>
+    <string name="font_family_faces">Varianti del font</string>
+    <string name="action_add_faces">Aggiungi varianti</string>
+    <string name="action_remove_family">Rimuovi famiglia</string>
+    <string name="face_upright">Dritto</string>
+    <string name="face_italic">Corsivo</string>
+    <string name="error_font_family_conflict">La famiglia contiene varianti in conflitto. Seleziona un insieme coerente di file di peso.</string>
+    <string name="preview_glyphs_sample">La luce del mattino</string>
 </resources>

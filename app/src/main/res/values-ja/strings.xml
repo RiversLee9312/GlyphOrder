@@ -34,7 +34,7 @@
     <string name="font_library">フォントライブラリ</string>
     <string name="action_import">読み込む</string>
     <string name="font_library_empty">フォントはまだありません</string>
-    <string name="font_files_supported">.ttf または .otf のフォントを読み込む</string>
+    <string name="font_files_supported">TTF · OTF · ZIP</string>
     <string name="action_choose_file">ファイルを選択</string>
     <string name="font_selected_primary">メインフォントに選択済み</string>
     <string name="font_removed">フォントを削除しました</string>
@@ -110,7 +110,7 @@
     <string name="notice_module_disabled">モジュールを無効にしました。システムフォントに戻すには再起動してください。</string>
     <string name="notice_module_saved">モジュールを保存しました</string>
     <string name="error_operation_failed">操作を完了できませんでした。</string>
-    <string name="error_font_extension">.ttf または .otf のフォントファイルを選択してください。</string>
+    <string name="error_font_extension">TTF/OTF ファイルまたは ZIP のフォントファミリーを選択してください。</string>
     <string name="error_font_too_large">フォントファイルが 128 MB を超えています。</string>
     <string name="error_file_read">ファイルを読み取れませんでした。</string>
     <string name="error_font_save">フォントを保存できませんでした。</string>
@@ -167,7 +167,7 @@
     <string name="automatic_fallback_title">不足文字を自動補完</string>
     <string name="action_reset_fallbacks">既定のフォールバックに戻す</string>
     <string name="application_mode">適用方法</string>
-    <string name="mode_single">単一フォント</string>
+    <string name="mode_single">単一の組み合わせ</string>
     <string name="mode_styles">種類ごとに組合せ</string>
     <string name="style_sans">サンセリフ</string>
     <string name="style_serif">セリフ</string>
@@ -189,4 +189,22 @@
     <string name="misans_notice">Xiaomi フォントライセンス</string>
     <string name="title_software_licenses">ソフトウェアライブラリ</string>
     <string name="title_artwork_licenses">アイコン</string>
+    <string name="chain_description">上から順にフォントを使用し、最後にシステムフォントで補います。</string>
+    <string name="action_reorder">並べ替え</string>
+    <string name="font_combination">フォントの組み合わせ</string>
+    <string name="action_create_combination">新しい組み合わせ</string>
+    <string name="combination_name">名前</string>
+    <string name="combinations_empty">先に「フォント」で組み合わせを作成してください。</string>
+    <string name="system_font_override">システムがフォントを一括置換しています。スタイルを使い分けるには、システムのフォント設定で Roboto を選択してください。</string>
+    <string name="action_system_font_settings">ディスプレイ設定</string>
+    <string name="search_fonts">フォントを検索</string>
+    <string name="error_settings_unavailable">設定を開けませんでした。システムのフォント設定を手動で開いてください。</string>
+    <string name="font_family">フォントファミリー</string>
+    <string name="font_family_faces">ファミリー内のフォント</string>
+    <string name="action_add_faces">フォントファイルを追加</string>
+    <string name="action_remove_family">ファミリーを削除</string>
+    <string name="face_upright">標準</string>
+    <string name="face_italic">斜体</string>
+    <string name="error_font_family_conflict">競合するフォントが含まれています。同じセットのウェイトファイルを選択してください。</string>
+    <string name="preview_glyphs_sample">そよ風 Aa 0123</string>
 </resources>

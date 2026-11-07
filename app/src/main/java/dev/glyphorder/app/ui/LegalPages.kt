@@ -68,6 +68,7 @@ private data class LegalParagraph(val text: String, val markdown: Boolean)
 @Composable
 internal fun LicensesPage(open: (String, List<String>) -> Unit) {
     val context = LocalContext.current
+    val noticesTitle = stringResource(R.string.title_notices)
     val libraries = remember {
         val array = JSONArray(context.assets.open("legal/libraries.json").bufferedReader().use { it.readText() })
         List(array.length()) { index -> array.getJSONObject(index).let { item ->
@@ -85,8 +86,8 @@ internal fun LicensesPage(open: (String, List<String>) -> Unit) {
             }
         }
         item {
-            LegalLink(stringResource(R.string.title_notices), index = 1, count = 2) {
-                open(context.getString(R.string.title_notices), listOf("legal/project/THIRD_PARTY_NOTICES.md"))
+            LegalLink(noticesTitle, index = 1, count = 2) {
+                open(noticesTitle, listOf("legal/project/THIRD_PARTY_NOTICES.md"))
             }
         }
         item { LegalSection(stringResource(R.string.title_font_licenses)) }

@@ -16,6 +16,11 @@ enum class RootBackend(val label: String) {
 data class RootManager(val backend: RootBackend, val version: String, val executable: String) {
     val displayName get() = "${backend.label} $version"
 
+    fun rebootCommand() = when (backend) {
+        RootBackend.MAGISK -> "svc power reboot"
+        RootBackend.KERNEL_SU -> "${Root.quote(executable)} soft-reboot"
+    }
+
     fun installCommand(path: String) = when (backend) {
         RootBackend.MAGISK -> "${Root.quote(executable)} --install-module ${Root.quote(path)}"
         RootBackend.KERNEL_SU -> "${Root.quote(executable)} module install ${Root.quote(path)}"

@@ -40,7 +40,7 @@
     <string name="font_library">Thư viện phông chữ</string>
     <string name="action_import">Nhập</string>
     <string name="font_library_empty">Chưa có phông chữ</string>
-    <string name="font_files_supported">Nhập tệp phông chữ .ttf hoặc .otf</string>
+    <string name="font_files_supported">TTF · OTF · ZIP</string>
     <string name="action_choose_file">Chọn tệp</string>
     <string name="font_selected_primary">Đã chọn làm phông chữ chính</string>
     <string name="font_removed">Đã xóa phông chữ</string>
@@ -113,7 +113,7 @@
     <string name="notice_module_disabled">Đã tắt mô-đun. Khởi động lại để khôi phục phông chữ hệ thống.</string>
     <string name="notice_module_saved">Đã lưu mô-đun</string>
     <string name="error_operation_failed">Không thể hoàn tất thao tác.</string>
-    <string name="error_font_extension">Chọn tệp phông chữ .ttf hoặc .otf.</string>
+    <string name="error_font_extension">Chọn tệp TTF/OTF hoặc họ phông ZIP.</string>
     <string name="error_font_too_large">Tệp phông chữ vượt quá 128 MB.</string>
     <string name="error_file_read">Không thể đọc tệp.</string>
     <string name="error_font_save">Không thể lưu phông chữ.</string>
@@ -170,7 +170,7 @@
     <string name="automatic_fallback_title">Tự động bổ sung ký tự thiếu</string>
     <string name="action_reset_fallbacks">Khôi phục phông dự phòng mặc định</string>
     <string name="application_mode">Cách áp dụng</string>
-    <string name="mode_single">Một phông chữ</string>
+    <string name="mode_single">Một bộ</string>
     <string name="mode_styles">Kết hợp theo kiểu</string>
     <string name="style_sans">Không chân</string>
     <string name="style_serif">Có chân</string>
@@ -192,4 +192,22 @@
     <string name="misans_notice">Giấy phép phông Xiaomi</string>
     <string name="title_software_licenses">Thư viện phần mềm</string>
     <string name="title_artwork_licenses">Biểu tượng</string>
+    <string name="chain_description">Phông chữ được thử theo thứ tự. Phông hệ thống được dùng cuối cùng.</string>
+    <string name="action_reorder">Đổi thứ tự</string>
+    <string name="font_combination">Bộ phông chữ</string>
+    <string name="action_create_combination">Bộ mới</string>
+    <string name="combination_name">Tên</string>
+    <string name="combinations_empty">Hãy tạo một bộ trong trang Phông chữ trước.</string>
+    <string name="system_font_override">Hệ thống đang thay thế các họ phông. Chọn Roboto trong cài đặt phông hệ thống để áp dụng các kiểu riêng.</string>
+    <string name="action_system_font_settings">Cài đặt màn hình</string>
+    <string name="search_fonts">Tìm phông chữ</string>
+    <string name="error_settings_unavailable">Không thể mở cài đặt. Hãy mở cài đặt phông hệ thống theo cách thủ công.</string>
+    <string name="font_family">Họ phông</string>
+    <string name="font_family_faces">Các kiểu trong họ</string>
+    <string name="action_add_faces">Thêm tệp phông</string>
+    <string name="action_remove_family">Xóa họ phông</string>
+    <string name="face_upright">Đứng</string>
+    <string name="face_italic">Nghiêng</string>
+    <string name="error_font_family_conflict">Họ phông có các kiểu xung đột. Hãy chọn một bộ tệp độ đậm nhất quán.</string>
+    <string name="preview_glyphs_sample">Gió ban mai 0123</string>
 </resources>

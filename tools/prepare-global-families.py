@@ -46,7 +46,7 @@ def record(path, **metadata):
             ranges[-1][1] = cp
         else:
             ranges.append([cp, cp])
-    scripts = {ud.script(chr(cp)) for cp in chars} - {'Latn', 'Zyyy', 'Zinh', 'Zzzz'}
+    scripts = base.routing_scripts(path, {ud.script(chr(cp)) for cp in chars} - {'Latn', 'Zyyy', 'Zinh', 'Zzzz'})
     tags = ['und-' + s for s in sorted(scripts)]
     if 'CJK' in path.name:
         tags += ['zh-Hans', 'zh-Hant', 'ja', 'ko']

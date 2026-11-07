@@ -40,7 +40,7 @@
     <string name="font_library">Yazı tipi kitaplığı</string>
     <string name="action_import">İçe aktar</string>
     <string name="font_library_empty">Henüz yazı tipi yok</string>
-    <string name="font_files_supported">.ttf veya .otf yazı tipi dosyalarını içe aktar</string>
+    <string name="font_files_supported">TTF · OTF · ZIP</string>
     <string name="action_choose_file">Dosyaları seç</string>
     <string name="font_selected_primary">Birincil yazı tipi olarak seçildi</string>
     <string name="font_removed">Yazı tipi kaldırıldı</string>
@@ -113,7 +113,7 @@
     <string name="notice_module_disabled">Modül devre dışı. Sistem yazı tiplerini geri yüklemek için cihazı yeniden başlatın.</string>
     <string name="notice_module_saved">Modül kaydedildi</string>
     <string name="error_operation_failed">İşlem tamamlanamadı.</string>
-    <string name="error_font_extension">.ttf veya .otf yazı tipi dosyası seçin.</string>
+    <string name="error_font_extension">TTF/OTF dosyaları veya ZIP yazı tipi ailesi seçin.</string>
     <string name="error_font_too_large">Yazı tipi dosyası 128 MB\'tan büyük.</string>
     <string name="error_file_read">Dosya okunamadı.</string>
     <string name="error_font_save">Yazı tipi kaydedilemedi.</string>
@@ -170,7 +170,7 @@
     <string name="automatic_fallback_title">Eksik karakterleri otomatik tamamla</string>
     <string name="action_reset_fallbacks">Varsayılan yedekleri geri yükle</string>
     <string name="application_mode">Uygulama biçimi</string>
-    <string name="mode_single">Tek yazı tipi</string>
+    <string name="mode_single">Tek birleşim</string>
     <string name="mode_styles">Stile göre karıştır</string>
     <string name="style_sans">Tırnaksız</string>
     <string name="style_serif">Tırnaklı</string>
@@ -192,4 +192,22 @@
     <string name="misans_notice">Xiaomi yazı tipi lisansı</string>
     <string name="title_software_licenses">Yazılım kitaplıkları</string>
     <string name="title_artwork_licenses">Simgeler</string>
+    <string name="chain_description">Yazı tipleri sırayla denenir. Sistem yazı tipleri en son kullanılır.</string>
+    <string name="action_reorder">Sırala</string>
+    <string name="font_combination">Yazı tipi birleşimi</string>
+    <string name="action_create_combination">Yeni birleşim</string>
+    <string name="combination_name">Ad</string>
+    <string name="combinations_empty">Önce Yazı Tipleri sayfasında bir birleşim oluşturun.</string>
+    <string name="system_font_override">Sistem yazı tipi ailelerini değiştiriyor. Farklı stiller uygulamak için sistem yazı tipi ayarlarında Roboto’yu seçin.</string>
+    <string name="action_system_font_settings">Ekran ayarları</string>
+    <string name="search_fonts">Yazı tipi ara</string>
+    <string name="error_settings_unavailable">Ayarlar açılamadı. Sistem yazı tipi ayarlarını elle açın.</string>
+    <string name="font_family">Yazı tipi ailesi</string>
+    <string name="font_family_faces">Yazı tipi biçimleri</string>
+    <string name="action_add_faces">Biçim ekle</string>
+    <string name="action_remove_family">Aileyi kaldır</string>
+    <string name="face_upright">Dik</string>
+    <string name="face_italic">İtalik</string>
+    <string name="error_font_family_conflict">Aile çakışan biçimler içeriyor. Tutarlı bir ağırlık dosyası kümesi seçin.</string>
+    <string name="preview_glyphs_sample">Gün ışığı 0123</string>
 </resources>

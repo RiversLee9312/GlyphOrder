@@ -34,7 +34,7 @@
     <string name="font_library">글꼴 라이브러리</string>
     <string name="action_import">가져오기</string>
     <string name="font_library_empty">글꼴이 아직 없습니다</string>
-    <string name="font_files_supported">.ttf 또는 .otf 글꼴 파일 가져오기</string>
+    <string name="font_files_supported">TTF · OTF · ZIP</string>
     <string name="action_choose_file">파일 선택</string>
     <string name="font_selected_primary">기본 글꼴로 선택됨</string>
     <string name="font_removed">글꼴 삭제됨</string>
@@ -110,7 +110,7 @@
     <string name="notice_module_disabled">모듈 사용 중지됨. 시스템 글꼴을 복원하려면 다시 시작하세요.</string>
     <string name="notice_module_saved">모듈 저장됨</string>
     <string name="error_operation_failed">작업을 완료할 수 없습니다.</string>
-    <string name="error_font_extension">.ttf 또는 .otf 글꼴 파일을 선택하세요.</string>
+    <string name="error_font_extension">TTF/OTF 파일 또는 ZIP 글꼴 모음을 선택하세요.</string>
     <string name="error_font_too_large">글꼴 파일이 128 MB를 초과합니다.</string>
     <string name="error_file_read">파일을 읽을 수 없습니다.</string>
     <string name="error_font_save">글꼴을 저장할 수 없습니다.</string>
@@ -167,7 +167,7 @@
     <string name="automatic_fallback_title">누락 문자 자동 대체</string>
     <string name="action_reset_fallbacks">기본 대체 글꼴 복원</string>
     <string name="application_mode">적용 방식</string>
-    <string name="mode_single">단일 글꼴</string>
+    <string name="mode_single">단일 조합</string>
     <string name="mode_styles">스타일별 조합</string>
     <string name="style_sans">산세리프</string>
     <string name="style_serif">세리프</string>
@@ -189,4 +189,22 @@
     <string name="misans_notice">Xiaomi 글꼴 라이선스</string>
     <string name="title_software_licenses">소프트웨어 라이브러리</string>
     <string name="title_artwork_licenses">아이콘</string>
+    <string name="chain_description">순서대로 글꼴을 사용하고, 마지막으로 시스템 글꼴을 사용합니다.</string>
+    <string name="action_reorder">순서 변경</string>
+    <string name="font_combination">글꼴 조합</string>
+    <string name="action_create_combination">새 조합</string>
+    <string name="combination_name">이름</string>
+    <string name="combinations_empty">먼저 글꼴 페이지에서 조합을 만드세요.</string>
+    <string name="system_font_override">시스템이 글꼴 모음을 일괄 변경하고 있습니다. 스타일별로 적용하려면 시스템 글꼴 설정에서 Roboto를 선택하세요.</string>
+    <string name="action_system_font_settings">디스플레이 설정</string>
+    <string name="search_fonts">글꼴 검색</string>
+    <string name="error_settings_unavailable">설정을 열 수 없습니다. 시스템 글꼴 설정을 직접 열어 주세요.</string>
+    <string name="font_family">글꼴 모음</string>
+    <string name="font_family_faces">모음의 글꼴</string>
+    <string name="action_add_faces">글꼴 파일 추가</string>
+    <string name="action_remove_family">글꼴 모음 삭제</string>
+    <string name="face_upright">정체</string>
+    <string name="face_italic">기울임</string>
+    <string name="error_font_family_conflict">충돌하는 글꼴이 있습니다. 같은 세트의 굵기 파일을 선택하세요.</string>
+    <string name="preview_glyphs_sample">맑은 하늘 Aa 0123</string>
 </resources>

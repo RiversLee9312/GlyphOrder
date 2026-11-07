@@ -12,10 +12,23 @@ object FontSelection {
             .sortedWith(compareBy<FontInfo> { it.weight }.thenBy { it.italic })
 
     fun automatic(plan: FontPlan, fonts: List<FontInfo>): Boolean =
-        plan.automaticFallback && fonts.any { it.id == plan.primary || (plan.styleMode && it.id in plan.styleFonts.values) }
+        !FontStyles.explicit(plan) && plan.automaticFallback && fonts.any { it.id == plan.primary || (plan.styleMode && it.id in plan.styleFonts.values) }
 
     fun defaultFallbacks(plan: FontPlan): FontPlan =
         plan.copy(automaticFallback = true, fallbacks = emptyMap(), universal = emptyList())
+
+    fun componentRoutes(plan: FontPlan, fonts: List<FontInfo>): Map<String, List<FontInfo>> {
+        val roots = listOfNotNull(plan.primary) + plan.orderedFallbacks
+        val components = roots.flatMap { plan.familyComponents[it].orEmpty() }.mapNotNull { id -> fonts.find { it.id == id } }
+        return components.flatMap { it.fallbackTags }.distinct().associateWith { tag -> components.filter { tag in it.fallbackTags } }
+    }
+
+    fun orderedFaces(plan: FontPlan, fonts: List<FontInfo>, language: String, includeOtherScripts: Boolean = false): List<FontInfo> =
+        (listOfNotNull(plan.primary) + plan.orderedFallbacks).flatMap { root ->
+            val children = plan.familyComponents[root].orEmpty().mapNotNull { id -> fonts.find { it.id == id } }
+            listOfNotNull(fonts.find { it.id == root }) + children.filter { language in it.fallbackTags } +
+                if (includeOtherScripts) children.filter { language !in it.fallbackTags } else emptyList()
+        }.distinctBy { it.id }
 
     fun dependencies(plan: FontPlan, fonts: List<FontInfo>): List<FontInfo> {
         if (!automatic(plan, fonts)) return emptyList()
@@ -45,12 +58,15 @@ object FontSelection {
     }
 
     fun selected(plan: FontPlan, fonts: List<FontInfo>): List<FontInfo> {
+        if (FontStyles.explicit(plan)) return FontStyles.groups.flatMap { FontStyles.chain(plan, it) }.distinct()
+            .flatMap { listOf(it) + plan.familyComponents[it].orEmpty() }
+            .map { id -> requireNotNull(fonts.find { it.id == id }) }.flatMap { family(it, fonts) }.distinctBy { it.id }
         if (plan.styleMode) return plan.styleFonts.values.distinct().flatMap { id ->
             selected(plan.copy(primary = id, styleMode = false), fonts)
         }.plus((plan.fallbacks.values + plan.universal).mapNotNull { id -> fonts.find { it.id == id } }
             .flatMap { family(it, fonts) }).distinctBy { it.id }
-        val ids = listOfNotNull(plan.primary) + plan.fallbacks.values + plan.universal
-        val direct = ids.map { id -> requireNotNull(fonts.find { it.id == id }) }
+        val ids = listOfNotNull(plan.primary) + plan.orderedFallbacks + plan.fallbacks.values + plan.universal
+        val direct = ids.flatMap { listOf(it) + plan.familyComponents[it].orEmpty() }.map { id -> requireNotNull(fonts.find { it.id == id }) }
         return (direct.flatMap { family(it, fonts) } + dependencies(plan, fonts).flatMap { family(it, fonts) }).distinctBy { it.id }
     }
 

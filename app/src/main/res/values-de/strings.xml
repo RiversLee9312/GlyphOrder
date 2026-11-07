@@ -34,7 +34,7 @@
     <string name="font_library">Schriftbibliothek</string>
     <string name="action_import">Importieren</string>
     <string name="font_library_empty">Noch keine Schriften</string>
-    <string name="font_files_supported">.ttf- oder .otf-Schriften importieren</string>
+    <string name="font_files_supported">TTF · OTF · ZIP</string>
     <string name="action_choose_file">Dateien auswählen</string>
     <string name="font_selected_primary">Als Hauptschrift ausgewählt</string>
     <string name="font_removed">Schrift entfernt</string>
@@ -110,7 +110,7 @@ Starte anschließend das Gerät neu.</string>
     <string name="notice_module_disabled">Modul deaktiviert. Starte neu, um die Systemschriften wiederherzustellen.</string>
     <string name="notice_module_saved">Modul gespeichert</string>
     <string name="error_operation_failed">Der Vorgang konnte nicht abgeschlossen werden.</string>
-    <string name="error_font_extension">Wähle eine .ttf- oder .otf-Schriftdatei aus.</string>
+    <string name="error_font_extension">Wähle TTF/OTF-Dateien oder eine ZIP-Schriftfamilie.</string>
     <string name="error_font_too_large">Die Schriftdatei ist größer als 128 MB.</string>
     <string name="error_file_read">Die Datei konnte nicht gelesen werden.</string>
     <string name="error_font_save">Die Schrift konnte nicht gespeichert werden.</string>
@@ -167,7 +167,7 @@ Starte anschließend das Gerät neu.</string>
     <string name="automatic_fallback_title">Fehlende Zeichen automatisch ergänzen</string>
     <string name="action_reset_fallbacks">Standard-Fallbacks wiederherstellen</string>
     <string name="application_mode">Anwendungsmodus</string>
-    <string name="mode_single">Eine Schrift</string>
+    <string name="mode_single">Eine Kombination</string>
     <string name="mode_styles">Nach Stil mischen</string>
     <string name="style_sans">Serifenlos</string>
     <string name="style_serif">Serifenschrift</string>
@@ -189,4 +189,22 @@ Starte anschließend das Gerät neu.</string>
     <string name="misans_notice">Xiaomi-Schriftlizenz</string>
     <string name="title_software_licenses">Softwarebibliotheken</string>
     <string name="title_artwork_licenses">Symbole</string>
+    <string name="chain_description">Schriften werden der Reihe nach verwendet. Systemschriften stehen am Ende.</string>
+    <string name="action_reorder">Reihenfolge ändern</string>
+    <string name="font_combination">Schriftkombination</string>
+    <string name="action_create_combination">Neue Kombination</string>
+    <string name="combination_name">Name</string>
+    <string name="combinations_empty">Erstelle zuerst unter Schriften eine Kombination.</string>
+    <string name="system_font_override">Das System ersetzt Schriftfamilien. Wähle Roboto in den System-Schrifteinstellungen für unterschiedliche Stile.</string>
+    <string name="action_system_font_settings">Anzeigeeinstellungen</string>
+    <string name="search_fonts">Schriftarten suchen</string>
+    <string name="error_settings_unavailable">Einstellungen konnten nicht geöffnet werden. Öffne die System-Schrifteinstellungen manuell.</string>
+    <string name="font_family">Schriftfamilie</string>
+    <string name="font_family_faces">Schriftschnitte</string>
+    <string name="action_add_faces">Schnitte hinzufügen</string>
+    <string name="action_remove_family">Familie entfernen</string>
+    <string name="face_upright">Aufrecht</string>
+    <string name="face_italic">Kursiv</string>
+    <string name="error_font_family_conflict">Die Familie enthält widersprüchliche Schnitte. Wähle einen einheitlichen Satz von Schriftdateien.</string>
+    <string name="preview_glyphs_sample">Frischer Wind Äöü</string>
 </resources>

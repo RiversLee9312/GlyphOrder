@@ -34,7 +34,7 @@
     <string name="font_library">Bibliothèque de polices</string>
     <string name="action_import">Importer</string>
     <string name="font_library_empty">Aucune police pour le moment</string>
-    <string name="font_files_supported">Importer des fichiers .ttf ou .otf</string>
+    <string name="font_files_supported">TTF · OTF · ZIP</string>
     <string name="action_choose_file">Choisir des fichiers</string>
     <string name="font_selected_primary">Sélectionnée comme police principale</string>
     <string name="font_removed">Police supprimée</string>
@@ -110,7 +110,7 @@ Redémarrez ensuite l’appareil.</string>
     <string name="notice_module_disabled">Module désactivé. Redémarrez pour restaurer les polices système.</string>
     <string name="notice_module_saved">Module enregistré</string>
     <string name="error_operation_failed">Impossible de terminer l’opération.</string>
-    <string name="error_font_extension">Choisissez un fichier de police .ttf ou .otf.</string>
+    <string name="error_font_extension">Choisissez des fichiers TTF/OTF ou une famille de polices ZIP.</string>
     <string name="error_font_too_large">Le fichier de police dépasse 128 Mo.</string>
     <string name="error_file_read">Impossible de lire le fichier.</string>
     <string name="error_font_save">Impossible d’enregistrer la police.</string>
@@ -167,7 +167,7 @@ Redémarrez ensuite l’appareil.</string>
     <string name="automatic_fallback_title">Compléter les caractères manquants</string>
     <string name="action_reset_fallbacks">Rétablir les polices de secours</string>
     <string name="application_mode">Mode d’application</string>
-    <string name="mode_single">Police unique</string>
+    <string name="mode_single">Une combinaison</string>
     <string name="mode_styles">Combiner les styles</string>
     <string name="style_sans">Sans empattement</string>
     <string name="style_serif">Avec empattement</string>
@@ -189,4 +189,22 @@ Redémarrez ensuite l’appareil.</string>
     <string name="misans_notice">Licence de police Xiaomi</string>
     <string name="title_software_licenses">Bibliothèques logicielles</string>
     <string name="title_artwork_licenses">Icônes</string>
+    <string name="chain_description">Les polices sont essayées dans cet ordre. Celles du système sont utilisées en dernier.</string>
+    <string name="action_reorder">Réorganiser</string>
+    <string name="font_combination">Combinaison de polices</string>
+    <string name="action_create_combination">Nouvelle combinaison</string>
+    <string name="combination_name">Nom</string>
+    <string name="combinations_empty">Créez une combinaison dans Polices.</string>
+    <string name="system_font_override">Le système remplace les familles de polices. Sélectionnez Roboto dans ses paramètres de police pour appliquer des styles distincts.</string>
+    <string name="action_system_font_settings">Paramètres d’affichage</string>
+    <string name="search_fonts">Rechercher des polices</string>
+    <string name="error_settings_unavailable">Impossible d’ouvrir les paramètres. Ouvrez manuellement les paramètres de police du système.</string>
+    <string name="font_family">Famille de polices</string>
+    <string name="font_family_faces">Variantes de police</string>
+    <string name="action_add_faces">Ajouter des variantes</string>
+    <string name="action_remove_family">Supprimer la famille</string>
+    <string name="face_upright">Droit</string>
+    <string name="face_italic">Italique</string>
+    <string name="error_font_family_conflict">La famille contient des variantes incompatibles. Sélectionnez un ensemble cohérent de fichiers de graisse.</string>
+    <string name="preview_glyphs_sample">À l’aube 0123</string>
 </resources>

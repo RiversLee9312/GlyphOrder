@@ -8,6 +8,13 @@ class FontBaselineTest {
     private val old = FontBaseline("active", current.copy(sdk = 36, incremental = "old-build"), true, false)
     private val pending = FontBaseline("staged", current, false, false)
 
+    @Test fun recognizesAMetamoduleLiveUpdateOnlyWhenItsOriginalBaselineMatches() {
+        assertTrue(FontBaseline.acceptsConfig("new-overlay", "stock", "old-overlay", "stock", "new-overlay"))
+        assertTrue(FontBaseline.acceptsConfig("stock", "stock", "old-overlay", null, null))
+        assertFalse(FontBaseline.acceptsConfig("external-change", "stock", "old-overlay", "stock", "new-overlay"))
+        assertFalse(FontBaseline.acceptsConfig("new-overlay", "stock", "old-overlay", "different-stock", "new-overlay"))
+    }
+
     @Test fun ignoresTheDisabledOldBaselineAfterAnUpgradeReboot() {
         assertNull(FontBaseline.select(current, old, null))
         assertNull(FontBaseline.select(current, old.copy(build = SystemBuild(current.fingerprint, -1, "")), null))

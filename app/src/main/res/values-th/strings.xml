@@ -40,7 +40,7 @@
     <string name="font_library">คลังแบบอักษร</string>
     <string name="action_import">นำเข้า</string>
     <string name="font_library_empty">ยังไม่มีแบบอักษร</string>
-    <string name="font_files_supported">นำเข้าไฟล์แบบอักษร .ttf หรือ .otf</string>
+    <string name="font_files_supported">TTF · OTF · ZIP</string>
     <string name="action_choose_file">เลือกไฟล์</string>
     <string name="font_selected_primary">เลือกเป็นแบบอักษรหลักแล้ว</string>
     <string name="font_removed">นำแบบอักษรออกแล้ว</string>
@@ -113,7 +113,7 @@
     <string name="notice_module_disabled">ปิดใช้โมดูลแล้ว รีบูตเพื่อคืนค่าแบบอักษรระบบ</string>
     <string name="notice_module_saved">บันทึกโมดูลแล้ว</string>
     <string name="error_operation_failed">ดำเนินการไม่สำเร็จ</string>
-    <string name="error_font_extension">เลือกไฟล์แบบอักษร .ttf หรือ .otf</string>
+    <string name="error_font_extension">เลือกไฟล์ TTF/OTF หรือตระกูลแบบอักษร ZIP</string>
     <string name="error_font_too_large">ไฟล์แบบอักษรมีขนาดเกิน 128 MB</string>
     <string name="error_file_read">อ่านไฟล์ไม่ได้</string>
     <string name="error_font_save">บันทึกแบบอักษรไม่ได้</string>
@@ -170,7 +170,7 @@
     <string name="automatic_fallback_title">เติมอักขระที่ขาดอัตโนมัติ</string>
     <string name="action_reset_fallbacks">คืนค่าแบบอักษรสำรองเริ่มต้น</string>
     <string name="application_mode">รูปแบบการใช้</string>
-    <string name="mode_single">แบบอักษรเดียว</string>
+    <string name="mode_single">ชุดเดียว</string>
     <string name="mode_styles">ผสมตามสไตล์</string>
     <string name="style_sans">ไม่มีเชิง</string>
     <string name="style_serif">มีเชิง</string>
@@ -192,4 +192,22 @@
     <string name="misans_notice">สัญญาอนุญาตแบบอักษร Xiaomi</string>
     <string name="title_software_licenses">ไลบรารีซอฟต์แวร์</string>
     <string name="title_artwork_licenses">ไอคอน</string>
+    <string name="chain_description">ลองใช้แบบอักษรตามลำดับ และใช้แบบอักษรระบบเป็นลำดับสุดท้าย</string>
+    <string name="action_reorder">เปลี่ยนลำดับ</string>
+    <string name="font_combination">ชุดแบบอักษร</string>
+    <string name="action_create_combination">ชุดใหม่</string>
+    <string name="combination_name">ชื่อ</string>
+    <string name="combinations_empty">สร้างชุดในหน้าแบบอักษรก่อน</string>
+    <string name="system_font_override">ระบบกำลังแทนที่ตระกูลแบบอักษร เลือก Roboto ในการตั้งค่าแบบอักษรของระบบเพื่อใช้รูปแบบที่ต่างกัน</string>
+    <string name="action_system_font_settings">การตั้งค่าการแสดงผล</string>
+    <string name="search_fonts">ค้นหาแบบอักษร</string>
+    <string name="error_settings_unavailable">เปิดการตั้งค่าไม่ได้ โปรดเปิดการตั้งค่าแบบอักษรของระบบด้วยตนเอง</string>
+    <string name="font_family">ตระกูลแบบอักษร</string>
+    <string name="font_family_faces">รูปแบบในตระกูล</string>
+    <string name="action_add_faces">เพิ่มไฟล์แบบอักษร</string>
+    <string name="action_remove_family">ลบตระกูล</string>
+    <string name="face_upright">ตัวตรง</string>
+    <string name="face_italic">ตัวเอียง</string>
+    <string name="error_font_family_conflict">มีรูปแบบที่ขัดแย้งกัน โปรดเลือกไฟล์น้ำหนักจากชุดเดียวกัน</string>
+    <string name="preview_glyphs_sample">สายลมยามเช้า ๑๒๓</string>
 </resources>

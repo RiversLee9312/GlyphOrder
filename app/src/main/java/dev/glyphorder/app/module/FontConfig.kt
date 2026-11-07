@@ -49,6 +49,13 @@ object FontConfig {
     fun patch(xml: String, modern: Boolean, plan: FontPlan, fonts: List<FontInfo>, product: Boolean = false,
               systemCoverage: Map<String, List<IntRange>> = emptyMap(), knownTargets: Set<String> = emptySet()): String {
         if (plan.styleMode) {
+            if (FontStyles.explicit(plan)) {
+                return plan.targets.groupBy(FontStyles::group).entries.fold(xml) { current, (group, names) ->
+                    val scoped = FontStyles.preview(plan, group).copy(targets = names.toSet(), global = false)
+                    if (scoped.primary == null) current else patchSingle(current, modern, scoped, fonts, product,
+                        systemCoverage, knownTargets, isolate = true)
+                }
+            }
             val assignments = FontStyles.assignments(plan, plan.targets)
             require(assignments.isNotEmpty()) { UiError.key("error_select_existing_family") }
             // Disjoint fallbackFor scopes keep each style's primary and supplements isolated.
@@ -125,18 +132,37 @@ object FontConfig {
         } }
         data class Route(val lang: String, val variant: String, val before: Element?, val fonts: List<Pair<FontInfo, Boolean>>)
         val routes = mutableListOf<Route>()
-        val globalLanguages = if ((plan.global || isolate) && primary != null) originals.filterNot { family ->
+        val components = FontSelection.componentRoutes(plan, fonts)
+        val globalLanguages = if ((plan.global || isolate || plan.orderedFallbacks.isNotEmpty()) && primary != null) originals.filterNot { family ->
             elements(family, "font").any { it.textContent.contains("NotoColorEmoji") }
         }
             .flatMap { it.getAttribute("lang").split(',') }.filter { it.isNotBlank() && it != "und-Zsye" }.toSet() else emptySet()
-        if (!product) (plan.fallbacks.keys + automatic.keys + globalLanguages).forEach { lang ->
+        val ordered = plan.orderedFallbacks.map { id -> requireNotNull(fonts.find { it.id == id }) }
+        if (!product) (plan.fallbacks.keys + automatic.keys + globalLanguages + components.keys).forEach { lang ->
             require(lang in languages || lang in globalLanguages || lang.matches(Regex("und-[A-Z][a-z]{3}"))) { UiError.key("error_language_script_unsupported") }
             val manual = plan.fallbacks[lang]?.let { id ->
                 fonts.find { it.id == id } ?: error(UiError.key("error_fallback_font_removed"))
             }
             // Every primary uses the same automatic pool: primary first, followed
             // by an explicit script selection and relevant Noto supplements.
-            val preferred = (listOfNotNull(primary.takeIf { automatic.isNotEmpty() || plan.global || isolate }, manual) + automatic[lang].orEmpty()).distinctBy { it.id }
+            val explicit = if (plan.familyComponents.isNotEmpty()) FontSelection.orderedFaces(plan, fonts, lang)
+                else listOfNotNull(primary.takeIf { automatic.isNotEmpty() || plan.global || isolate || ordered.isNotEmpty() }) + ordered
+            val preferred = (explicit + listOfNotNull(manual) + automatic[lang].orEmpty()).distinctBy { it.id }
+            // Generic supplements cannot contribute a glyph already guaranteed by
+            // the earlier, explicitly preferred design on this same language route.
+            // Keep unknown coverage and every face that adds even one codepoint.
+            var designCoverage = emptyList<IntRange>()
+            val routed = preferred.filter { font ->
+                val faces = FontSelection.family(font, fonts)
+                val complete = faces.all { it.coverage.isNotEmpty() }
+                val redundant = font.id != primary?.id && font.id != manual?.id && complete &&
+                    font.fallbackGroup in setOf("noto", "sarasa") && designCoverage.isNotEmpty() &&
+                    CmapCoverage.contains(designCoverage, CmapCoverage.union(faces.map(FontInfo::coverage)))
+                if (complete && font.fallbackGroup in setOf("noto-serif", "misans-global")) {
+                    designCoverage = CmapCoverage.union(listOf(designCoverage, CmapCoverage.intersection(faces.map(FontInfo::coverage))))
+                }
+                !redundant
+            }
             // Language tags rank families; they do not isolate them into separate native
             // collections. Repeating a face for each script consumes the same 254 slots.
             val matching = allFamilies.filter { lang in it.getAttribute("lang").split(',').map(String::trim) }
@@ -146,7 +172,7 @@ object FontConfig {
             variants.forEach { variant ->
                 val first = matching.firstOrNull { it.getAttribute("variant") == variant }
                     ?: allFamilies.firstOrNull { !it.hasAttribute("name") }
-                routes += Route(lang, variant, first, preferred.map { it to (isolate || primary != null) })
+                routes += Route(lang, variant, first, routed.map { it to (isolate || primary != null) })
             }
         }
         val reused = mutableMapOf<Element, String>()
@@ -225,6 +251,20 @@ object FontConfig {
             }
         }
         if (!product) {
+            // Explicit chain entries also serve characters with no existing script
+            // route. Script-tagged copies above keep the same order for CJK/RTL.
+            val anchor = elements(root, "family").firstOrNull { !it.hasAttribute("name") }
+            ordered.distinctBy { it.id }.forEach { font ->
+                val family = doc.createElement("family")
+                appendFamily(family, font, true)
+                if (anchor != null) root.insertBefore(family, anchor) else root.appendChild(family)
+            }
+            (listOfNotNull(primary?.id) + plan.orderedFallbacks).flatMap { plan.familyComponents[it].orEmpty() }
+                .mapNotNull { id -> fonts.find { it.id == id } }.filter { it.fallbackTags.isEmpty() }.distinctBy { it.id }.forEach { font ->
+                    val family = doc.createElement("family")
+                    appendFamily(family, font, true)
+                    if (anchor != null) root.insertBefore(family, anchor) else root.appendChild(family)
+                }
             // Universal fonts fill missing glyphs, after all device fallback families, preserving emoji priority.
             // Tagged automatic faces already participate in fallback for all characters.
             // Appending them again as unqualified families doubles the native chain.

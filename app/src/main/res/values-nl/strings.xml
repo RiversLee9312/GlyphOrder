@@ -40,7 +40,7 @@
     <string name="font_library">Lettertypebibliotheek</string>
     <string name="action_import">Importeren</string>
     <string name="font_library_empty">Nog geen lettertypen</string>
-    <string name="font_files_supported">Importeer .ttf- of .otf-lettertypebestanden</string>
+    <string name="font_files_supported">TTF · OTF · ZIP</string>
     <string name="action_choose_file">Bestanden kiezen</string>
     <string name="font_selected_primary">Geselecteerd als primair lettertype</string>
     <string name="font_removed">Lettertype verwijderd</string>
@@ -113,7 +113,7 @@
     <string name="notice_module_disabled">Module uitgeschakeld. Herstart om de systeemlettertypen te herstellen.</string>
     <string name="notice_module_saved">Module opgeslagen</string>
     <string name="error_operation_failed">De bewerking kan niet worden voltooid.</string>
-    <string name="error_font_extension">Kies een .ttf- of .otf-lettertypebestand.</string>
+    <string name="error_font_extension">Kies TTF/OTF-bestanden of een ZIP-lettertypefamilie.</string>
     <string name="error_font_too_large">Het lettertypebestand is groter dan 128 MB.</string>
     <string name="error_file_read">Het bestand kan niet worden gelezen.</string>
     <string name="error_font_save">Het lettertype kan niet worden opgeslagen.</string>
@@ -170,7 +170,7 @@
     <string name="automatic_fallback_title">Ontbrekende tekens aanvullen</string>
     <string name="action_reset_fallbacks">Standaardterugval herstellen</string>
     <string name="application_mode">Toepassingsmodus</string>
-    <string name="mode_single">Eén lettertype</string>
+    <string name="mode_single">Eén combinatie</string>
     <string name="mode_styles">Mengen per stijl</string>
     <string name="style_sans">Schreefloos</string>
     <string name="style_serif">Met schreef</string>
@@ -192,4 +192,22 @@
     <string name="misans_notice">Xiaomi-lettertypelicentie</string>
     <string name="title_software_licenses">Softwarebibliotheken</string>
     <string name="title_artwork_licenses">Pictogrammen</string>
+    <string name="chain_description">Lettertypen worden op volgorde geprobeerd. Systeemlettertypen komen als laatste.</string>
+    <string name="action_reorder">Volgorde wijzigen</string>
+    <string name="font_combination">Lettertypecombinatie</string>
+    <string name="action_create_combination">Nieuwe combinatie</string>
+    <string name="combination_name">Naam</string>
+    <string name="combinations_empty">Maak eerst een combinatie bij Lettertypen.</string>
+    <string name="system_font_override">Het systeem vervangt lettertypefamilies. Kies Roboto in de systeeminstellingen voor lettertypen om verschillende stijlen toe te passen.</string>
+    <string name="action_system_font_settings">Beeldscherminstellingen</string>
+    <string name="search_fonts">Lettertypen zoeken</string>
+    <string name="error_settings_unavailable">Instellingen kunnen niet worden geopend. Open de systeeminstellingen voor lettertypen handmatig.</string>
+    <string name="font_family">Lettertypefamilie</string>
+    <string name="font_family_faces">Lettertypevarianten</string>
+    <string name="action_add_faces">Varianten toevoegen</string>
+    <string name="action_remove_family">Familie verwijderen</string>
+    <string name="face_upright">Recht</string>
+    <string name="face_italic">Cursief</string>
+    <string name="error_font_family_conflict">De familie bevat conflicterende varianten. Kies een samenhangende set gewichtsbestanden.</string>
+    <string name="preview_glyphs_sample">Een frisse bries</string>
 </resources>

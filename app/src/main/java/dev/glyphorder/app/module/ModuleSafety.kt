@@ -11,9 +11,7 @@ object ModuleSafety {
     const val MAX_FAMILIES = 254
     private const val MAX_XML_BYTES = 16 * 1024 * 1024
     private const val LEGACY = "/system/etc/fonts.xml"
-    private const val MODERN = "/system/etc/font_fallback.xml"
-    private const val PRODUCT = "/product/etc/fonts_customization.xml"
-    private val paths = setOf(LEGACY, MODERN, PRODUCT)
+    private val paths = FontPaths.all.toSet()
 
     private fun children(parent: Element, tag: String? = null): List<Element> =
         (0 until parent.childNodes.length).map { parent.childNodes.item(it) }
@@ -25,10 +23,12 @@ object ModuleSafety {
     fun validate(configs: Map<String, String>): Int {
         var maximum = 0
         require(LEGACY in configs && paths.containsAll(configs.keys)) { UiError.key("error_font_config_format") }
-        val product = configs[PRODUCT]?.let { FontConfig.parse(it).documentElement }
-        require(product == null || product.tagName == "fonts-modification") { UiError.key("error_font_config_format") }
-        listOf(LEGACY, MODERN).forEach { path ->
+        configs.filterKeys(FontPaths::isCustomization).values.forEach {
+            require(FontConfig.parse(it).documentElement.tagName == "fonts-modification") { UiError.key("error_font_config_format") }
+        }
+        FontPaths.bases.forEach { path ->
             val xml = configs[path] ?: return@forEach
+            val product = configs[FontPaths.customization(path)]?.let { FontConfig.parse(it).documentElement }
             val root = FontConfig.parse(xml).documentElement
             require(root.tagName == "familyset") { UiError.key("error_font_config_format") }
             val named = linkedMapOf<String, Named>()
@@ -111,7 +111,7 @@ object ModuleSafety {
         val configs = ZipFile(file).use { zip ->
             val entries = zip.entries().asSequence().toList()
             paths.mapNotNull { path ->
-                val overlay = if (path.startsWith("/product/")) "system$path" else path.removePrefix("/")
+                val overlay = FontPaths.overlay(path)
                 val matching = entries.filter { it.name == overlay }
                 require(matching.size == if (path in expectedConfigs) 1 else 0) { UiError.key("error_module_integrity") }
                 matching.singleOrNull()?.let { entry ->

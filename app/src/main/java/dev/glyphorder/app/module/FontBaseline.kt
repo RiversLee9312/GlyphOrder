@@ -5,6 +5,10 @@ import dev.glyphorder.app.UiError
 data class FontBaseline(val path: String, val build: SystemBuild, val disabled: Boolean,
                         val mountedThisBoot: Boolean) {
     companion object {
+        /** A metamodule may update its mounted image before the framework restarts. */
+        fun acceptsConfig(current: String, original: String, installed: String?, stagedOriginal: String?, staged: String?): Boolean =
+            current == original || current == installed || (stagedOriginal == original && current == staged)
+
         fun select(current: SystemBuild, active: FontBaseline?, staged: FontBaseline?): String? {
             val activeMatches = active?.build?.matches(current) == true
             val stagedMatches = staged?.build?.matches(current) == true
