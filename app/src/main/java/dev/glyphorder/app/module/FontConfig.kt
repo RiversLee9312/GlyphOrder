@@ -317,6 +317,19 @@ object FontConfig {
         val contributions = families.associateWith { family -> targets.associateWith { coverage(family, it) }.toMutableMap() }.toMutableMap()
         families.forEach { family ->
             if (elements(family, "font").any { it.textContent.contains("NotoColorEmoji") }) return@forEach
+            val generic = coverage(family, "")
+            if (elements(family, "font").any { !it.hasAttribute("fallbackFor") }) {
+                // Older Skia consumers ask for an unnamed fallback and cannot use
+                // fallbackFor="sans-serif" (or another named chain). A proof for
+                // the selected named targets must not erase that generic route.
+                // Keep locale/variant alternatives: equal cmap coverage alone does
+                // not make Japanese and Simplified Chinese glyph designs equivalent.
+                val alternatives = families.filter { it !== family &&
+                    it.getAttribute("lang") == family.getAttribute("lang") &&
+                    it.getAttribute("variant") == family.getAttribute("variant") }
+                    .map { coverage(it, "").guaranteed }
+                if (!generic.complete || !CmapCoverage.contains(CmapCoverage.union(alternatives), generic.possible)) return@forEach
+            }
             val eligible = targets.filter { target -> contributions.getValue(family).getValue(target).let { it.complete && !it.custom } }
             val chains = eligible.associateWith { target ->
                 families.filter { it !== family }.map { contributions.getValue(it).getValue(target).id }.filter { it != 0 }.distinct().sorted()

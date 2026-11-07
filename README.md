@@ -82,7 +82,7 @@ python tools/prepare-legal.py
 
 ## 验证与恢复
 
-2026-11-07：在一加 13（PJZ110、ColorOS / Android 17、KernelSU 3.3.1、meta-overlayfs 1.3.1）完成组合配置、安装与 KSU 软重启验证，内核会话保持。89 项单元测试、8 项实机回归测试通过；独立无 Root 探针完成 46 个家族、2,576 次排版，并检查实际字形文件来源。已定位并修正旧版自动补字导致少数汉字混入衬线体的问题。ColorOS 的系统字体模式仍可能重定向 Serif/Mono 等请求；应用会提示前往系统设置选择 Roboto，不会自动改动系统设置。第三方源码、Issue、论坛报告及实测边界见 [ColorOS 技术调查](design/COLOROS.md)。
+2026-11-07：在一加 13（PJZ110、ColorOS / Android 17、KernelSU 3.3.1、meta-overlayfs 1.3.1）完成组合配置、安装与 KSU 软重启验证，内核会话保持。91 项单元测试、8 项实机回归测试通过；独立无 Root 探针完成 46 个家族、2,576 次排版，并检查实际字形文件来源。已修正旧版自动补字导致少数汉字混入衬线体的问题，以及通用回退被移除后 HeyTap 旧内核显示中文缺字框的问题。ColorOS 的系统字体模式仍可能重定向 Serif/Mono 等请求；应用会提示前往系统设置选择 Roboto，不会自动改动系统设置。第三方源码、Issue、论坛报告及实测边界见 [ColorOS 技术调查](design/COLOROS.md)。
 
 2026-10-28：在官方 LOS 24.0-20261023（API 37、增量版本 `c4db0ea4ab`）与 KernelSU 3.3.1 上通过真实配置读取/生成、官方安装与停用、原有 MiSans/Noto Serif/Sarasa 配置恢复及重启后的字体服务检查。66 项单元测试通过。独立无 Root 探针在 Zygisk Next 1.5.2 的仅还原挂载模式下完成 79 个家族、4,424 次排版，实际使用的 34 个自定义字体文件路径均不可见；启用 HMA 3.8.3 与 SuSFS LKM 后结果相同。该结果不等于对所有隐藏策略或检测程序的保证。
 

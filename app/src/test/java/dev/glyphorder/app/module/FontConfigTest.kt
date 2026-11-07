@@ -11,6 +11,27 @@ class FontConfigTest {
     private val variable = static.copy(id = "v", fileName = "var.otf", axes = listOf(FontAxis("wght", 200f, 400f, 800f), FontAxis("wdth", 75f, 100f, 125f)))
     private fun fontNodes(text: String) = FontConfig.parse(text).getElementsByTagName("font").let { n -> (0 until n.length).map { n.item(it) as Element } }
 
+    @Test fun namedStyleCoverageCannotEraseTheGenericChineseFallback() {
+        val latin = static.copy(coverage = listOf(65..90))
+        val cjkSerif = static.copy(id = "serif-cjk", fileName = "serif-cjk.ttf", coverage = listOf(0x4e00..0x9fff))
+        val plan = FontPlan(styleMode = true, styleChains = mapOf("sans" to listOf(latin.id), "serif" to listOf(cjkSerif.id)),
+            targets = setOf("sans-serif", "serif"), automaticFallback = false)
+        val result = FontConfig.patch(xml, false, plan, listOf(latin, cjkSerif), systemCoverage = mapOf(
+            "/system/fonts/Arabic.ttf#0" to listOf(0x600..0x6ff),
+            "/system/fonts/CJK.ttc#2" to listOf(0x4e00..0x9fff),
+            "/system/fonts/SerifCJK.ttc#0" to listOf(0x4e00..0x9fff)))
+        assertTrue(fontNodes(result).any { it.textContent.trim() == "CJK.ttc" && !it.hasAttribute("fallbackFor") })
+        assertTrue(fontNodes(result).any { it.textContent.trim() == "GlyphOrder-serif-cjk.ttf" && it.getAttribute("fallbackFor") == "serif" })
+    }
+
+    @Test fun primaryCoverageCannotReplaceAnUnnamedFallbackRequest() {
+        val greek = static.copy(coverage = listOf(0x391..0x3a9))
+        val input = """<familyset><family name="sans-serif"><font>Roboto.ttf</font></family><family lang="und-Grek"><font>Greek.ttf</font></family></familyset>"""
+        val result = FontConfig.patch(input, false, FontPlan(primary = greek.id, automaticFallback = false), listOf(greek),
+            systemCoverage = mapOf("/system/fonts/Greek.ttf#0" to greek.coverage))
+        assertTrue(fontNodes(result).any { it.textContent.trim() == "Greek.ttf" && !it.hasAttribute("fallbackFor") })
+    }
+
     @Test fun explicitFallbackOrderPrecedesStockCjkAndNeverAddsAnAutomaticScriptFont() {
         val second = static.copy(id = "second", fileName = "second.ttf", coverage = listOf(0x4e00..0x9fff))
         val hidden = static.copy(id = "khitan", fileName = "khitan.ttf", hidden = true,
